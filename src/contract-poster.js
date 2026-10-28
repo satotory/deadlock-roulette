@@ -1,6 +1,7 @@
 import { getBuildPurchasePlan } from './build-purchase-plan.js';
 import { createNewspaperArticle, newspaperAssetPath } from './newspaper-core.js';
 import { FATE_PRESENTATION, drawFateBadges, prepareFateBadgeImages } from './fate-presentation.js';
+import { exportPNG } from './file-export.js';
 
 const CATEGORY = { weapon: '#df9b55', vitality: '#a2ca82', spirit: '#bea0db' };
 const assetURL = path => new URL(`../${path}`, import.meta.url).href;
@@ -180,7 +181,7 @@ export async function renderContractPoster({ build, hero, items, art, language =
 }
 
 let dialog;
-/** Preview before invoking Windows' save dialog; closing never alters the build. */
+/** Preview before saving; closing never alters the build. */
 export async function showContractPoster(options) {
   const ru = options.language !== 'en', dataURL = await renderContractPoster(options);
   if (!dialog) {
@@ -194,7 +195,7 @@ export async function showContractPoster(options) {
   dialog.querySelector('p').textContent = ru ? `Один кадр: герой, маршрут покупок и каждый шаг раскачки. PNG · ${layout.width} × ${layout.height}.` : `One sheet: your hero, purchase route and every upgrade. PNG · ${layout.width} × ${layout.height}.`;
   const preview = dialog.querySelector('img'); preview.src = dataURL; preview.alt = ru ? 'Постер текущего билда' : 'Current build poster'; dialog.querySelector('[data-poster-close]').textContent = ru ? 'Закрыть' : 'Close';
   const save = dialog.querySelector('#contract-poster-save'); save.textContent = ru ? '↓ Сохранить PNG' : '↓ Save PNG'; save.disabled = false;
-  save.onclick = async () => { save.disabled = true; try { await window.deadlock.exportPNG(dataURL, options.build.name || options.hero.name, options.language); }
+  save.onclick = async () => { save.disabled = true; try { await exportPNG(dataURL, options.build.name || options.hero.name, options.language); }
     catch { dialog.querySelector('p').textContent = ru ? 'Не удалось сохранить файл. Выбери другую папку и попробуй ещё раз.' : 'Could not save the file. Choose another folder and try again.'; } finally { save.disabled = false; } };
   if (!dialog.open) dialog.showModal(); save.focus(); return dataURL;
 }

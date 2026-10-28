@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./build-mode.css">
   <link rel="stylesheet" href="./newspaper.css">
   <link rel="stylesheet" href="./fate-effects.css" data-fate-effects>
+  <link rel="stylesheet" href="./guide.css">
+  <link rel="stylesheet" href="./app-polish.css">
 </head>
 <body>
   <div class="app-shell">
@@ -19,7 +21,8 @@
         <span><strong>DEADLOCK<span class="brand-divider">/</span>ROULETTE</strong><small data-i18n="brand">ЛАВКА СЛУЧАЯ</small></span>
       </a>
       <nav class="header-actions" data-i18n-label="settings" aria-label="Настройки приложения">
-        <span class="offline-badge"><i></i><span data-i18n="offline">РАБОТАЕТ ОФЛАЙН</span></span>
+        <button class="app-guide-button" id="guide-button" data-i18n-title="guideTitle" data-i18n-label="guideTitle" title="Гайд по приложению"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-2 4-4 2 2-4 4-2Z"/></svg><span data-i18n="guideLabel">Гайд</span></button>
+        <button class="app-update-button" id="update-button" type="button" title="Проверить обновления" aria-label="Проверить обновления"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-update-label>v1.10.0</span></button>
         <div class="zoom-control" role="group" data-i18n-label="zoom" aria-label="Масштаб интерфейса">
           <button id="zoom-out-button" data-i18n-title="zoomOutTitle" data-i18n-label="zoomOut" title="Уменьшить · Ctrl −" aria-label="Уменьшить масштаб">−</button>
           <select id="zoom-select" data-i18n-title="zoomTitle" data-i18n-label="zoom" title="Масштаб интерфейса · Ctrl + / Ctrl − / Ctrl 0" aria-label="Масштаб интерфейса">
@@ -46,6 +49,8 @@
         <button class="icon-button" id="language-button" title="Switch to English" aria-label="Switch to English">RU</button>
         <button class="icon-button" id="speed-button" title="Быстрый режим" aria-label="Быстрый режим" aria-pressed="false">↯</button>
         <button class="icon-button" id="fullscreen-button" data-i18n-title="fullscreenTitle" data-i18n-label="fullscreen" title="Полный экран · F11" aria-label="Полный экран">⛶</button>
+        <a class="icon-button project-link" id="github-link" href="https://github.com/satotory/deadlock-roulette" target="_blank" rel="noopener noreferrer" data-project-link="github" data-i18n-title="githubLink" data-i18n-label="githubLink" title="Проект на GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.13c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.64-1.25-1.64-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.99 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.62 1.56.23 2.7.12 2.99.72.79 1.15 1.8 1.15 3.03 0 4.33-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg></a>
+        <button class="icon-button" id="share-button" type="button" data-i18n-title="shareApp" data-i18n-label="shareApp" title="Поделиться приложением"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg></button>
         <button class="icon-button" id="help-button" data-i18n-title="help" data-i18n-label="help" title="Как это работает" aria-label="Как это работает">?</button>
       </nav>
     </header>
@@ -113,7 +118,8 @@
     </main>
     <footer class="app-footer"><span data-i18n-html="footer">DEADLOCK ROULETTE <b>✦</b> ЛИЧНАЯ ЛАВКА</span><span data-i18n="footerMotto">Три пути. Одна судьба.</span></footer>
   </div>
-  <dialog id="help-dialog" class="modal"><button class="modal-close" data-close data-i18n-label="close" aria-label="Закрыть">×</button><div class="eyebrow" data-i18n="mechanics">МЕХАНИКА СЛУЧАЯ</div><h2 data-i18n-html="helpHeading">Честная рулетка.<br>Твои правила.</h2><p data-i18n="helpWeight"></p><div class="formula" data-i18n="formula"></div><p data-i18n="helpExample"></p><p data-i18n-html="helpRandom"></p><p data-i18n="helpSession"></p><p data-i18n-html="helpZoom"></p><p data-i18n="helpAudio"></p><div class="help-keys" data-i18n-html="helpKeys"></div><p class="small-copy" id="legendary-note"></p></dialog>
+  <dialog id="help-dialog" class="modal"><button class="modal-close" data-close data-i18n-label="close" aria-label="Закрыть">×</button><div class="eyebrow" data-i18n="mechanics">МЕХАНИКА СЛУЧАЯ</div><h2 data-i18n-html="helpHeading">Честная рулетка.<br>Твои правила.</h2><p data-i18n="helpWeight"></p><div class="formula" data-i18n="formula"></div><p data-i18n="helpExample"></p><p data-i18n-html="helpRandom"></p><p data-i18n="helpSession"></p><p data-i18n-html="helpZoom"></p><p data-i18n="helpAudio"></p><div class="help-keys" data-i18n-html="helpKeys"></div><p class="small-copy" id="legendary-note"></p><button type="button" class="primary-button app-help-guide" id="help-start-guide" data-i18n="startGuide">Показать интерактивный гайд</button></dialog>
+  <dialog id="share-dialog" class="modal compact-modal"><button class="modal-close" data-close data-i18n-label="close" aria-label="Закрыть">×</button><div class="eyebrow">DEADLOCK ROULETTE</div><h2 data-i18n="shareApp">Поделиться приложением</h2><p data-i18n="shareCopy">Скопируй ссылку: приложение откроется прямо в браузере.</p><input id="share-link-value" class="app-share-input" readonly value="https://satotory.github.io/deadlock-roulette/" data-i18n-label="appLink" aria-label="Ссылка на приложение"><div class="modal-actions"><a class="secondary-button" data-project-link="web" href="https://satotory.github.io/deadlock-roulette/" target="_blank" rel="noopener noreferrer" data-i18n="openWebApp">Открыть в браузере</a><button class="primary-button" data-close data-i18n="done">Готово</button></div></dialog>
   <dialog id="reset-dialog" class="modal compact-modal"><div class="eyebrow" data-i18n="cleanSlate">ЧИСТЫЙ ЛИСТ</div><h2 data-i18n="resetHeading">Снова довериться судьбе?</h2><p data-i18n="resetCopy"></p><div class="modal-actions"><button class="secondary-button" data-close data-i18n="continueSession">Продолжить сессию</button><button class="primary-button" id="confirm-reset" data-i18n="startOver">Начать заново</button></div></dialog>
   <dialog id="item-dialog" class="modal compact-modal"><button class="modal-close" data-close data-i18n-label="close" aria-label="Закрыть">×</button><div id="item-detail"></div></dialog>
   <input id="import-file" type="file" accept="application/json,.json" hidden>

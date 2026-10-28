@@ -1,6 +1,6 @@
 # Patron presentation sources
 
-Verified against the user's installed Deadlock game on 2026-10-14. The read-only VPK reader verifies each original resource's CRC32. The evidence snapshot is `.build-cache/fate-patron-source.json`; the extraction is repeatable with `.build-cache/extract-fate-presentation.mjs` before manual module integration. Game resources belong to Valve Corporation and are used in this private offline app.
+Verified against the user's installed Deadlock game on 2026-10-14. The read-only VPK reader verifies each original resource's CRC32. The evidence snapshot is `.build-cache/fate-patron-source.json`; the extraction is repeatable with `.build-cache/extract-fate-presentation.mjs` before manual module integration. Game resources belong to Valve Corporation and are used in this fan application.
 
 The exact UI colours come from `panorama/styles/citadel_base_styles.vcss_c`, archive `pak01_130.vpk`, CRC32 `1370036206`, SHA-256 `278aa2f3e5d0522a6281374b77b05298cefbfadf8486c2e50d3bc3f2e2c6d46e`. These are direct CSS definitions, not colours sampled from a screenshot:
 

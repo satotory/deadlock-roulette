@@ -165,6 +165,12 @@ async function launch() {
   await call('Log.enable');
   await call('Page.enable');
   await until("Number(document.querySelector('#total-count').textContent) > 0 && (!document.querySelector('button[data-mode=roulette]').disabled || document.querySelector('#build-archmother-dialog')?.open || document.querySelector('#build-king-dialog')?.open || document.querySelector('.fate-effects-layer[data-kind=chicken]:not([hidden])'))");
+  // Exercise the actual first-visit choice instead of disabling onboarding in production.
+  // Its independent tour behaviour is covered by polish.smoke.mjs.
+  if (await evaluate("Boolean(document.querySelector('#guide-welcome-dialog'))")) {
+    await until("document.querySelector('#guide-welcome-dialog').open || JSON.parse(localStorage.getItem('deadlock-roulette.guide.v1') || '{}').offered === true", 5000);
+    await evaluate("if(document.querySelector('#guide-welcome-dialog').open)document.querySelector('#guide-later').click()");
+  }
   return {
     call, evaluate, until, reload, failures,
     async close() {

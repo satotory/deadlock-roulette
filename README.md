@@ -6,19 +6,33 @@
 
 **A random hero. An unpredictable build. One contract for your next match.**
 
-An offline Windows app for playing Deadlock with whatever chance gives you. Spin for items, draft a complete hero build, follow the purchase route and ability upgrades, and try to survive the Chicken of Fate.
+An app for Windows and the browser for playing Deadlock with whatever chance gives you. Spin for items, draft a complete hero build, follow the purchase route and ability upgrades, and try to survive the Chicken of Fate.
 
-**[Download for Windows](https://github.com/satotory/deadlock-roulette/releases/latest)** · [Detailed guide in Russian](docs/FEATURES.md) · [Audio sources](docs/audio-sources.md)
+**[Play in your browser](https://satotory.github.io/deadlock-roulette/)** · **[Download for Windows](https://github.com/satotory/deadlock-roulette/releases/latest)** · [Detailed guide in Russian](docs/FEATURES.md) · [Audio sources](docs/audio-sources.md)
 
 ### Download and play
+
+**Browser:** open the [web app](https://satotory.github.io/deadlock-roulette/) and play immediately. No account or download is needed. Music starts after your first interaction, as browsers require.
+
+**Windows:**
 
 1. Open the [latest release](https://github.com/satotory/deadlock-roulette/releases/latest) and download the `.exe` under **Assets**.
 2. Run it. No installation, administrator access, server or account is needed.
 3. Choose **Item roulette** or **Hero build**. Enable the items and heroes you want, then start drawing.
 
-**Windows download notice:** Release 1.9.0 is unsigned, so Windows may show **Unknown publisher** or a SmartScreen warning. See [how to verify the official download](docs/WINDOWS-DOWNLOAD.md#english) before deciding whether to run it; changing your protection settings is unnecessary.
+**Windows download notice:** The Windows release is unsigned, so Windows may show **Unknown publisher** or a SmartScreen warning. See [how to verify the official download](docs/WINDOWS-DOWNLOAD.md#english) before deciding whether to run it; changing your protection settings is unnecessary.
 
 The portable app supports **Windows 10/11 x64**. Icons, hero art, music, sounds and voices are bundled; playing does not require an internet connection.
+
+### Guided first run, updates and sharing
+
+The first launch offers a **13-step guided tour**. It highlights the wheel, filters, audio and scale, hero selection, inventory, abilities, events, archive and sharing. Use **Guide** in the header to replay it; Back, Next and Skip let you move at your own pace. The tour keeps your build and does not spend draws or alteration charges.
+
+The version button checks for updates at startup and periodically. In the portable Windows app, **Update and restart** downloads the latest stable release, verifies its SHA-256 and replaces the launcher only after you click. It keeps a backup and can restore the previous executable if the new version fails to start. Your current build, archive, language, scale and volume settings stay in the same profile. Keep the portable EXE in a folder you can write to. Version 1.9 and earlier need a one-time manual download of 1.10; future releases can use the built-in updater.
+
+In the browser, the version button checks the deployed site and offers a page refresh when a newer version appears. **Share** copies the web app link; the **GitHub icon** opens this repository in either edition.
+
+Browser and desktop saves are separate. Use **JSON export/import** to move a session between them. Match posters and the Contract Gazette download as PNG files in either edition. See [browser hosting and storage](docs/WEB.md#english).
 
 ### A look inside
 
@@ -190,7 +204,9 @@ npm test
 npm run build
 ```
 
-The build produces `dist/Deadlock Roulette.exe`. On Windows, use `npm.cmd` if PowerShell blocks `npm`. No backend is needed.
+For the static browser edition, run `npm run build:web` and serve the generated `web-dist/` folder over HTTP. GitHub Actions deploys that folder to GitHub Pages after a push to `main`.
+
+The Windows build produces `dist/Deadlock Roulette.exe`. On Windows, use `npm.cmd` if PowerShell blocks `npm`. No backend is needed.
 
 ### Catalogue and credits
 
@@ -206,19 +222,33 @@ This is an unofficial fan project, unaffiliated with Valve. Deadlock, characters
 
 **Случайный герой. Непредсказуемый билд. Один контракт на следующий матч.**
 
-Приложение для Windows, чтобы играть в Deadlock тем, что выпало. Крути предметы, собирай билд на героя, следуй порядку закупа и прокачки — и постарайся пережить Курицу судьбы.
+Приложение для Windows и браузера, чтобы играть в Deadlock тем, что выпало. Крути предметы, собирай билд на героя, следуй порядку закупа и прокачки — и постарайся пережить Курицу судьбы.
 
-**[Скачать для Windows](https://github.com/satotory/deadlock-roulette/releases/latest)** · [Подробное руководство](docs/FEATURES.md) · [Источники звуков](docs/audio-sources.md)
+**[Открыть в браузере](https://satotory.github.io/deadlock-roulette/)** · **[Скачать для Windows](https://github.com/satotory/deadlock-roulette/releases/latest)** · [Подробное руководство](docs/FEATURES.md) · [Источники звуков](docs/audio-sources.md)
 
 ### Скачать и начать играть
+
+**Браузер:** открой [веб-версию](https://satotory.github.io/deadlock-roulette/) и играй. Аккаунт и скачивание не нужны. Музыка запускается после первого взаимодействия со страницей, как требуют браузеры.
+
+**Windows:**
 
 1. Открой [последний релиз](https://github.com/satotory/deadlock-roulette/releases/latest) и скачай `.exe` из раздела **Assets**.
 2. Запусти файл. Установка, права администратора, сервер и аккаунт не нужны.
 3. Выбери **«Рулетка предметов»** или **«Билд на персонажа»**, настрой пул и начинай розыгрыш.
 
-**При скачивании на Windows:** Версия 1.9.0 не подписана, поэтому могут появиться **«Неизвестный издатель»** или предупреждение SmartScreen. Перед запуском [проверь официальный файл по инструкции](docs/WINDOWS-DOWNLOAD.md#русский); менять настройки защиты не требуется.
+**При скачивании на Windows:** Windows-версия не подписана, поэтому могут появиться **«Неизвестный издатель»** или предупреждение SmartScreen. Перед запуском [проверь официальный файл по инструкции](docs/WINDOWS-DOWNLOAD.md#русский); менять настройки защиты не требуется.
 
 Переносимая версия работает на **Windows 10/11 x64**. Иконки, герои, музыка, звуки и реплики уже внутри файла; интернет во время игры не нужен.
+
+### Первое знакомство, обновления и ссылка друзьям
+
+При первом запуске появляется **пошаговый гайд из 13 шагов**: он подсвечивает колесо, фильтры, звук и масштаб, выбор героя, инвентарь, способности, события, архив и кнопку ссылки. Кнопка **«Гайд»** в шапке запускает его повторно. Можно вернуться назад, перейти дальше или пропустить. Гайд сохраняет билд и не тратит розыгрыши или заряды изменений.
+
+Кнопка с версией проверяет обновления при запуске и затем периодически. В переносимой Windows-версии **«Обновить и перезапустить»** скачивает последний стабильный релиз, проверяет SHA-256 и заменяет EXE после твоего нажатия. Сохраняется резервная копия; если новая версия не запустится, приложение сможет вернуть предыдущую. Текущий билд, архив, язык, масштаб и громкость остаются в прежнем профиле. Файл должен лежать в доступной для записи папке. С версии 1.9 и более ранних нужно один раз вручную скачать 1.10; следующие релизы можно будет ставить из приложения.
+
+В браузере кнопка версии проверяет опубликованный сайт и предлагает обновить страницу, когда появляется новая версия. **«Поделиться»** копирует ссылку на веб-приложение, а **иконка GitHub** открывает этот репозиторий в обеих версиях.
+
+Сохранения браузера и Windows раздельные. Для переноса сессии используй **экспорт и импорт JSON**. Постеры матча и Газета контракта скачиваются в PNG в обеих версиях. Подробнее: [хостинг и сохранения браузерной версии](docs/WEB.md#русский).
 
 ### Как это выглядит
 
@@ -390,7 +420,9 @@ npm test
 npm run build
 ```
 
-Результат — `dist/Deadlock Roulette.exe`. Если PowerShell блокирует `npm`, используй `npm.cmd`. Серверная часть не нужна.
+Для браузера выполни `npm run build:web` и открой содержимое `web-dist/` через HTTP-сервер. После пуша в `main` GitHub Actions публикует эту папку на GitHub Pages.
+
+Результат Windows-сборки — `dist/Deadlock Roulette.exe`. Если PowerShell блокирует `npm`, используй `npm.cmd`. Серверная часть не нужна.
 
 ### Каталог и авторство
 

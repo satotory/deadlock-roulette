@@ -20,6 +20,9 @@ import { showContractPoster } from './contract-poster.js';
 import heroArt from './hero-art.js';
 import { MUSIC_TRACKS } from './music-tracks.js';
 import { curseTiming } from './curse-timing.js';
+import { createGuide } from './guide.js';
+import { createAppUpdates } from './app-updates.js';
+import { PROJECT_LINKS } from './app-version.js';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -68,6 +71,7 @@ let focusedItemId = null;
 let lastTick = 0;
 let zoomRequest = 0;
 let buildMode;
+let guide, updates;
 let hoveredIndex = -1;
 const imageCache = new Map();
 const canvas = $('#wheel');
@@ -263,6 +267,7 @@ function applyLanguage() {
   renderViewPreferences();
   buildMode?.render({ spinning });
   if (hoveredIndex >= 0) renderHoverCard();
+  guide?.refresh(); updates?.refresh();
 }
 function toast(message) {
   $('#toast').textContent = message;
@@ -561,6 +566,7 @@ function render({ preserveWheel = false, preserveResult = false, beforeHistory, 
   if (!preserveWheel) { hideWheelHover(); wheelEntries = buildWheel(distribution.items); }
   drawWheel();
   buildMode?.render({ spinning, beforeHistory, beforePurchasePlan });
+  guide?.refresh(); updates?.refresh();
 }
 function renderChoosing() {
   $('#result-content').innerHTML = `<div class="empty-result-art">✦</div><h3>${t('choosing')}</h3><p>${t('choosingCopy')}</p>`;
@@ -732,6 +738,7 @@ async function continueArchmotherOffer({ announce = true } = {}) {
 }
 
 async function spin(action = 'draw') {
+  if (guide?.active || updates?.applying) return;
   if (spinning || offerBusy || buildMode?.busy || document.querySelector('dialog[open]')) return;
   const inBuild = session.preferences.mode === 'build';
   if (inBuild && !session.build.heroId) { toast(t('buildMissingHero')); return; }
@@ -880,6 +887,26 @@ $('#fullscreen-button').addEventListener('click', async () => {
 });
 $('#help-button').addEventListener('click', () => $('#help-dialog').showModal());
 $('#weights-help').addEventListener('click', () => $('#help-dialog').showModal());
+$('#guide-button').addEventListener('click', () => guide?.start());
+$('#help-start-guide').addEventListener('click', () => { $('#help-dialog').close(); guide?.start(); });
+$('#share-button').addEventListener('click', async () => {
+  try {
+    if (window.deadlock?.copyAppLink) await window.deadlock.copyAppLink();
+    else if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(PROJECT_LINKS.web);
+    else throw new Error('Clipboard unavailable.');
+    toast(t('linkCopied'));
+  } catch {
+    $('#share-link-value').value = PROJECT_LINKS.web;
+    $('#share-dialog').showModal(); $('#share-link-value').focus(); $('#share-link-value').select();
+  }
+});
+document.addEventListener('click', event => {
+  const link = event.target.closest('[data-project-link]');
+  if (!link || !window.deadlock?.openProjectLink) return;
+  event.preventDefault();
+  const kind = link.dataset.projectLink;
+  window.deadlock.openProjectLink(kind).catch(() => toast(t('projectLinkFailed')));
+});
 $('#search').addEventListener('input', renderCatalog);
 $('#catalog-tier').addEventListener('change', renderCatalog);
 $('#catalog-status').addEventListener('change', renderCatalog);
@@ -895,6 +922,7 @@ $('#import-file').addEventListener('change', async event => {
   event.target.value = '';
 });
 document.addEventListener('keydown', event => {
+  if (guide?.active || updates?.applying) return;
   if (event.ctrlKey && !event.altKey && !event.metaKey) {
     if (event.key === '+' || event.key === '=' || event.code === 'NumpadAdd') { event.preventDefault(); stepZoom(1); return; }
     if (event.key === '-' || event.code === 'NumpadSubtract') { event.preventDefault(); stepZoom(-1); return; }
@@ -905,6 +933,7 @@ document.addEventListener('keydown', event => {
   if (event.code === 'Space' && !editable && !event.repeat && !document.querySelector('dialog[open]') && !event.target.closest('button,summary')) { event.preventDefault(); spin(); }
 });
 document.addEventListener('wheel', event => {
+  if (guide?.active || updates?.applying) return;
   if (!event.ctrlKey || !event.deltaY) return;
   event.preventDefault();
   if (event.deltaY < 0) stepZoom(1); else stepZoom(-1);
@@ -1044,3 +1073,20 @@ applyLanguage(); audio.setPreferences(session.preferences);
 activateMode(session.preferences.mode); warmImages();
 applyZoom(session.preferences.zoomFactor, { persist: false });
 if (storageFailed) toast(t('storageDamaged'));
+
+const hasPendingFate = () => Boolean(session.build.fate?.pendingChicken || session.build.fate?.pendingArchmother || session.build.fate?.pendingKing);
+guide = createGuide({
+  getLanguage: () => session.preferences.language,
+  getMode: () => session.preferences.mode,
+  setMode: activateMode,
+  isBusy: () => spinning || offerBusy || Boolean(buildMode?.busy) || Boolean(updates?.applying) || hasPendingFate() || Boolean(document.querySelector('dialog[open]:not(#guide-welcome-dialog)')),
+  onStateChange: () => { hideWheelHover(); drawWheel(); },
+});
+updates = createAppUpdates({
+  getLanguage: () => session.preferences.language,
+  isBusy: () => spinning || offerBusy || Boolean(buildMode?.busy) || Boolean(guide?.active) || hasPendingFate() || Boolean(document.querySelector('dialog[open]:not(#app-update-dialog)')),
+  beforeUpdate: save,
+  notify: toast,
+});
+const guideOfferTimer = setInterval(() => { if (guide.maybeWelcome()) clearInterval(guideOfferTimer); }, 1000);
+setTimeout(() => clearInterval(guideOfferTimer), 60000);

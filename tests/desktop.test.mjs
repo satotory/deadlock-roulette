@@ -32,6 +32,8 @@ const electron = {
   },
   ipcMain: { handle: (name, handler) => handlers.set(name, handler) },
   dialog: {},
+  shell: { openExternal: async () => {} },
+  clipboard: { writeText() {} },
 };
 const context = vm.createContext({
   require: (name) => name === 'electron' ? electron : require(name),
@@ -44,7 +46,7 @@ desktop.setWindow(fakeWindow);
 desktop.registerIPC();
 const trustedEvent = { sender: fakeContents, senderFrame: fakeContents.mainFrame };
 
-test('offline resource policy accepts bundled files and rejects remote/outside files', () => {
+test('bundled resource policy accepts packaged files and rejects remote/outside files', () => {
   assert.equal(desktop.isAppResource(pathToFileURL(path.join(root, 'assets', 'items.json')).href), true);
   assert.equal(desktop.isAppResource(pathToFileURL(path.join(root, '..', 'secret.json')).href), false);
   assert.equal(desktop.isAppResource('https://example.com/app.js'), false);
@@ -114,25 +116,60 @@ test('native session dialogs translate English labels and use Russian for unsupp
   assert.equal(saveOptions.filters[0].name, 'Сессия Deadlock Roulette');
 });
 
-test('preload exposes six specific methods and never exposes raw IPC', () => {
+test('preload exposes only specific methods, strips update events and unsubscribes cleanly', () => {
   const calls = [];
+  const listeners = new Map();
   let api;
   const preloadContext = vm.createContext({
     require: () => ({
       contextBridge: { exposeInMainWorld(name, value) { assert.equal(name, 'deadlock'); api = value; } },
-      ipcRenderer: { invoke(...args) { calls.push(args); return Promise.resolve(); } },
+      ipcRenderer: {
+        invoke(...args) { calls.push(args); return Promise.resolve(); },
+        on(channel, listener) { listeners.set(channel, listener); },
+        removeListener(channel, listener) { assert.equal(listeners.get(channel), listener); listeners.delete(channel); },
+      },
     }),
   });
   vm.runInContext(fs.readFileSync(path.join(root, 'preload.cjs'), 'utf8'), preloadContext);
-  assert.deepEqual(Object.keys(api), ['setZoomFactor', 'toggleFullscreen', 'getVersion', 'exportJSON', 'importJSON', 'exportPNG']);
+  assert.deepEqual(Object.keys(api), ['setZoomFactor', 'toggleFullscreen', 'getVersion', 'getUpdateState', 'checkForUpdates', 'installUpdate', 'onUpdateState', 'openProjectLink', 'copyAppLink', 'exportJSON', 'importJSON', 'exportPNG']);
+  assert.equal(Object.isFrozen(api), true);
+  assert.equal(api.invoke, undefined);
+  assert.equal(api.send, undefined);
   api.setZoomFactor(1.5);
   api.exportJSON('{}');
   api.importJSON();
   api.exportJSON('{}', 'en');
   api.importJSON('en');
   api.exportPNG('data:image/png;base64,test', 'match', 'en');
+  api.getUpdateState(); api.checkForUpdates(); api.installUpdate(); api.openProjectLink(); api.openProjectLink('web'); api.copyAppLink();
   assert.deepEqual(calls, [['desktop:set-zoom', 1.5], ['desktop:export-json', '{}', 'ru'], ['desktop:import-json', 'ru'],
-    ['desktop:export-json', '{}', 'en'], ['desktop:import-json', 'en'], ['desktop:export-png', 'data:image/png;base64,test', 'match', 'en']]);
+    ['desktop:export-json', '{}', 'en'], ['desktop:import-json', 'en'], ['desktop:export-png', 'data:image/png;base64,test', 'match', 'en'],
+    ['desktop:update-state'], ['desktop:check-updates'], ['desktop:install-update'], ['desktop:open-link', 'github'], ['desktop:open-link', 'web'], ['desktop:copy-app-link']]);
+  let received;
+  const unsubscribe = api.onUpdateState(value => { received = value; });
+  const state = { status: 'available', latestVersion: '1.10.0' };
+  listeners.get('desktop:update-state')({ sender: 'privileged event' }, state);
+  assert.equal(received, state);
+  unsubscribe();
+  assert.equal(listeners.size, 0);
+  assert.throws(() => api.onUpdateState({}), /listener must be a function/);
+});
+
+test('project links and sharing use fixed destinations and reject untrusted frames', async () => {
+  const opened = []; const copied = [];
+  electron.shell.openExternal = async value => { opened.push(value); };
+  electron.clipboard.writeText = value => { copied.push(value); };
+  const open = handlers.get('desktop:open-link'), copy = handlers.get('desktop:copy-app-link');
+  await open(trustedEvent, 'github'); await open(trustedEvent, 'web'); await open(trustedEvent, 'releases');
+  assert.deepEqual(opened, ['https://github.com/satotory/deadlock-roulette', 'https://satotory.github.io/deadlock-roulette/', 'https://github.com/satotory/deadlock-roulette/releases/latest']);
+  for (const invalid of ['https://example.com', 'file:///C:/Windows', '', null, {}]) assert.throws(() => open(trustedEvent, invalid), /Unknown project link/);
+  assert.equal(copy(trustedEvent), 'https://satotory.github.io/deadlock-roulette/');
+  assert.deepEqual(copied, ['https://satotory.github.io/deadlock-roulette/']);
+  for (const channel of ['desktop:open-link', 'desktop:copy-app-link', 'desktop:update-state', 'desktop:check-updates', 'desktop:install-update']) assert.throws(() => handlers.get(channel)({ sender: {}, senderFrame: {} }, 'github'), /Untrusted/);
+  const initial = handlers.get('desktop:update-state')(trustedEvent);
+  assert.equal(initial.status, 'idle');
+  assert.equal(initial.canInstall, false);
+  assert.equal(initial.reason, 'development');
 });
 
 const tinyPNG = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/lLkAAAAASUVORK5CYII=';

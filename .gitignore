@@ -12,3 +12,4 @@ artifacts/
 .tools/
 .env
 .env.*
+web-dist/

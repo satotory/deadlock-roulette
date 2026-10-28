@@ -1,0 +1,53 @@
+.guide-running{scroll-behavior:auto!important}
+.guide-overlay[hidden]{display:none!important}
+.guide-overlay{--guide-accent:#d7bd83;position:fixed;z-index:2147483000;inset:0;pointer-events:none;isolation:isolate;color:#f0e7d7;font-family:LocalSans,"Segoe UI",sans-serif;font-size:14px}
+body[data-mode=build] .guide-overlay{--guide-accent:var(--hero-color,#bea0d0)}
+.guide-shield{position:fixed;inset:0;pointer-events:auto;background:#07100b12;touch-action:none}
+.guide-spotlight{position:fixed;border:2px solid var(--guide-accent);border-radius:12px;box-shadow:0 0 0 9999px #080c10c7,0 0 32px color-mix(in srgb,var(--guide-accent) 30%,transparent),inset 0 0 20px color-mix(in srgb,var(--guide-accent) 9%,transparent);pointer-events:none;transition:left .25s ease,top .25s ease,width .25s ease,height .25s ease}
+.guide-spotlight[hidden]{display:none}
+.guide-spotlight>i{position:absolute;width:14px;height:14px;border-color:var(--guide-accent);border-style:solid;filter:drop-shadow(0 0 6px var(--guide-accent))}
+.guide-spotlight>i:nth-child(1){left:-5px;top:-5px;border-width:2px 0 0 2px;border-radius:8px 0 0}
+.guide-spotlight>i:nth-child(2){right:-5px;top:-5px;border-width:2px 2px 0 0;border-radius:0 8px 0 0}
+.guide-spotlight>i:nth-child(3){right:-5px;bottom:-5px;border-width:0 2px 2px 0;border-radius:0 0 8px}
+.guide-spotlight>i:nth-child(4){left:-5px;bottom:-5px;border-width:0 0 2px 2px;border-radius:0 0 0 8px}
+.guide-card{box-sizing:border-box;position:fixed;width:min(382px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow:auto;pointer-events:auto;border:1px solid color-mix(in srgb,var(--guide-accent) 50%,#ffffff1a);border-radius:14px;background:linear-gradient(145deg,color-mix(in srgb,var(--guide-accent) 11%,#181d20),#15181f 75%);padding:26px 26px 19px;box-shadow:0 20px 70px #0008,0 0 28px color-mix(in srgb,var(--guide-accent) 8%,transparent);animation:guide-card-appear .22s ease-out}
+.guide-card h2{font:normal 28px/1.17 Georgia,serif;letter-spacing:-.4px;margin:15px 0 13px;color:#f4ead8;outline:none}
+.guide-card p{font-size:13px;line-height:1.75;color:#c4c6bb;margin:0}
+.guide-card .guide-reassurance{font-size:10px;color:#a6a58f;border-top:1px solid #ffffff0e;margin-top:18px;padding-top:11px}
+.guide-eyebrow{font-size:8px;line-height:1.6;letter-spacing:2.4px;font-weight:600;color:var(--guide-accent,#d7bd83);padding-right:17px}
+.guide-close{position:absolute;right:10px;top:7px;display:grid;place-items:center;width:29px;height:29px;border:0;background:transparent;color:#c2bda9;font:24px/1 sans-serif;border-radius:6px}
+.guide-close:hover{background:#ffffff0c;color:white}
+.guide-step-line{display:flex;align-items:center;gap:14px;margin-top:11px}
+#guide-step-count{font:9px/1.4 monospace;color:#c9bd9b;white-space:nowrap}
+.guide-meter{height:2px;flex:1;background:#ffffff12;border-radius:3px;overflow:hidden}
+.guide-meter>i{display:block;height:100%;background:var(--guide-accent);transition:width .25s ease}
+.guide-actions{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-top:19px}
+.guide-actions>div{display:flex;gap:7px;flex-shrink:0}
+.guide-actions button{font:11px/1.4 LocalSans,"Segoe UI",sans-serif;border-radius:6px;padding:9px 11px;white-space:nowrap}
+.guide-skip{background:transparent;border:0;color:#a7a894;padding-left:0!important;font-size:9px!important;white-space:normal!important;text-align:left}
+.guide-skip:hover{color:#e1dcc8}
+.guide-back{border:1px solid #ffffff18;background:#ffffff04;color:#c4c5b7}
+.guide-back:disabled{opacity:.3;cursor:default}
+.guide-next{background:var(--guide-accent);border:1px solid transparent;color:#191b19;font-weight:600!important}
+.guide-next:hover:not(:disabled){filter:brightness(1.12)}
+.guide-next:disabled{opacity:.6;cursor:wait}
+.guide-overlay button:focus-visible,.guide-welcome button:focus-visible{outline:2px solid var(--guide-accent,#d7bd83);outline-offset:3px}
+.guide-announcement{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.guide-welcome{--guide-accent:#d7bd83;box-sizing:border-box;width:min(504px,calc(100vw - 32px));max-height:calc(100vh - 32px);padding:37px;color:#ede7d8;background:radial-gradient(ellipse at 15% 0,#d7bd8315,transparent 60%),#19201c;border:1px solid #d7bd8357;border-radius:17px;box-shadow:0 25px 110px #0009;overflow:auto}
+.guide-welcome::backdrop{background:#07100dd9;backdrop-filter:blur(8px)}
+.guide-welcome-art{position:relative;width:90px;height:90px;margin:0 auto 26px;display:grid;place-items:center;color:#ddc58f}
+.guide-welcome-art>span{font:64px Georgia,serif;filter:drop-shadow(0 0 18px #d7bd8355)}
+.guide-welcome-art>i{position:absolute;inset:1px;border:1px solid #d7bd833d;transform:rotate(30deg);border-radius:18px;animation:guide-orbit 20s linear infinite}
+.guide-welcome-art>b{position:absolute;right:-1px;bottom:0;display:grid;place-items:center;width:24px;height:24px;background:#d7bd83;border:4px solid #19201c;border-radius:50%;font:15px Georgia,serif;color:#222b21}
+.guide-welcome>.guide-eyebrow{text-align:center;padding:0}
+.guide-welcome h2{font:normal 37px/1.13 Georgia,serif;letter-spacing:-.7px;text-align:center;margin:13px 0 20px;color:#f4ead8}
+.guide-welcome-body{font-size:13px;line-height:1.8;color:#adb8a6;text-align:center;margin:0}
+.guide-welcome>small{display:block;text-align:center;font-size:10px;line-height:1.65;color:#83977c;margin-top:17px}
+.guide-welcome-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:27px}
+.guide-welcome-actions button{border-radius:7px;padding:12px 15px;font:11px/1.45 LocalSans,"Segoe UI",sans-serif}
+#guide-start{background:#d7bd83;color:#20291d;border:1px solid transparent;font-weight:600}
+#guide-later{border:1px solid #ffffff19;background:transparent;color:#adb89d}
+@keyframes guide-card-appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes guide-orbit{to{transform:rotate(390deg)}}
+@media(max-width:440px){.guide-card{padding:22px 18px 16px}.guide-card h2{font-size:25px}.guide-actions button{padding:9px}.guide-welcome{padding:30px 24px}.guide-welcome h2{font-size:32px}.guide-welcome-actions{flex-direction:column}.guide-welcome-actions button{width:100%}}
+@media(prefers-reduced-motion:reduce){.guide-overlay *,.guide-welcome *{animation:none!important;transition:none!important}}

@@ -1,10 +1,12 @@
 'use strict';
 
-const { app, BrowserWindow, Menu, ipcMain, dialog, session, nativeTheme } = require('electron');
+const { app, BrowserWindow, Menu, ipcMain, dialog, session, nativeTheme, shell, clipboard } = require('electron');
 const path = require('node:path');
 const fs = require('node:fs/promises');
 const { existsSync } = require('node:fs');
 const { pathToFileURL, fileURLToPath } = require('node:url');
+const { createDesktopUpdater } = require(path.join(__dirname, 'desktop-updater.cjs'));
+const { PROJECT_URL, WEB_URL, RELEASES_URL } = require(path.join(__dirname, 'update-core.cjs'));
 
 const APP_NAME = 'Deadlock Roulette';
 const APP_ROOT = path.resolve(__dirname);
@@ -17,6 +19,7 @@ const MAX_ZOOM_FACTOR = 2.5;
 const SMOKE_TEST = process.argv.includes('--smoke-test');
 let mainWindow = null;
 let fileDialogActive = false;
+let desktopUpdater = null;
 
 app.setName(APP_NAME);
 app.setAppUserModelId('local.deadlock.roulette');
@@ -80,7 +83,29 @@ function toggleFullscreen() {
   return fullscreen;
 }
 
+function getDesktopUpdater() {
+  if (!desktopUpdater) desktopUpdater = createDesktopUpdater({
+    version: app.getVersion(), isPackaged: app.isPackaged === true,
+    userData: app.getPath('userData'), env: process.env || {}, platform: process.platform,
+    onState: state => {
+      if (mainWindow && !mainWindow.isDestroyed?.()) mainWindow.webContents.send?.('desktop:update-state', state);
+    },
+    quit: () => { session.defaultSession.flushStorageData(); app.quit(); },
+  });
+  return desktopUpdater;
+}
+
 function registerIPC() {
+  ipcMain.handle('desktop:update-state', event => { assertTrustedSender(event); return getDesktopUpdater().getState(); });
+  ipcMain.handle('desktop:check-updates', event => { assertTrustedSender(event); return getDesktopUpdater().checkForUpdates(); });
+  ipcMain.handle('desktop:install-update', event => { assertTrustedSender(event); return getDesktopUpdater().installUpdate(); });
+  ipcMain.handle('desktop:open-link', (event, kind) => {
+    assertTrustedSender(event);
+    const links = new Map([['github', PROJECT_URL], ['web', WEB_URL], ['releases', RELEASES_URL]]);
+    if (typeof kind !== 'string' || !links.has(kind)) throw new Error('Unknown project link.');
+    return shell.openExternal(links.get(kind));
+  });
+  ipcMain.handle('desktop:copy-app-link', event => { assertTrustedSender(event); clipboard.writeText(WEB_URL); return WEB_URL; });
   ipcMain.handle('desktop:set-zoom', (event, value) => {
     assertTrustedSender(event);
     if (typeof value !== 'number' || !Number.isFinite(value)) {
@@ -183,7 +208,10 @@ function createWindow() {
     },
   });
   if (SMOKE_TEST) mainWindow.webContents.setAudioMuted(true);
-  mainWindow.once('ready-to-show', () => { if (!SMOKE_TEST) mainWindow.show(); });
+  mainWindow.once('ready-to-show', () => {
+    if (!SMOKE_TEST) mainWindow.show();
+    getDesktopUpdater().markHealthy().catch(() => {});
+  });
   mainWindow.on('closed', () => { mainWindow = null; });
   mainWindow.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
   mainWindow.webContents.on('will-navigate', (event, url) => {
@@ -230,4 +258,5 @@ if (!app.requestSingleInstanceLock()) {
     });
   });
   app.on('window-all-closed', () => app.quit());
+  app.on('before-quit', () => desktopUpdater?.dispose());
 }

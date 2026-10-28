@@ -1,8 +1,8 @@
 {
   "name": "deadlock-roulette-private",
   "productName": "Deadlock Roulette",
-  "version": "1.9.0",
-  "description": "Personal offline item roulette for Deadlock",
+  "version": "1.10.0",
+  "description": "Deadlock item roulette and hero build randomizer for Windows and the browser",
   "author": "Deadlock Roulette",
   "private": true,
   "type": "module",
@@ -12,7 +12,8 @@
     "test": "node --test",
     "build": "electron-builder --win portable --x64 --publish never",
     "build:unpacked": "electron-builder --win --x64 --dir --publish never",
-    "sync-items": "node scripts/sync-items.mjs"
+    "sync-items": "node scripts/sync-items.mjs",
+    "build:web": "node scripts/build-web.mjs"
   },
   "devDependencies": {
     "electron": "44.7.2",
@@ -33,10 +34,19 @@
       "src/**/*",
       "assets/**/*",
       "package.json",
-      "!assets/**/*-raw.json"
+      "!assets/**/*-raw.json",
+      "desktop-updater.cjs",
+      "update-core.cjs"
     ],
     "win": {
-      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
       "icon": "assets/app.ico",
       "signAndEditExecutable": false,
       "artifactName": "Deadlock Roulette.exe"

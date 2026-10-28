@@ -523,7 +523,7 @@ export class AudioManager {
     } catch { this.stopHeroVoice(); return false; }
   }
 
-  /** Quiet material accents are generated offline; no media files or requests. */
+  /** Quiet material accents are generated locally; no media files or requests. */
   ui(kind = 'tap') {
     if (!this.uiSoundEnabled || this.uiVolume <= 0) return false;
     this.unlock();

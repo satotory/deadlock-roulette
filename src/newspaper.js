@@ -1,5 +1,6 @@
 import { createNewspaperArticle, escapeNewspaperHTML, newspaperAssetPath } from './newspaper-core.js';
 import { FATE_PRESENTATION, fateBadgeHTML, drawFateBadges, prepareFateBadgeImages } from './fate-presentation.js';
+import { exportPNG } from './file-export.js';
 
 const INK = '#28251f', MUTED = '#716352', PAPER = '#e9dec4', RED = '#803b32';
 const imageCache = new Map();
@@ -272,7 +273,7 @@ export async function renderNewspaperPNG(options, preparedArticle) {
 }
 
 let dialog, generation = 0;
-/** Opens a read-only newspaper; export uses the application's existing trusted PNG bridge. */
+/** Opens a read-only newspaper; export uses the native save dialog or a browser download. */
 export async function showBuildNewspaper(options) {
   const article = createNewspaperArticle(options), copy = UI[article.language], token = ++generation;
   if (!dialog) {
@@ -297,7 +298,7 @@ export async function showBuildNewspaper(options) {
     save.onclick = async () => {
       save.disabled = true;
       try {
-        const name = await window.deadlock.exportPNG(dataURL, `gazette-${article.heroName}-${article.issue}`, article.language);
+        const name = await exportPNG(dataURL, `gazette-${article.heroName}-${article.issue}`, article.language);
         if (token === generation && name) status.textContent = `${copy.saved}: ${name}`;
       } catch { if (token === generation) status.textContent = copy.saveFailed; }
       finally { if (token === generation) save.disabled = false; }

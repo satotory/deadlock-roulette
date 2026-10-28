@@ -13,7 +13,7 @@ const require = createRequire(import.meta.url);
 const asar = require('@electron/asar');
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const archive = path.join(root, 'dist', 'win-unpacked', 'resources', 'app.asar');
-const required = ['main.cjs', 'preload.cjs'];
+const required = ['main.cjs', 'preload.cjs', 'desktop-updater.cjs', 'update-core.cjs'];
 
 async function enumerate(directory) {
   for (const entry of await fs.readdir(path.join(root, directory), { withFileTypes: true })) {
