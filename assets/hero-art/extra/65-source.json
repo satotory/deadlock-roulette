@@ -1,0 +1,12 @@
+{
+  "id": "65",
+  "hero": "Venator",
+  "page": "https://deadlocklabs.gg/heroes/venator/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Venator.webp",
+  "file": "assets/hero-art/extra/65.webp",
+  "width": 1639,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 196216,
+  "sha256": "844a6b1cbd4a6165c049d9671b88d6581d260560ea718931bdfcbe2ac983d5d6"
+}

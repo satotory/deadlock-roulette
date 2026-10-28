@@ -1,0 +1,12 @@
+{
+  "id": "15",
+  "hero": "Bebop",
+  "page": "https://deadlocklabs.gg/heroes/bebop/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Bebop.webp",
+  "file": "assets/hero-art/extra/15.webp",
+  "width": 1632,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 182306,
+  "sha256": "eb34633d997b93c81444d76bfa1b525f1af0607581852407a7abe30e39a1ca58"
+}

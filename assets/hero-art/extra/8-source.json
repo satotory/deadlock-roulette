@@ -1,0 +1,12 @@
+{
+  "id": "8",
+  "hero": "McGinnis",
+  "page": "https://deadlocklabs.gg/heroes/mcginnis/",
+  "source": "https://deadlocklabs.gg/heroes/renders/McGinnis.webp",
+  "file": "assets/hero-art/extra/8.webp",
+  "width": 1642,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 231402,
+  "sha256": "c7b62d050a5531fb1f7888fe5415c6bca51f77af6f5243561a3fe7eeb6a7d167"
+}

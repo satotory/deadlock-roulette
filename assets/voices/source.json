@@ -1,0 +1,416 @@
+{
+  "copyright": "Valve Corporation",
+  "description": "Unmodified original hero-selection/intro lines, extracted from the local Steam installation for this personal app. Each source archive CRC32 was verified.",
+  "sources": [
+    {
+      "id": "6",
+      "hero": "Abrams",
+      "resource": "sounds/vo/atlas/atlas_select_01.vsnd_c",
+      "archive": "pak01_285.vpk",
+      "file": "6.mp3",
+      "duration": 2.8734693877551005,
+      "bytes": 44097,
+      "sha256": "eafafd573471f9539ffe10cd4b24c79c9875bfd619a64d8d346a73aaf99c6110"
+    },
+    {
+      "id": "77",
+      "hero": "Apollo",
+      "resource": "sounds/vo/fencer/fencer_select_02.vsnd_c",
+      "archive": "pak01_177.vpk",
+      "file": "77.mp3",
+      "duration": 5.6685714285714415,
+      "bytes": 83199,
+      "sha256": "63bd2a9127f3863069558f020bb3a526352828ff527265419938a8507dd33396"
+    },
+    {
+      "id": "15",
+      "hero": "Bebop",
+      "resource": "sounds/vo/bebop/bebop_select_01.vsnd_c",
+      "archive": "pak01_250.vpk",
+      "file": "15.mp3",
+      "duration": 3.526530612244893,
+      "bytes": 53896,
+      "sha256": "7fb58bfc6fb3dbda3b879d860971009f8cba0f9e78d8af7366e319cbea8ceea4"
+    },
+    {
+      "id": "72",
+      "hero": "Billy",
+      "resource": "sounds/vo/punkgoat/punkgoat_select_01.vsnd_c",
+      "archive": "pak01_107.vpk",
+      "file": "72.mp3",
+      "duration": 3.709387755102035,
+      "bytes": 53894,
+      "sha256": "3170e66ba6fb87b8522a2adb015a9d6c6b5c20e8fe055ea7a8bac847b4f63b1e"
+    },
+    {
+      "id": "16",
+      "hero": "Calico",
+      "resource": "sounds/vo/nano/nano_select_01.vsnd_c",
+      "archive": "pak01_254.vpk",
+      "file": "16.mp3",
+      "duration": 4.466938775510203,
+      "bytes": 68491,
+      "sha256": "73d5fba667a0efece9459c07146c59751ad3def8ef8cc1b49785845731d32902"
+    },
+    {
+      "id": "81",
+      "hero": "Celeste",
+      "resource": "sounds/vo/unicorn/unicorn_select_01.vsnd_c",
+      "archive": "pak01_286.vpk",
+      "file": "81.mp3",
+      "duration": 5.120000000000006,
+      "bytes": 80793,
+      "sha256": "b90ad255f527d4e2130975edcbf5bd69f0ee3fc4a1dc6ac64f6116f60a0d22df"
+    },
+    {
+      "id": "78",
+      "hero": "Deadman Danny",
+      "resource": "sounds/vo/deadpack/deadpack_select_01.vsnd_c",
+      "archive": "pak01_318.vpk",
+      "file": "78.mp3",
+      "duration": 2.298775510204083,
+      "bytes": 34714,
+      "sha256": "8f6f56abf7b08b274dd20611e0df7e3128daf7afc92da57c8a6f1c317e3e492b"
+    },
+    {
+      "id": "64",
+      "hero": "Drifter",
+      "resource": "sounds/vo/drifter/drifter_select_02.vsnd_c",
+      "archive": "pak01_214.vpk",
+      "file": "64.mp3",
+      "duration": 2.664489795918367,
+      "bytes": 41178,
+      "sha256": "47cf0f1436cee7cb793c54dd36d71b8c1bcb7c9640b1c8b33e52bb67df9b1848"
+    },
+    {
+      "id": "11",
+      "hero": "Dynamo",
+      "resource": "sounds/vo/dynamo/dynamo_select_01.vsnd_c",
+      "archive": "pak01_307.vpk",
+      "file": "11.mp3",
+      "duration": 1.0187755102040812,
+      "bytes": 15429,
+      "sha256": "ba087913f94ab0a94aa857132ac30ac9a5a2f699ab109c8c1042f2b543aa55b5"
+    },
+    {
+      "id": "76",
+      "hero": "Graves",
+      "resource": "sounds/vo/necro/necro_select_03.vsnd_c",
+      "archive": "pak01_048.vpk",
+      "file": "76.mp3",
+      "duration": 2.5077551020408166,
+      "bytes": 37737,
+      "sha256": "0425a8b65979684d0e16486d49114d7297a31610e2674b50bcf0439f43017e51"
+    },
+    {
+      "id": "17",
+      "hero": "Grey Talon",
+      "resource": "sounds/vo/orion/orion_select_01.vsnd_c",
+      "archive": "pak01_200.vpk",
+      "file": "17.mp3",
+      "duration": 1.6979591836734713,
+      "bytes": 25853,
+      "sha256": "b4cf826a6502813d75a0a609ab461a429991173851b7bfb12d0a80f216cd0c83"
+    },
+    {
+      "id": "13",
+      "hero": "Haze",
+      "resource": "sounds/vo/haze/haze_select_01.vsnd_c",
+      "archive": "pak01_294.vpk",
+      "file": "13.mp3",
+      "duration": 2.481632653061225,
+      "bytes": 38572,
+      "sha256": "38d20082a70fc03f9afd94795fbeca4385033e37e0a9a8306c3285e07cb7bbd4"
+    },
+    {
+      "id": "14",
+      "hero": "Holliday",
+      "resource": "sounds/vo/astro/astro_select_01.vsnd_c",
+      "archive": "pak01_273.vpk",
+      "file": "14.mp3",
+      "duration": 2.0114285714285742,
+      "bytes": 30544,
+      "sha256": "bbf3b54d660c94f2d53fe0a429713222d3588f32fe49e71eb931b3c4c8f5fcf1"
+    },
+    {
+      "id": "1",
+      "hero": "Infernus",
+      "resource": "sounds/vo/inferno/inferno_select_01.vsnd_c",
+      "archive": "pak01_183.vpk",
+      "file": "1.mp3",
+      "duration": 1.7502040816326552,
+      "bytes": 25331,
+      "sha256": "b24d49a6cdc60a42e3347ff3198473b7e7086bc50493592c21a13cbe0f671f5b"
+    },
+    {
+      "id": "20",
+      "hero": "Ivy",
+      "resource": "sounds/vo/tengu/tengu_select_01.vsnd_c",
+      "archive": "pak01_301.vpk",
+      "file": "20.mp3",
+      "duration": 2.298775510204083,
+      "bytes": 34401,
+      "sha256": "13253d46927489793c291ada701491ffd57fba7c9345c3fdb3eaa14295f36d4b"
+    },
+    {
+      "id": "12",
+      "hero": "Kelvin",
+      "resource": "sounds/vo/kelvin/kelvin_select_01.vsnd_c",
+      "archive": "pak01_228.vpk",
+      "file": "12.mp3",
+      "duration": 2.1681632653061245,
+      "bytes": 33881,
+      "sha256": "03b969cc649a6452a1cf54e81449252e82f159720c9dda1ec87418728bc3d0ca"
+    },
+    {
+      "id": "4",
+      "hero": "Lady Geist",
+      "resource": "sounds/vo/ghost/ghost_select_01.vsnd_c",
+      "archive": "pak01_191.vpk",
+      "file": "4.mp3",
+      "duration": 1.5934693877551036,
+      "bytes": 23246,
+      "sha256": "cd1540719b1a49d4b4b9e8f92fb1ca4ac8022d6dac98c4b914c93da9433c5e05"
+    },
+    {
+      "id": "31",
+      "hero": "Lash",
+      "resource": "sounds/vo/lash/lash_select_01.vsnd_c",
+      "archive": "pak01_273.vpk",
+      "file": "31.mp3",
+      "duration": 4.649795918367348,
+      "bytes": 66714,
+      "sha256": "656ef677b535b3f17ddafd5566c5e8bd6bd914e322a94853e28ef3c89ef429b9"
+    },
+    {
+      "id": "8",
+      "hero": "McGinnis",
+      "resource": "sounds/vo/forge/forge_select_01.vsnd_c",
+      "archive": "pak01_281.vpk",
+      "file": "8.mp3",
+      "duration": 0.8620408163265302,
+      "bytes": 13344,
+      "sha256": "82e21e03ff2c8aa2968920950ed5a503f78e818a9a7b0298d74d05bd75ae11d0"
+    },
+    {
+      "id": "63",
+      "hero": "Mina",
+      "resource": "sounds/vo/vampirebat/vampirebat_select_01.vsnd_c",
+      "archive": "pak01_214.vpk",
+      "file": "63.mp3",
+      "duration": 3.5004081632653015,
+      "bytes": 53061,
+      "sha256": "29091115b235194421d37ddd008471615539249fb2629c1160c42d035b4eef08"
+    },
+    {
+      "id": "52",
+      "hero": "Mirage",
+      "resource": "sounds/vo/mirage/mirage_select_01.vsnd_c",
+      "archive": "pak01_195.vpk",
+      "file": "52.mp3",
+      "duration": 1.5934693877551036,
+      "bytes": 24082,
+      "sha256": "3ab68fddd60fa8b1dfc78d846824ee6ad0613550147508802c27677afdfefb50"
+    },
+    {
+      "id": "18",
+      "hero": "Mo & Krill",
+      "resource": "sounds/vo/krill/krill_select_01.vsnd_c",
+      "archive": "pak01_273.vpk",
+      "file": "18.mp3",
+      "duration": 3.4742857142857098,
+      "bytes": 55569,
+      "sha256": "a773c7bb91d63e2258f3e11033a1ac951dbf1b9b07f3d53e6d08364bef0a3e34"
+    },
+    {
+      "id": "67",
+      "hero": "Paige",
+      "resource": "sounds/vo/bookworm/bookworm_select_01.vsnd_c",
+      "archive": "pak01_218.vpk",
+      "file": "67.mp3",
+      "duration": 3.6048979591836683,
+      "bytes": 54939,
+      "sha256": "6ef296e52a111f0769f88bcbbf588131b205935ef5f063c8a3210a4733cfcc6c"
+    },
+    {
+      "id": "10",
+      "hero": "Paradox",
+      "resource": "sounds/vo/chrono/chrono_select_01.vsnd_c",
+      "archive": "pak01_307.vpk",
+      "file": "10.mp3",
+      "duration": 4.048979591836728,
+      "bytes": 61297,
+      "sha256": "345ac1380df8c830d6b53408c3494de880720f86bc3feeec7522d8d9aae28946"
+    },
+    {
+      "id": "50",
+      "hero": "Pocket",
+      "resource": "sounds/vo/synth/synth_select_01.vsnd_c",
+      "archive": "pak01_304.vpk",
+      "file": "50.mp3",
+      "duration": 1.3061224489795924,
+      "bytes": 18346,
+      "sha256": "1dd84a56c70ac4a710c5a2495b29dd611d96bfa25e90f5574d80f16af88ad294"
+    },
+    {
+      "id": "84",
+      "hero": "Rat King",
+      "resource": "sounds/vo/ratking/ratking_select_01.vsnd_c",
+      "archive": "pak01_289.vpk",
+      "file": "84.mp3",
+      "duration": 5.799183673469402,
+      "bytes": 88301,
+      "sha256": "4f166ffec1d5fcf39d7901120ec5c9c253f8c18fb664f3378613ec8ce92e3ddf"
+    },
+    {
+      "id": "79",
+      "hero": "Rem",
+      "resource": "sounds/vo/familiar/familiar_select_01.vsnd_c",
+      "archive": "pak01_318.vpk",
+      "file": "79.mp3",
+      "duration": 2.821224489795917,
+      "bytes": 44933,
+      "sha256": "9ea30fdfc69a02ef64cd15f54ccc9734249130c3a34b5291cf5be5ff4cb9c672"
+    },
+    {
+      "id": "2",
+      "hero": "Seven",
+      "resource": "sounds/vo/gigawatt/gigawatt_select_01.vsnd_c",
+      "archive": "pak01_222.vpk",
+      "file": "2.mp3",
+      "duration": 1.828571428571431,
+      "bytes": 29401,
+      "sha256": "774b77d9cf436baa2481b0cb5fb321bae4e6ffb7c97ce53b0052d76a8878ce2b"
+    },
+    {
+      "id": "19",
+      "hero": "Shiv",
+      "resource": "sounds/vo/shiv/shiv_select_01.vsnd_c",
+      "archive": "pak01_308.vpk",
+      "file": "19.mp3",
+      "duration": 1.9330612244897987,
+      "bytes": 28667,
+      "sha256": "e467f6723281b62db0de407694a04dfeace35b61b6f0beb42c83e17ef9d13b50"
+    },
+    {
+      "id": "80",
+      "hero": "Silver",
+      "resource": "sounds/vo/werewolf/werewolf_select_02.vsnd_c",
+      "archive": "pak01_197.vpk",
+      "file": "80.mp3",
+      "duration": 3.526530612244893,
+      "bytes": 52331,
+      "sha256": "dc2974296a31fb25dd17fee6ee7a5999b82590a533fee1d6aa2ec390e65c1e44"
+    },
+    {
+      "id": "60",
+      "hero": "Sinclair",
+      "resource": "sounds/vo/magician/magician_henry_select_01.vsnd_c",
+      "archive": "pak01_305.vpk",
+      "file": "60.mp3",
+      "duration": 1.6718367346938794,
+      "bytes": 26689,
+      "sha256": "d32962f50facb28bb01fd2a4b596fc3677fcb10e559949ecdf6bfff6220114c2"
+    },
+    {
+      "id": "85",
+      "hero": "Solomon",
+      "resource": "sounds/vo/chessmaster/chessmaster_select_03.vsnd_c",
+      "archive": "pak01_225.vpk",
+      "file": "85.mp3",
+      "duration": 3.3175510204081595,
+      "bytes": 51186,
+      "sha256": "6aaf46f9118f554e73faf081e66552ec260194ff053f221cb3fa2900c37056b9"
+    },
+    {
+      "id": "69",
+      "hero": "The Doorman",
+      "resource": "sounds/vo/doorman/doorman_select_01.vsnd_c",
+      "archive": "pak01_270.vpk",
+      "file": "69.mp3",
+      "duration": 1.6195918367346955,
+      "bytes": 22830,
+      "sha256": "420ffa0db092116e3c4f6d8d0e8f8450eb5b623e058c3ccb0fc57064bfa4692d"
+    },
+    {
+      "id": "65",
+      "hero": "Venator",
+      "resource": "sounds/vo/priest/priest_select_01.vsnd_c",
+      "archive": "pak01_274.vpk",
+      "file": "65.mp3",
+      "duration": 3.6048979591836683,
+      "bytes": 49721,
+      "sha256": "e7dfacc57ad9467e89a86bf74fcfc7bf9ab5c5f8fe6f776c0b6626858410a83e"
+    },
+    {
+      "id": "66",
+      "hero": "Victor",
+      "resource": "sounds/vo/frank/frank_select_01.vsnd_c",
+      "archive": "pak01_274.vpk",
+      "file": "66.mp3",
+      "duration": 2.1681632653061245,
+      "bytes": 33674,
+      "sha256": "2749de1086877d2356024f17c479413bbd88d5b613f48237da94a33d05dfd41d"
+    },
+    {
+      "id": "3",
+      "hero": "Vindicta",
+      "resource": "sounds/vo/hornet/hornet_select_01.vsnd_c",
+      "archive": "pak01_214.vpk",
+      "file": "3.mp3",
+      "duration": 2.9779591836734673,
+      "bytes": 47017,
+      "sha256": "730731cba6dca5983562ba7987caaba0406617b2782b1ddeb25391a640174a54"
+    },
+    {
+      "id": "35",
+      "hero": "Viscous",
+      "resource": "sounds/vo/viscous/viscous_select_01.vsnd_c",
+      "archive": "pak01_171.vpk",
+      "file": "35.mp3",
+      "duration": 2.220408163265308,
+      "bytes": 33255,
+      "sha256": "c695140fc98ea5de90770f6a10b9e103020c10283d40121d694b3816b791a3a4"
+    },
+    {
+      "id": "58",
+      "hero": "Vyper",
+      "resource": "sounds/vo/viper/viper_select_01.vsnd_c",
+      "archive": "pak01_171.vpk",
+      "file": "58.mp3",
+      "duration": 3.6832653061224434,
+      "bytes": 56919,
+      "sha256": "95f5ed984861a0a767a3d90a5fcd8480361fb8c5bb3308e5b4e35271accd1d29"
+    },
+    {
+      "id": "25",
+      "hero": "Warden",
+      "resource": "sounds/vo/warden/warden_select_01.vsnd_c",
+      "archive": "pak01_226.vpk",
+      "file": "25.mp3",
+      "duration": 3.735510204081627,
+      "bytes": 54311,
+      "sha256": "16615abe69bba80d35c7211e440d8475a6f7b2800e054d687832dd7f513a9962"
+    },
+    {
+      "id": "7",
+      "hero": "Wraith",
+      "resource": "sounds/vo/wraith/wraith_select_01.vsnd_c",
+      "archive": "pak01_131.vpk",
+      "file": "7.mp3",
+      "duration": 3.735510204081627,
+      "bytes": 59009,
+      "sha256": "56cdf87e9ed452903c7ffc0a21b16facb20f832a1ac915b2cf37e78fb1ab0204"
+    },
+    {
+      "id": "27",
+      "hero": "Yamato",
+      "resource": "sounds/vo/yamato/yamato_select_01.vsnd_c",
+      "archive": "pak01_195.vpk",
+      "file": "27.mp3",
+      "duration": 1.3061224489795924,
+      "bytes": 18659,
+      "sha256": "0cb02c9d970d660f885de3db0a195190fbdc9c737dd9a465650c03588d23599c"
+    }
+  ]
+}

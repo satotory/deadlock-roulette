@@ -1,0 +1,12 @@
+{
+  "id": "27",
+  "hero": "Yamato",
+  "page": "https://deadlocklabs.gg/heroes/yamato/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Yamato.webp",
+  "file": "assets/hero-art/extra/27.webp",
+  "width": 1555,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 124744,
+  "sha256": "f64fe72ca047f5fcddda1388e8223d35fe9c3817b89197f829091fc1703c3153"
+}

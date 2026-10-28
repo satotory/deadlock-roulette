@@ -1,0 +1,12 @@
+{
+  "id": "14",
+  "hero": "Holliday",
+  "page": "https://deadlocklabs.gg/heroes/holliday/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Holliday.webp",
+  "file": "assets/hero-art/extra/14.webp",
+  "width": 1112,
+  "height": 1024,
+  "alpha": true,
+  "bytes": 112300,
+  "sha256": "fec78625f1cd2af141b6968f579493ef4c136d5ad81dbcf40c3b3a32066999c6"
+}

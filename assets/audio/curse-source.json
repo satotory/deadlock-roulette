@@ -1,0 +1,12 @@
+{
+  "copyright": "Valve Corporation",
+  "description": "Original Cursed Relic cast, unmodified MPEG stream from the user local game installation. VPK CRC32 verified; the app curse is a separate custom rule.",
+  "soundeventResource": "soundevents/mods/tech.vsndevts_c",
+  "soundevent": "Mods.Tech.Glitch.Cast",
+  "resource": "sounds/mods/tech/glitch/curse_cast.vsnd_c",
+  "archive": "pak01_293.vpk",
+  "file": "assets/audio/curse.mp3",
+  "duration": 2.425691604614258,
+  "bytes": 67841,
+  "sha256": "2c346767c535c3605fb1738678b4e8bb2a3af9c8b8da31f780e1de25aa3769b8"
+}

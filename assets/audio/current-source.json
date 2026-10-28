@@ -1,0 +1,165 @@
+{
+  "copyright": "Valve Corporation",
+  "description": "Original unmodified MPEG audio from the current local Deadlock installation for this personal offline app. VPK CRC32 verified. Soundevent paths decoded from the game resource, not guessed from filenames.",
+  "soundeventResources": [
+    "soundevents/music.vsndevts_c",
+    "soundevents/ui.vsndevts_c"
+  ],
+  "sources": [
+    {
+      "kind": "music",
+      "id": "title",
+      "soundevent": "Music.Title",
+      "field": "vsnd_files",
+      "duration": 170,
+      "resource": "sounds/music/music_title_155bpm.vsnd_c",
+      "archive": "pak01_217.vpk",
+      "file": "assets/audio/music/title.mp3",
+      "bytes": 5157354,
+      "sha256": "a8605bd8b42ba76c85fc1761ccc3253bd5c1d49e0a45efafeb70f33c56d1f132"
+    },
+    {
+      "kind": "music",
+      "id": "hideout",
+      "soundevent": "Music.Hideout",
+      "field": "vsnd_files_play_base",
+      "duration": 43.35485076904297,
+      "resource": "sounds/music/music_hideout_play_base_lp_155bpm.vsnd_c",
+      "archive": "pak01_104.vpk",
+      "file": "assets/audio/music/hideout.mp3",
+      "bytes": 1493699,
+      "sha256": "379e26192d8f9e617865fa919487b28e5ca685c3dc87da46287f6c9a66e6d01c"
+    },
+    {
+      "kind": "music",
+      "id": "brawl",
+      "soundevent": "Music.Brawl.Draft",
+      "field": "vsnd_files_draft",
+      "duration": 62.52632522583008,
+      "resource": "sounds/music/brawl/music_brawl_draft_95bpm.vsnd_c",
+      "archive": "pak01_214.vpk",
+      "file": "assets/audio/music/brawl.mp3",
+      "bytes": 2017359,
+      "sha256": "31be043ca5e99700e3fefccdb886f4c8d6a9e274cc3d4747c677578348b0cb4b"
+    },
+    {
+      "kind": "music",
+      "id": "search",
+      "soundevent": "Music.Hideout.Search",
+      "field": "vsnd_files",
+      "duration": 75.0968017578125,
+      "resource": "sounds/music/music_hideout_search_155bpm.vsnd_c",
+      "archive": "pak01_104.vpk",
+      "file": "assets/audio/music/search.mp3",
+      "bytes": 2304861,
+      "sha256": "fd03ccdf511a0d7d43348b1ca9a43359043c7e881a3461161c4ff74af7fbcba2"
+    },
+    {
+      "kind": "music",
+      "id": "postgame",
+      "soundevent": "Music.PostGame",
+      "field": "vsnd_files",
+      "duration": 44,
+      "resource": "sounds/music/music_postgame_155bpm.vsnd_c",
+      "archive": "pak01_291.vpk",
+      "file": "assets/audio/music/postgame.mp3",
+      "bytes": 1453925,
+      "sha256": "6a8ea1fc721c747a843eeb8c61a2695117e251d484a34dbfb50f0e82d7f0a557"
+    },
+    {
+      "kind": "music",
+      "id": "classic",
+      "soundevent": "Music.MainMenu",
+      "field": "vsnd_files",
+      "duration": 247.0264434814453,
+      "resource": "sounds/music/music_menu_lp.vsnd_c",
+      "archive": "pak01_280.vpk",
+      "file": "assets/audio/menu.mp3",
+      "bytes": 5765383,
+      "sha256": "d8b0a429809556fc4811db8c58a116e1bae6deae6d563fd9bbaa638d6dcb8da7"
+    },
+    {
+      "kind": "item-landing-base",
+      "soundevent": "Base.UI.ItemDraft.Appear",
+      "field": "track_2.track_vsnd_files",
+      "resource": "sounds/ui/ui_draft_item_appear_base_01.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/shot-1.mp3",
+      "bytes": 51361,
+      "sha256": "882973d9e883d4c265f2d919c135fe0c002744b32ef5c1a69d5447045dbd1090"
+    },
+    {
+      "kind": "item-landing-base",
+      "soundevent": "Base.UI.ItemDraft.Appear",
+      "field": "track_2.track_vsnd_files",
+      "resource": "sounds/ui/ui_draft_item_appear_base_02.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/shot-2.mp3",
+      "bytes": 49689,
+      "sha256": "cfcfd25e5bf04bebd31bffe8f03b6c0656c04d19a4614d765f3e7175b457abdf"
+    },
+    {
+      "kind": "item-landing-base",
+      "soundevent": "Base.UI.ItemDraft.Appear",
+      "field": "track_2.track_vsnd_files",
+      "resource": "sounds/ui/ui_draft_item_appear_base_03.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/shot-3.mp3",
+      "bytes": 55325,
+      "sha256": "d8812cef9fa4751008da4a4442f6306d02a9c4a4a89cca23e171e6818b2489b6"
+    },
+    {
+      "kind": "item-landing-base",
+      "soundevent": "Base.UI.ItemDraft.Appear",
+      "field": "track_2.track_vsnd_files",
+      "resource": "sounds/ui/ui_draft_item_appear_base_04.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/shot-4.mp3",
+      "bytes": 54491,
+      "sha256": "6d0454ef26eb02d83edba1222ba0beff395904924ef06c50437e18809f1de667"
+    },
+    {
+      "kind": "item-landing-base",
+      "soundevent": "Base.UI.ItemDraft.Appear",
+      "field": "track_2.track_vsnd_files",
+      "resource": "sounds/ui/ui_draft_item_appear_base_05.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/shot-5.mp3",
+      "bytes": 42591,
+      "sha256": "de11b7b83d5ba96f4d5a3829004c4b650e4daac16edb05fe761d0d06a110b636"
+    },
+    {
+      "kind": "item-landing-category",
+      "category": "weapon",
+      "soundevent": "UI.ItemDraft.Appear.Weapon",
+      "duration": 2.6988208293914795,
+      "resource": "sounds/ui/ui_draft_item_appear_weapon.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/weapon.mp3",
+      "bytes": 66375,
+      "sha256": "23c7572d7d78f1391889ab217850b4aca7ed9132d22ed593d2c19d9e8b06f20e"
+    },
+    {
+      "kind": "item-landing-category",
+      "category": "vitality",
+      "soundevent": "UI.ItemDraft.Appear.Vitality",
+      "duration": 3.040884256362915,
+      "resource": "sounds/ui/ui_draft_item_appear_vitality.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/vitality.mp3",
+      "bytes": 63766,
+      "sha256": "768c6d598ae97c9f3c2b269d6c3d9d982212eb04ca635656a2f71680a2c8bfb1"
+    },
+    {
+      "kind": "item-landing-category",
+      "category": "spirit",
+      "soundevent": "UI.ItemDraft.Appear.Spirit",
+      "duration": 3.2436962127685547,
+      "resource": "sounds/ui/ui_draft_item_appear_spirit.vsnd_c",
+      "archive": "pak01_219.vpk",
+      "file": "assets/audio/street-brawl/spirit.mp3",
+      "bytes": 98535,
+      "sha256": "3335205a4cac86b402a948f34295aed1627561eee02b6488599fbc3bef662e0e"
+    }
+  ]
+}

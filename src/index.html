@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="color-scheme" content="dark">
+  <title>Deadlock Roulette — Лавка случая</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./build-mode.css">
+  <link rel="stylesheet" href="./newspaper.css">
+  <link rel="stylesheet" href="./fate-effects.css" data-fate-effects>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" data-i18n-label="brandLabel" aria-label="Deadlock Roulette, главная">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 43 14v20L24 45 5 34V14Z" stroke="currentColor"/><path d="M9 24s6-10 15-10 15 10 15 10-6 10-15 10S9 24 9 24Z" stroke="currentColor"/><circle cx="24" cy="24" r="6" fill="currentColor"/><path d="M24 7v5m0 24v5M7 24h5m24 0h5" stroke="currentColor"/></svg>
+        <span><strong>DEADLOCK<span class="brand-divider">/</span>ROULETTE</strong><small data-i18n="brand">ЛАВКА СЛУЧАЯ</small></span>
+      </a>
+      <nav class="header-actions" data-i18n-label="settings" aria-label="Настройки приложения">
+        <span class="offline-badge"><i></i><span data-i18n="offline">РАБОТАЕТ ОФЛАЙН</span></span>
+        <div class="zoom-control" role="group" data-i18n-label="zoom" aria-label="Масштаб интерфейса">
+          <button id="zoom-out-button" data-i18n-title="zoomOutTitle" data-i18n-label="zoomOut" title="Уменьшить · Ctrl −" aria-label="Уменьшить масштаб">−</button>
+          <select id="zoom-select" data-i18n-title="zoomTitle" data-i18n-label="zoom" title="Масштаб интерфейса · Ctrl + / Ctrl − / Ctrl 0" aria-label="Масштаб интерфейса">
+            <option value="0.75">75%</option><option value="1" selected>100%</option><option value="1.1">110%</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="1.75">175%</option><option value="2">200%</option><option value="2.5">250%</option>
+          </select>
+          <button id="zoom-in-button" data-i18n-title="zoomInTitle" data-i18n-label="zoomIn" title="Увеличить · Ctrl +" aria-label="Увеличить масштаб">+</button>
+        </div>
+        <button class="icon-button" id="music-button" title="Выключить музыку главного меню" aria-label="Выключить музыку главного меню" aria-pressed="true">♪</button>
+        <button class="icon-button" id="sound-button" title="Включить щелчки колеса" aria-label="Включить щелчки колеса" aria-pressed="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M11 4 6 8H3v8h3l5 4V4Z" stroke-linejoin="round"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" stroke-linecap="round"/></svg></button>
+        <details class="audio-settings" id="audio-settings">
+          <summary class="icon-button" data-i18n-title="audioSettings" data-i18n-label="audioSettings" title="Громкость" aria-label="Громкость"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/><circle cx="8" cy="6" r="2" fill="#19241a"/><circle cx="16" cy="12" r="2" fill="#19241a"/><circle cx="10" cy="18" r="2" fill="#19241a"/></svg></summary>
+          <div class="volume-popover">
+            <div class="volume-heading" data-i18n="audioSettings">Громкость</div>
+            <label class="volume-row" for="music-volume"><span data-i18n="musicVolume">Музыка</span><output id="music-volume-value" for="music-volume">22%</output><input id="music-volume" type="range" min="0" max="100" step="1" value="22" data-i18n-label="musicVolume" aria-label="Громкость музыки"></label>
+            <div class="sound-palette-row"><label for="music-track" data-i18n="musicTrack">Фоновый трек</label><select id="music-track" data-i18n-label="musicTrack" aria-label="Фоновый трек"></select></div>
+            <label class="volume-row" for="sound-volume"><span data-i18n="wheelVolume">Колесо</span><output id="sound-volume-value" for="sound-volume">100%</output><input id="sound-volume" type="range" min="0" max="100" step="1" value="100" data-i18n-label="wheelVolume" aria-label="Громкость колеса"></label>
+            <div class="sound-palette-row"><label for="sound-style" data-i18n="soundStyle">Звук прокрутки</label><select id="sound-style" data-i18n-label="soundStyle" aria-label="Звук прокрутки"><option value="streetbrawl" data-i18n="soundStreetBrawl">Street Brawl · оригинальный выстрел</option><option value="wood" data-i18n="soundWood">Дерево · мягкий стук</option><option value="revolver" data-i18n="soundRevolver">Револьвер · металлический щелчок</option><option value="crystal" data-i18n="soundCrystal">Кристалл · лёгкий звон</option><option value="arcade" data-i18n="soundArcade">Аркада · 8-битный импульс</option><option value="mechanical" data-i18n="soundMechanical">Механика · прежний звук</option></select><button id="sound-preview" class="volume-mute-button" type="button" data-i18n="soundPreview" data-i18n-title="soundPreviewHint" title="Прослушать при текущей громкости колеса">▷ Прослушать</button></div>
+            <label class="volume-row" for="voice-volume"><span data-i18n="voiceVolume">Фразы героев</span><output id="voice-volume-value" for="voice-volume">65%</output><input id="voice-volume" type="range" min="0" max="100" step="1" value="65" data-i18n-label="voiceVolume" aria-label="Громкость фраз героев"></label>
+            <button id="voice-button" class="volume-mute-button" type="button" title="Выключить фразы героев" aria-label="Выключить фразы героев" aria-pressed="true"><span>Выключить фразы героев</span></button>
+            <label class="volume-row" for="ui-volume"><span data-i18n="uiVolume">Звуки интерфейса</span><output id="ui-volume-value" for="ui-volume">35%</output><input id="ui-volume" type="range" min="0" max="100" step="1" value="35" data-i18n-label="uiVolume" aria-label="Громкость звуков интерфейса"></label>
+            <button id="ui-sound-button" class="volume-mute-button" type="button" title="Выключить звуки интерфейса" aria-label="Выключить звуки интерфейса" aria-pressed="true"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M11 4 6 8H3v8h3l5 4V4Z" stroke-linejoin="round"/><path d="m16 8 3 4-3 4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Выключить звуки интерфейса</span></button>
+          </div>
+        </details>
+        <button class="icon-button" id="language-button" title="Switch to English" aria-label="Switch to English">RU</button>
+        <button class="icon-button" id="speed-button" title="Быстрый режим" aria-label="Быстрый режим" aria-pressed="false">↯</button>
+        <button class="icon-button" id="fullscreen-button" data-i18n-title="fullscreenTitle" data-i18n-label="fullscreen" title="Полный экран · F11" aria-label="Полный экран">⛶</button>
+        <button class="icon-button" id="help-button" data-i18n-title="help" data-i18n-label="help" title="Как это работает" aria-label="Как это работает">?</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><div class="eyebrow" data-i18n-html="intro"><span class="tiny-star">✦</span> ТВОЙ БИЛД. ВОЛЯ СЛУЧАЯ.</div><h1 id="page-title" data-i18n-html="headline">Судьба не повторяется<span>.</span></h1></div>
+        <div class="session-meter"><div><span data-i18n="session">В этой сессии</span><strong><b id="drawn-count">0</b><em>/</em><span id="total-count">—</span></strong></div><div class="meter-track"><i id="session-progress"></i></div></div>
+      </section>
+
+      <div class="view-toolbar"><nav class="mode-tabs" data-i18n-label="mode" aria-label="Режим"><button data-mode="roulette" class="active" aria-pressed="true" data-i18n="rouletteMode">Рулетка предметов</button><button data-mode="build" aria-pressed="false" data-i18n="buildMode">Билд на персонажа</button></nav><button class="catalog-toggle" id="catalog-toggle-button" aria-controls="catalog" aria-expanded="true">Скрыть список предметов</button></div>
+      <section id="roulette-mode">
+      <section class="playground" data-i18n-label="roulette" aria-label="Рулетка предметов">
+        <aside class="panel controls">
+          <div class="panel-heading"><h2 data-i18n="rules">Правила случая</h2><span>01</span></div>
+          <div class="field-heading"><b data-i18n="categories">КАТЕГОРИИ</b><span data-i18n="choosePath">Выбери свой путь</span></div>
+          <div id="category-controls" class="category-controls"></div>
+          <div class="divider"></div>
+          <div class="field-heading"><b data-i18n="tiersWeights">ТИРЫ И ВЕСА</b><button class="text-button" id="weights-help" data-i18n="howWeights" data-i18n-title="weightTooltip" title="Чем больше вес, тем выше шанс">Как считать?</button></div>
+          <div id="tier-controls" class="tier-controls"></div>
+          <p class="weight-note" data-i18n-html="weightNote">Вес каждого предмета.<br>Нулевой вес убирает его из розыгрыша.</p>
+          <div class="presets" data-i18n-label="presets" aria-label="Пресеты весов"><button data-preset="classic" class="preset active" data-i18n="classic">Классика</button><button data-preset="equal" class="preset" data-i18n="equal">Поровну</button><button data-preset="luxury" class="preset" data-i18n="luxury">Дорогой вкус</button></div>
+          <details class="advanced"><summary><b data-i18n="categoryWeights">Веса категорий</b><span>＋</span></summary><div id="category-weights"></div></details>
+          <details class="advanced special-rules"><summary><b data-i18n="specialRules">Особые правила</b><span>＋</span></summary><label class="special-rule-label"><span data-i18n="curseChance">Шанс проклятия</span><output id="curse-chance-value">50%</output></label><input id="curse-chance" type="range" min="0" max="100" step="1" value="50" data-i18n-label="curseChance"><p class="weight-note" data-i18n="curseDescription">После проклятия сразу выпадает ещё один предмет с замком. Он не запускает новое проклятие.</p><label class="special-pairs-toggle"><input id="pairs-enabled" type="checkbox" checked><span data-i18n="pairsEnabled">Связки из двух предметов</span></label></details>
+          <div class="pool-status"><span class="status-dot"></span><span><strong id="pool-count">—</strong> <span data-i18n="poolItems">предметов в колесе</span></span></div>
+          <button class="reset-button" id="reset-button"><span>↺</span><b data-i18n="reset">Новая сессия</b></button>
+        </aside>
+
+        <div class="wheel-stage">
+          <div class="stage-caption"><span class="line"></span><span id="ritual-label">РИТУАЛ № 001</span><span class="line"></span></div>
+          <div class="wheel-wrap" id="wheel-wrap">
+            <div class="wheel-halo"></div><div class="wheel-pointer" aria-hidden="true"></div>
+            <canvas id="wheel" width="1100" height="1100" data-i18n-label="wheelDescription" aria-label="Колесо: размер каждого сектора равен шансу предмета"></canvas>
+            <div class="wheel-center"><div class="center-star">✦</div><span data-i18n="trust">ДОВЕРЬСЯ</span><strong data-i18n="chance">случаю</strong><small id="wheel-center-count">— ПРЕДМЕТОВ</small></div>
+            <div class="wheel-empty" id="wheel-empty" hidden><span>✧</span><strong data-i18n="quiet">Здесь пока тихо</strong><p id="empty-reason"></p></div>
+            <div id="wheel-hover-card" class="wheel-hover-card" hidden></div>
+          </div>
+          <div class="wheel-legend"><span class="legend-weapon" data-i18n="weaponUpper">ГАН</span><span class="legend-vitality" data-i18n="vitalityUpper">ХП</span><span class="legend-spirit" data-i18n="spiritUpper">СПИРИТ</span><span class="legend-tip" data-i18n="sectorChance">Сектор = шанс</span></div>
+          <button id="spin-button" class="spin-button" disabled><span>КРУТИТЬ КОЛЕСО</span><b>↗</b></button>
+          <div class="roulette-actions"><button id="reroll-button" data-i18n="reroll" data-i18n-title="rerollHint">Реролл</button><button id="upgrade-button" data-i18n="upgrade" data-i18n-title="upgradeHint">↑ Апгрейд</button><button id="downgrade-button" data-i18n="downgrade" data-i18n-title="downgradeHint">↓ Даунгрейд</button></div>
+          <p class="spin-hint" data-i18n-html="spinHint"><kbd>ПРОБЕЛ</kbd> запускает судьбу <span>·</span> без повторов</p>
+        </div>
+
+        <aside class="outcome-column">
+          <section class="panel result-panel" data-i18n-label="resultLabel" aria-label="Выпавший предмет" aria-live="polite">
+            <div class="panel-heading"><h2 data-i18n="resultHeading">Выбор судьбы</h2><span>02</span></div>
+            <div id="result-content" class="result-content"><div class="empty-result-art">✧<span>?</span></div><h3>Что тебе достанется?</h3><p>Первый поворот —<br>и билд уже не будет прежним.</p></div>
+          </section>
+          <section class="panel history-panel">
+            <div class="panel-heading"><h2 data-i18n="history">Следы случая</h2><span id="history-count">00</span></div>
+            <div id="history-list" class="history-list"><p class="history-empty">Здесь появится твоя история.<br>Каждый предмет — только один раз.</p></div>
+            <div class="history-footer"><button class="text-button" id="export-button" data-i18n="save">↓ Сохранить</button><button class="text-button" id="import-button" data-i18n="load">↑ Загрузить</button></div>
+          </section>
+        </aside>
+      </section>
+
+      </section>
+      <section id="build-mode" hidden></section>
+      <section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading"><div><div class="eyebrow" data-i18n="collection">ВСЯ КОЛЛЕКЦИЯ</div><h2 id="catalog-title"><b data-i18n="catalog">На полках лавки</b> <span id="catalog-count">—</span></h2></div><label class="search-box"><span>⌕</span><input id="search" type="search" data-i18n-placeholder="searchPlaceholder" data-i18n-label="search" placeholder="Найти предмет…" aria-label="Поиск предмета"><kbd>Ctrl K</kbd></label></div>
+        <div class="catalog-toolbar"><div class="catalog-tabs" id="catalog-categories"><button data-category="all" class="active" data-i18n="allItems">Все предметы</button><button data-category="weapon" data-i18n="weapon">Ган</button><button data-category="vitality" data-i18n="vitality">ХП</button><button data-category="spirit" data-i18n="spirit">Спирит</button></div><div class="catalog-selects"><select id="catalog-tier" data-i18n-label="tierFilter" aria-label="Фильтр тира"><option value="all" data-i18n="allTiers">Все тиры</option><option value="1" data-i18n="tier" data-i18n-tier="1">Тир 1</option><option value="2" data-i18n="tier" data-i18n-tier="2">Тир 2</option><option value="3" data-i18n="tier" data-i18n-tier="3">Тир 3</option><option value="4" data-i18n="tier" data-i18n-tier="4">Тир 4</option><option value="5" data-i18n="legendary">Легендарные</option></select><select id="catalog-status" data-i18n-label="statusFilter" aria-label="Фильтр состояния"><option value="all" data-i18n="allStatuses">Все состояния</option><option value="available" data-i18n="available">В колесе</option><option value="drawn" data-i18n="drawn">Уже выпали</option><option value="excluded" data-i18n="excluded">Исключены</option></select></div></div>
+        <div id="catalog-grid" class="catalog-grid" aria-live="polite"></div>
+        <div class="catalog-bottom"><span data-i18n="catalogHint">Нажми на предмет, чтобы изменить его вес или исключить.</span><span id="catalog-source"></span></div>
+      </section>
+    </main>
+    <footer class="app-footer"><span data-i18n-html="footer">DEADLOCK ROULETTE <b>✦</b> ЛИЧНАЯ ЛАВКА</span><span data-i18n="footerMotto">Три пути. Одна судьба.</span></footer>
+  </div>
+  <dialog id="help-dialog" class="modal"><button class="modal-close" data-close data-i18n-label="close" aria-label="Закрыть">×</button><div class="eyebrow" data-i18n="mechanics">МЕХАНИКА СЛУЧАЯ</div><h2 data-i18n-html="helpHeading">Честная рулетка.<br>Твои правила.</h2><p data-i18n="helpWeight"></p><div class="formula" data-i18n="formula"></div><p data-i18n="helpExample"></p><p data-i18n-html="helpRandom"></p><p data-i18n="helpSession"></p><p data-i18n-html="helpZoom"></p><p data-i18n="helpAudio"></p><div class="help-keys" data-i18n-html="helpKeys"></div><p class="small-copy" id="legendary-note"></p></dialog>
+  <dialog id="reset-dialog" class="modal compact-modal"><div class="eyebrow" data-i18n="cleanSlate">ЧИСТЫЙ ЛИСТ</div><h2 data-i18n="resetHeading">Снова довериться судьбе?</h2><p data-i18n="resetCopy"></p><div class="modal-actions"><button class="secondary-button" data-close data-i18n="continueSession">Продолжить сессию</button><button class="primary-button" id="confirm-reset" data-i18n="startOver">Начать заново</button></div></dialog>
+  <dialog id="item-dialog" class="modal compact-modal"><button class="modal-close" data-close data-i18n-label="close" aria-label="Закрыть">×</button><div id="item-detail"></div></dialog>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "id": "50",
+  "hero": "Pocket",
+  "page": "https://deadlocklabs.gg/heroes/pocket/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Pocket.webp",
+  "file": "assets/hero-art/extra/50.webp",
+  "width": 1827,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 181854,
+  "sha256": "9e7ff0e37845542ae9ccd2343ed6cfc52d3008120fcfbb934b3653c7962e57bf"
+}

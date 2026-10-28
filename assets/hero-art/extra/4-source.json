@@ -1,0 +1,12 @@
+{
+  "id": "4",
+  "hero": "Lady Geist",
+  "page": "https://deadlocklabs.gg/heroes/lady-geist/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Lady_Geist.webp",
+  "file": "assets/hero-art/extra/4.webp",
+  "width": 1834,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 182190,
+  "sha256": "626809dd42caad55887dbc388002bc02d00167f82fad06a9eef75cab5dbf6c9d"
+}

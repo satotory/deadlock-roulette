@@ -1,0 +1,12 @@
+{
+  "id": "7",
+  "hero": "Wraith",
+  "page": "https://deadlocklabs.gg/heroes/wraith/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Wraith.webp",
+  "file": "assets/hero-art/extra/7.webp",
+  "width": 1683,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 146346,
+  "sha256": "4f43c082521191db8340582c73264918627ab1ed7b24552c4eb688951a1ef574"
+}

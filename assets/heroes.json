@@ -1,0 +1,2587 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-14T06:08:40.921Z",
+  "source": "https://api.deadlock-api.com/v1/assets/heroes?language=english",
+  "localizationSource": "https://api.deadlock-api.com/v1/assets/heroes?language=russian",
+  "abilitySource": "https://api.deadlock-api.com/v1/assets/items?language=english",
+  "clientVersion": 6779,
+  "gameVersionDate": "2026-10-13T13:33:25",
+  "heroes": [
+    {
+      "id": "6",
+      "name": "Abrams",
+      "nameRu": "Абрамс",
+      "className": "hero_atlas",
+      "portrait": "assets/heroes/6.png",
+      "description": "Abrams has the bulk and sustain to lead from the front, often running into the middle of his foes and watching them scatter. If his enemies waste their fire on him, his backline teammates can lay out damage with impunity.",
+      "descriptionRu": "Сила и выносливость Абрамса позволяют ему сражаться в первых рядах — он часто налетает прямо на врагов, заставляя их бросаться в бегство. Если враги сосредотачиваются на Абрамсе, его союзники на задней линии могут безнаказанно вести по ним огонь.",
+      "abilities": [
+        {
+          "id": "4072270083",
+          "slot": 1,
+          "name": "Siphon Life",
+          "nameRu": "Переливание жизни",
+          "className": "citadel_ability_bull_heal",
+          "icon": "assets/heroes/abilities/4072270083.png",
+          "description": "Drain health from nearby enemies, dealing spirit damage over time and healing for a portion of the damage dealt.",
+          "descriptionRu": "Абрамс высасывает здоровье врагов поблизости, нанося постепенный спиритический урон и получая лечение в размере части нанесённого урона.",
+          "ultimate": false
+        },
+        {
+          "id": "2824119765",
+          "slot": 2,
+          "name": "Shoulder Charge",
+          "nameRu": "Плечом вперёд",
+          "className": "citadel_ability_bull_charge",
+          "icon": "assets/heroes/abilities/2824119765.png",
+          "description": "Charge forward, pulling enemies you hit. Pushing a hero into a wall applies stun. If you collide with a hero you move faster during your charge.",
+          "descriptionRu": "Абрамс мчится вперёд и тащит за собой поражённых врагов. При ударе героев об стену на них накладывается оглушение. При столкновении с героями скорость рывка увеличивается.",
+          "ultimate": false
+        },
+        {
+          "id": "715762406",
+          "slot": 3,
+          "name": "Infernal Resilience",
+          "nameRu": "Адская устойчивость",
+          "className": "citadel_ability_passive_beefy",
+          "icon": "assets/heroes/abilities/715762406.png",
+          "description": "Gain bonus defensive attributes. Taking damage grants temporary regeneration for a portion of the damage taken.",
+          "descriptionRu": "Абрамс получает дополнительные защитные характеристики. Получение урона даёт временное восстановление его части.",
+          "ultimate": false
+        },
+        {
+          "id": "509856396",
+          "slot": 4,
+          "name": "Seismic Impact",
+          "nameRu": "Сейсмический удар",
+          "className": "citadel_ability_bull_leap",
+          "icon": "assets/heroes/abilities/509856396.png",
+          "description": "Leap high into the air before crashing into the ground, dealing spirit damage and applying stun.",
+          "descriptionRu": "Абрамс подпрыгивает высоко в воздух, а затем обрушивается на землю, нанося спиритический урон и накладывая оглушение.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "77",
+      "name": "Apollo",
+      "nameRu": "Аполлон",
+      "className": "hero_fencer",
+      "portrait": "assets/heroes/77.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "725153709",
+          "slot": 1,
+          "name": "Disengaging Sigil",
+          "nameRu": "Высвобождающий сигил",
+          "className": "ability_fencer_throwblade",
+          "icon": "assets/heroes/abilities/725153709.png",
+          "description": "Draw a sigil sphere in front of you and then leap backwards as it explodes, damaging and slowing enemies caught in it.",
+          "descriptionRu": "Аполлон рисует перед собой сигильную сферу и прыгает назад в момент её взрыва, который наносит урон и накладывает замедление на поражённых врагов.",
+          "ultimate": false
+        },
+        {
+          "id": "2006773718",
+          "slot": 2,
+          "name": "Riposte",
+          "nameRu": "Рипост",
+          "className": "ability_fencer_riposte",
+          "icon": "assets/heroes/abilities/2006773718.png",
+          "description": "Prepare to deflect the next incoming attack. On a successful deflection, briefly become invulnerable and target an enemy hero to dash towards them, stunning them and reducing their Melee Resist. Press Ability 2 to select a target. Does not trigger against trooper or neutral damage.",
+          "descriptionRu": "Аполлон готовится отразить следующую атаку. При успешном отражении Аполлон ненадолго становится неуязвимым и нацеливается на вражеского героя, после чего делает рывок к цели, оглушает её и снижает её сопротивляемость в ближнем бою. Нажмите 2-е умение , чтобы выбрать цель. Не срабатывает при атаках солдат и нейтралов.",
+          "ultimate": false
+        },
+        {
+          "id": "147493976",
+          "slot": 3,
+          "name": "Flawless Advance",
+          "nameRu": "Безупречное наступление",
+          "className": "ability_fencer_lunge",
+          "icon": "assets/heroes/abilities/147493976.png",
+          "description": "Perform a series of lunges in any direction, delivering piercing stabs ahead of you. Hold your ability key to time your attacks, dealing more damage the longer it's held. Releasing your attack during the perfect window deals maximum damage. Press Ability 3 to re-cast.",
+          "descriptionRu": "Аполлон выполняет серию выпадов в любом направлении, нанося перед собой колющие удары. Чем дольше удерживается кнопка умения, тем выше наносимый урон. Отпустив кнопку в идеальный момент, вы нанесёте максимальный урон. Нажмите 3-е умение , чтобы применить повторно.",
+          "ultimate": false
+        },
+        {
+          "id": "494112189",
+          "slot": 4,
+          "name": "Itani Lo Sahn",
+          "nameRu": "Итани Ло Сан",
+          "className": "ability_fencer_ultimate",
+          "icon": "assets/heroes/abilities/494112189.png",
+          "description": "Charge up and perform a long range slash. Struck enemies cannot take action or heal and are stuck in slow motion. When this effect expires, they suffer devastating damage, dealing bonus damage against half-health enemies. While in slow motion, Apollo is invulnerable and enemies take reduced damage. Hold Ability 4 or to delay the cast.",
+          "descriptionRu": "Аполлон заряжает и совершает дальнобойный рассекающий удар. Поражённые враги не могут совершать действия и лечиться, а также оказываются в замедленном состоянии. По истечении эффекта они получают сокрушительный урон, а враги с низким уровнем здоровья — ещё и дополнительный урон. В замедленном состоянии Аполлон неуязвим, а враги получают уменьшенный урон. Удерживайте 4-е умение или , чтобы задержать применение.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Bebop",
+      "nameRu": "Бибоп",
+      "className": "hero_bebop",
+      "portrait": "assets/heroes/15.png",
+      "description": "Bebop can string together his abilities in many different ways. Disrupting enemy positions, saving an ally or dealing bursts of damage. When the situation doesn't require subtlety his giant laser still solves many problems.",
+      "descriptionRu": "Бибоп комбинирует свои умения множеством способов для любых задач — будь то прорыв вражеских позиций, спасение союзника или нанесение огромного урона. Когда ситуация не требует тонкости, огромный лазер Бибопа решает все проблемы.",
+      "abilities": [
+        {
+          "id": "3089858203",
+          "slot": 1,
+          "name": "Exploding Uppercut",
+          "nameRu": "Взрывной апперкот",
+          "className": "citadel_ability_uppercut",
+          "icon": "assets/heroes/abilities/3089858203.png",
+          "description": "Deal melee damage to nearby enemies and apply knockback. When they land, they deal spirit damage and apply reduced fire rate to other nearby enemies. Exploding Uppercut can be used on allies.",
+          "descriptionRu": "Бибоп наносит урон ближнего боя врагам поблизости и отбрасывает их. При приземлении другие враги около них получают спиритический урон и уменьшение скорострельности. «Взрывной апперкот» можно применять на союзников.",
+          "ultimate": false
+        },
+        {
+          "id": "2521902222",
+          "slot": 2,
+          "name": "Sticky Bomb",
+          "nameRu": "Бомба-липучка",
+          "className": "citadel_ability_sticky_bomb",
+          "icon": "assets/heroes/abilities/2521902222.png",
+          "description": "Attach a bomb that explodes after a delay, dealing spirit damage to nearby enemies. If the bomb hits or kills a hero, you gain permanent bonus damage on Sticky Bomb. Stacks diminish by half after 60 hits and 7 kills",
+          "descriptionRu": "Бибоп прикрепляет бомбу, которая взрывается после задержки и наносит спиритический урон находящимся рядом врагам. Если взрыв задевает или убивает героя, Бибоп получает постоянный бонус к урону от бомбы-липучки. После 60 задеваний и 7 убийств получаемые бонусы будут вдвое меньше.",
+          "ultimate": false
+        },
+        {
+          "id": "1928108461",
+          "slot": 3,
+          "name": "Grapple Arm",
+          "nameRu": "Рука-захват",
+          "className": "citadel_ability_hook",
+          "icon": "assets/heroes/abilities/1928108461.png",
+          "description": "Launch out a mechanical hand that pulls the first character it hits, reeling them in. Grapple Arm can be used on allies.",
+          "descriptionRu": "Бибоп выпускает механическую руку, которая притягивает к герою первое попавшееся существо. Умение можно применять на союзников.",
+          "ultimate": false
+        },
+        {
+          "id": "3832675871",
+          "slot": 4,
+          "name": "Hyper Beam",
+          "nameRu": "Гиперлуч",
+          "className": "citadel_ability_bebop_laser_beam",
+          "icon": "assets/heroes/abilities/3832675871.png",
+          "description": "Channel a powerful torrent of energy that deals spirit damage and applies slow.",
+          "descriptionRu": "Бибоп выпускает мощный поток энергии, который наносит спиритический урон и накладывает замедление.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "72",
+      "name": "Billy",
+      "nameRu": "Билли",
+      "className": "hero_punkgoat",
+      "portrait": "assets/heroes/72.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "1841661392",
+          "slot": 1,
+          "name": "Bashdown",
+          "nameRu": "Разгром",
+          "className": "ability_punkgoat_ult",
+          "icon": "assets/heroes/abilities/1841661392.png",
+          "description": "Slam your bat into the ground, pulling enemies down and dealing melee damage. The slam creates a shockwave that deals spirit damage and applies knockup.",
+          "descriptionRu": "Билли бьёт битой по земле, притягивая к ней врагов и нанося им урон ближнего боя. Удар создаёт волну, которая наносит жертвам спиритический урон и подбрасывает их.",
+          "ultimate": false
+        },
+        {
+          "id": "1792773251",
+          "slot": 2,
+          "name": "Rising Ram",
+          "nameRu": "Рогатый таран",
+          "className": "ability_punkgoat_goatflip",
+          "icon": "assets/heroes/abilities/1792773251.png",
+          "description": "Charge head-first into an enemy and send them into the air along with Billy. Cooldown reduced by 50% on impact.",
+          "descriptionRu": "Билли мчится на врага головой вперёд, подбрасывая его и себя в воздух. При попадании время перезарядки сокращается на 50%.",
+          "ultimate": false
+        },
+        {
+          "id": "3296031213",
+          "slot": 3,
+          "name": "Blasted",
+          "nameRu": "В стельку",
+          "className": "ability_punkgoat_blasted",
+          "icon": "assets/heroes/abilities/3296031213.png",
+          "description": "Passive: Melee hits restore ammo and inflict wrecked on the victim for 7.0s.",
+          "descriptionRu": "Пассивное: удары ближнего боя восстанавливают боезапас и накладывают на жертву сломленность на 7.0 с.",
+          "ultimate": false
+        },
+        {
+          "id": "3762861984",
+          "slot": 4,
+          "name": "Chain Gang",
+          "nameRu": "Цепная банда",
+          "className": "ability_punkgoat_tether",
+          "icon": "assets/heroes/abilities/3762861984.png",
+          "description": "Chain nearby enemies to you. Chained enemies cannot use movement abilities and receive a heavy slow when they pull on the chain. After a delay, yank everyone towards Billy and deal spirit damage. The chain breaks if you lose line of sight for a short while.",
+          "descriptionRu": "Билли приковывает к себе находящихся поблизости врагов. Прикованные жертвы не могут использовать связанные с движением умения и сильно замедляются, когда натягивают цепь. После задержки Билли тянет всех к себе и наносит им спиритический урон. Цепь обрывается, если жертва ненадолго уходит из поля зрения Билли.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Calico",
+      "nameRu": "Калико",
+      "className": "hero_nano",
+      "portrait": "assets/heroes/16.png",
+      "description": "Calico uses the shadows to her advantage, weaving in and out of combat to hunt down her enemies one by one.",
+      "descriptionRu": "Используя тени, Калико ловко вступает в бой и уходит из-под огня, что позволяет ей устранять врагов одного за другим.",
+      "abilities": [
+        {
+          "id": "4131517918",
+          "slot": 1,
+          "name": "Gloom Bombs",
+          "nameRu": "Бомбы мрака",
+          "className": "ability_nano_clustergrenade",
+          "icon": "assets/heroes/abilities/4131517918.png",
+          "description": "Throw a cluster of bombs that detonate after a delay, dealing spirit damage. Enemies hit by multiple bombs take 65% damage.",
+          "descriptionRu": "Калико бросает связку бомб, которые взрываются с задержкой и наносят спиритический урон. Враги, задетые несколькими бомбами, получают 65% урона.",
+          "ultimate": false
+        },
+        {
+          "id": "1426567660",
+          "slot": 2,
+          "name": "Leaping Slash",
+          "nameRu": "Рассекающий рывок",
+          "className": "ability_nano_dash",
+          "icon": "assets/heroes/abilities/1426567660.png",
+          "description": "Dash forward before slashing all enemies in a circle, dealing melee damage. If the ability hits at least one hero, heal a small amount of health.",
+          "descriptionRu": "Сделав рывок вперёд, Калико рассекает всех врагов в радиусе действия умения, нанося урон ближнего боя. Если при использовании умения задет хотя бы один герой, Калико получает лечение небольшой части здоровья.",
+          "ultimate": false
+        },
+        {
+          "id": "1009029159",
+          "slot": 3,
+          "name": "Ava",
+          "nameRu": "Ава",
+          "className": "ability_nano_catform",
+          "icon": "assets/heroes/abilities/1009029159.png",
+          "description": "Turn to shadows and possess Ava. You gain bonus move speed that increases over time, and become hidden on the minimap. Taking damage from an enemy hero resets your bonus move speed and puts Ava on a brief cooldown.",
+          "descriptionRu": "Калико уходит в тени и овладевает Авой, отчего героине даётся bonus move speed и она становится скрытой на мини-карте. При получении урона от вражеского героя бонус к скорости передвижения сбрасывается, и вы ненадолго теряете возможность использовать Аву.",
+          "ultimate": false
+        },
+        {
+          "id": "2054144742",
+          "slot": 4,
+          "name": "Return to Shadows",
+          "nameRu": "Возвращение в тени",
+          "className": "ability_nano_shadow_pulse",
+          "icon": "assets/heroes/abilities/2054144742.png",
+          "description": "Instantly turn to shadows, becoming untargetable, gaining bonus move speed, and dealing spirit damage. After a delay, return from the shadows, dealing spirit damage again.",
+          "descriptionRu": "Калико мгновенно уходит в тени, благодаря чему её нельзя выбрать целью. Калико также даётся bonus move speed, а ещё она наносит спиритический урон. После задержки Калико выходит из теней, снова нанося спиритический урон.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "name": "Celeste",
+      "nameRu": "Селеста",
+      "className": "hero_unicorn",
+      "portrait": "assets/heroes/81.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "3443575800",
+          "slot": 1,
+          "name": "Light Eater",
+          "nameRu": "Дыхание светом",
+          "className": "ability_unicorn_radiantblast",
+          "icon": "assets/heroes/abilities/3443575800.png",
+          "description": "Blast enemies in a cone in front of you with a flare of light. Blasted enemies take spirit damage when attacked by Celeste and provides her spirit lifesteal.",
+          "descriptionRu": "Селеста поражает врагов вспышкой света в конусообразной области перед собой. Селеста получает кражу здоровья спиритизмом по задетым вспышкой врагам, а также наносит им спиритический урон при атаках.",
+          "ultimate": false
+        },
+        {
+          "id": "1950738949",
+          "slot": 2,
+          "name": "Dazzling Trick",
+          "nameRu": "Ослепительный трюк",
+          "className": "ability_unicorn_prismaticguard",
+          "icon": "assets/heroes/abilities/1950738949.png",
+          "description": "Surround yourself in a protective prism. If the barrier is destroyed, it silences nearby enemies and deals a portion of the barrier as damage.",
+          "descriptionRu": "Селеста окружает себя защитной призмой. При разрушении призма накладывает безмолвие на врагов поблизости и наносит урон в размере доли от своей прочности.",
+          "ultimate": false
+        },
+        {
+          "id": "1011349580",
+          "slot": 3,
+          "name": "Radiant Daggers",
+          "nameRu": "Лучезарные кинжалы",
+          "className": "ability_unicorn_luminousstrike",
+          "icon": "assets/heroes/abilities/1011349580.png",
+          "description": "Call down a beam of light from the sky. After a short duration, the beam will fully form, causing an explosion that deals spirit damage to all targets in the area. Celeste will receive a stacking buff that increases her spirit damage anytime this hits an enemy hero.",
+          "descriptionRu": "Селеста призывает луч света с небес. Спустя короткое время он обретает полную форму и вызывает взрыв, который наносит спиритический урон всем целям в области. За каждое попадание лучом во вражеского героя Селеста получает накапливаемый эффект, увеличивающий её спиритический урон.",
+          "ultimate": false
+        },
+        {
+          "id": "2590796390",
+          "slot": 4,
+          "name": "Shining Wonder",
+          "nameRu": "Сияющее чудо",
+          "className": "ability_unicorn_dazzlingorb",
+          "icon": "assets/heroes/abilities/2590796390.png",
+          "description": "Launch a deadly orb of light that deals spirit damage and applies slow and reduces Dash Distance on impact. The orb then bounces to the enemies within range. If no target is found, the orb will linger for a short duration while continuing to look for targets. Prioritizes enemy heroes when picking targets.",
+          "descriptionRu": "Селеста запускает смертельный шар света, который наносит спиритический урон, накладывает замедление и снижает дальность рывка при попадании. Затем шар отскакивает к врагам в радиусе действия. Если цели нет, шар ещё недолго её ищет. При выборе целей приоритет отдаётся вражеским героям.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "78",
+      "name": "Deadman Danny",
+      "nameRu": "Дохлый Дэнни",
+      "className": "hero_deadpack",
+      "portrait": "assets/heroes/78.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "2603013853",
+          "slot": 1,
+          "name": "Strix Salvo",
+          "nameRu": "Strix Salvo",
+          "className": "ability_deadpack_chargeblast",
+          "icon": "assets/heroes/abilities/2603013853.png",
+          "description": "Launch a salvo of spirit missiles that lodge into the ground along a line. The missiles explode after a delay or upon detecting an enemy, dealing spirit damage and marking the target. Shooting a marked enemy with a charged shot consumes a mark to deal bonus spirit damage and apply a fading slow. Hold and drag to select the angle.",
+          "descriptionRu": "Launch a salvo of spirit missiles that lodge into the ground along a line. The missiles explode after a delay or upon detecting an enemy, dealing спиритический урон and marking the target. Shooting a marked enemy with a charged shot consumes a mark to deal доп. спиритический урон and apply a fading замедление. Hold and drag to select the angle.",
+          "ultimate": false
+        },
+        {
+          "id": "1904698842",
+          "slot": 2,
+          "name": "Chimera Mk1",
+          "nameRu": "Chimera Mk1",
+          "className": "ability_deadpack_rocketeer",
+          "icon": "assets/heroes/abilities/1904698842.png",
+          "description": "Hold Jump / mantle to fly, building up heat. When max heat is reached, your jetpack will begin to overheat. Overheating: After a short delay, dive to the ground. Upon impact, create an explosion that deals damage and launches you and nearby enemies. If no hero is hit, you stun yourself. Press Ability 2 to dive early. Cooling Down: After overheating, the jetpack cannot be used until it fully cools down. Slows affect you while airborne. You always explode on death.",
+          "descriptionRu": "Hold Подпрыгнуть/забраться to fly, building up heat. When max heat is reached, your jetpack will begin to overheat. Overheating: After a short delay, dive to the ground. Upon impact, create an explosion that deals damage and launches you and nearby enemies. If no hero is hit, you stun yourself. Press 2-е умение to dive early. Cooling Down: After overheating, the jetpack cannot be used until it fully cools down. Slows affect you while airborne. You always explode on death.",
+          "ultimate": false
+        },
+        {
+          "id": "374042410",
+          "slot": 3,
+          "name": "Jettison Fuel",
+          "nameRu": "Jettison Fuel",
+          "className": "ability_deadpack_flamethrower",
+          "icon": "assets/heroes/abilities/374042410.png",
+          "description": "Spray fuel dealing weapon damage over time and shredding bullet resist, building up to a huge backblast that deals spirit damage and knocks you backwards. Vents the jetpack when dealing damage.",
+          "descriptionRu": "Spray fuel dealing постепенный урон от оружия and shredding сопротивляемость пулям, building up to a huge backblast that deals спиритический урон and knocks you backwards. Vents the jetpack when dealing damage.",
+          "ultimate": false
+        },
+        {
+          "id": "1026127931",
+          "slot": 4,
+          "name": "Close The Deal",
+          "nameRu": "Close The Deal",
+          "className": "ability_deadpack_ultimate",
+          "icon": "assets/heroes/abilities/1026127931.png",
+          "description": "Grab an enemy and give them a hands-on demonstration, flying high into the air before crashing back to the ground. You and the participant take spirit damage over time while falling and spirit damage upon impact. Damage is increased to enemies under 50% health.",
+          "descriptionRu": "Grab an enemy and give them a hands-on demonstration, flying high into the air before crashing back to the ground. You and the participant take постепенный спиритический урон while falling and спиритический урон upon impact. Damage is increased to enemies under 50% health.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "name": "Drifter",
+      "nameRu": "Скиталец",
+      "className": "hero_drifter",
+      "portrait": "assets/heroes/64.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "3120550633",
+          "slot": 1,
+          "name": "Rend",
+          "nameRu": "Раздирание",
+          "className": "drifter_blood_blast",
+          "icon": "assets/heroes/abilities/3120550633.png",
+          "description": "Swipe at enemies in a cone ahead of you, dealing spirit damage. If the enemy is in close range, deal bonus melee damage.",
+          "descriptionRu": "Скиталец когтями атакует врагов в конусообразной области перед собой, нанося им спиритический урон. Если враг находится на близкой дистанции, он получает дополнительный урон ближнего боя.",
+          "ultimate": false
+        },
+        {
+          "id": "1264175662",
+          "slot": 2,
+          "name": "Stalker's Mark",
+          "nameRu": "Метка преследователя",
+          "className": "drifter_shadow_mark",
+          "icon": "assets/heroes/abilities/1264175662.png",
+          "description": "Send out a mark that bleeds the first target it hits, dealing spirit damage over time. While the enemy is bleeding you can re-activate Stalker's Mark to instantly appear behind their back.",
+          "descriptionRu": "Скиталец ставит метку, которая вызывает кровотечение у первой поражённой цели, нанося постепенный спиритический урон. Пока у жертвы течёт кровь, вы можете активировать умение повторно, чтобы мгновенно появиться у неё за спиной.",
+          "ultimate": false
+        },
+        {
+          "id": "1033019133",
+          "slot": 3,
+          "name": "Bloodscent",
+          "nameRu": "Запах крови",
+          "className": "ability_drifter_hunger",
+          "icon": "assets/heroes/abilities/1033019133.png",
+          "description": "",
+          "descriptionRu": "",
+          "ultimate": false
+        },
+        {
+          "id": "1168182161",
+          "slot": 4,
+          "name": "Eternal Night",
+          "nameRu": "Вечная ночь",
+          "className": "drifter_darkness",
+          "icon": "assets/heroes/abilities/1168182161.png",
+          "description": "Surround nearby enemy heroes in darkness, severely limiting their vision of other units. Affected enemies are briefly revealed to you and are considered isolated for the duration. You gain bonus sprint speed.",
+          "descriptionRu": "Скиталец окружает вражеских героев поблизости тьмой, сильно ограничивая их способность видеть других. Местоположение жертв ненадолго раскрывается герою, и они считаются изолированными на время действия умения. Скиталец получает бонус к скорости бега.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Dynamo",
+      "nameRu": "Динамо",
+      "className": "hero_dynamo",
+      "portrait": "assets/heroes/11.png",
+      "description": "Dynamo keeps himself and his allies healthy while waiting for his moment. Few things can warp a team fight more than a well-coordinated use of Singularity.",
+      "descriptionRu": "Динамо лечит себя и союзников, выжидая своего момента. Продуманное использование «Сингулярности» позволит склонить чашу весов в вашу пользу во время командного боя.",
+      "abilities": [
+        {
+          "id": "3760705623",
+          "slot": 1,
+          "name": "Kinetic Pulse",
+          "nameRu": "Кинетический импульс",
+          "className": "citadel_ability_stomp",
+          "icon": "assets/heroes/abilities/3760705623.png",
+          "description": "Release an energy pulse that travels along the ground, dealing spirit damage and applying knockup.",
+          "descriptionRu": "Динамо выпускает энергетический импульс, который распространяется по земле, нанося спиритический урон и подбрасывая цели.",
+          "ultimate": false
+        },
+        {
+          "id": "2031714424",
+          "slot": 2,
+          "name": "Quantum Entanglement",
+          "nameRu": "Квантовое запутывание",
+          "className": "citadel_ability_void_sphere",
+          "icon": "assets/heroes/abilities/2031714424.png",
+          "description": "Briefly become untargetable while teleporting to the target location. Restores stamina upon use. : Bring nearby allies with you.",
+          "descriptionRu": "Динамо телепортируется в выбранное место и его нельзя выбрать целью в течение короткого периода. При использовании восстанавливается выносливость. : перенести союзников поблизости с собой.",
+          "ultimate": false
+        },
+        {
+          "id": "492030745",
+          "slot": 3,
+          "name": "Rejuvenating Aurora",
+          "nameRu": "Восстановительное сияние",
+          "className": "citadel_ability_nikuman",
+          "icon": "assets/heroes/abilities/492030745.png",
+          "description": "While channeling, restore health over time to you and any allies nearby. You can dash and melee without breaking the channel.",
+          "descriptionRu": "Во время действия Динамо и союзники поблизости постепенно восстанавливают здоровье. Совершение рывков и ударов ближнего боя не прерывает это умение.",
+          "ultimate": false
+        },
+        {
+          "id": "249410288",
+          "slot": 4,
+          "name": "Singularity",
+          "nameRu": "Сингулярность",
+          "className": "citadel_ability_self_vacuum",
+          "icon": "assets/heroes/abilities/249410288.png",
+          "description": "Create a singularity in your hands, dealing spirit damage over time, applying stun, and pulling in nearby enemies.",
+          "descriptionRu": "Динамо создаёт в своих руках сингулярность, которая наносит врагам поблизости постепенный спиритический урон, накладывает на них оглушение и притягивает их.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "76",
+      "name": "Graves",
+      "nameRu": "Грейвс",
+      "className": "hero_necro",
+      "portrait": "assets/heroes/76.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "3214055642",
+          "slot": 1,
+          "name": "Jar of Dead",
+          "nameRu": "Банка мёртвых",
+          "className": "ability_necro_hauntingskull",
+          "icon": "assets/heroes/abilities/3214055642.png",
+          "description": "Passive: Collect death when anything dies nearby and store it in your Jar of Dead. Active: Throw a jar to summon Deadheads that repeatedly deal spirit damage to enemies. Deadheads follow you instead if there's no nearby enemies, and prioritize the target of your weapon.",
+          "descriptionRu": "Пассивное: Грейвс собирает в банку мёртвых экстракт смерти, когда кто-то умирает поблизости. Активное: Грейвс бросает банку, чтобы призвать головы мёртвых, которые многократно наносят спиритический урон врагам. Если поблизости нет врагов, головы следуют за вами и отдают приоритет целям, на которые направлено ваше оружие.",
+          "ultimate": false
+        },
+        {
+          "id": "2001589780",
+          "slot": 2,
+          "name": "Grasping Hands",
+          "nameRu": "Хватка смерти",
+          "className": "ability_necro_zombiewall",
+          "icon": "assets/heroes/abilities/2001589780.png",
+          "description": "Unearth a line of grasping hands, summoning a Ghoul and leaving behind a rift. Enemies who pass through take spirit damage and receive immobilize. Alt-Cast rotates the orientation of the wall.",
+          "descriptionRu": "Грейвс вырывает из земли полосу хватающих рук, которая призывает гуля и оставляет разлом. Руки наносят спиритический урон и обездвиживают пересекающих полосу врагов. Альтернативное применение меняет ориентацию стены.",
+          "ultimate": false
+        },
+        {
+          "id": "629925354",
+          "slot": 3,
+          "name": "Essence Theft",
+          "nameRu": "Хищение эссенции",
+          "className": "ability_necro_fear",
+          "icon": "assets/heroes/abilities/629925354.png",
+          "description": "Your weapon steals weapon damage and spirit resist over time, up to a maximum amount per target.",
+          "descriptionRu": "Оружие Грейвс постепенно крадёт урон от оружия и сопротивляемость спиритизму — до порога для каждой цели.",
+          "ultimate": false
+        },
+        {
+          "id": "4110547059",
+          "slot": 4,
+          "name": "Borrowed Decree",
+          "nameRu": "Загробный договор",
+          "className": "ability_necro_gravestone",
+          "icon": "assets/heroes/abilities/4110547059.png",
+          "description": "",
+          "descriptionRu": "",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Grey Talon",
+      "nameRu": "Серый Коготь",
+      "className": "hero_orion",
+      "portrait": "assets/heroes/17.png",
+      "description": "A cunning predator, Grey Talon uses a combination of deadly accuracy, traps, and clever positioning to bring down the toughest of opponents.",
+      "descriptionRu": "Серый Коготь — хитрый охотник, использующий смертельную точность, ловушки и продуманный выбор позиции, чтобы одолеть даже самых сильных противников.",
+      "abilities": [
+        {
+          "id": "548943648",
+          "slot": 1,
+          "name": "Charged Shot",
+          "nameRu": "Заряженный выстрел",
+          "className": "ability_charged_shot",
+          "icon": "assets/heroes/abilities/548943648.png",
+          "description": "Charge up a powerful shot that pierces through enemies. Hold Ability 1 or to hold the shot.",
+          "descriptionRu": "Серый Коготь совершает мощный выстрел, который пронзает врагов. Удерживайте 1-е умение или , чтобы как следует прицелиться.",
+          "ultimate": false
+        },
+        {
+          "id": "3452399392",
+          "slot": 2,
+          "name": "Rain of Arrows",
+          "nameRu": "Дождь из стрел",
+          "className": "ability_power_jump",
+          "icon": "assets/heroes/abilities/3452399392.png",
+          "description": "Launches you high in the air, allowing you to glide slowly. While airborne, you gain Weapon Damage and multishot on your weapon. for reduced jump height. Press Jump / mantle to cancel the glide.",
+          "descriptionRu": "Серый Коготь подпрыгивает высоко в воздух и начинает медленно парить. Находясь в воздухе, он наносит дополнительный урон от оружия и совершает мультивыстрелы. Нажмите , чтобы уменьшить высоту прыжка. Нажмите Подпрыгнуть/забраться , чтобы вернуться на землю.",
+          "ultimate": false
+        },
+        {
+          "id": "512733154",
+          "slot": 3,
+          "name": "Spirit Snare",
+          "nameRu": "Спиритическая ловушка",
+          "className": "ability_immobilize_trap",
+          "icon": "assets/heroes/abilities/512733154.png",
+          "description": "Throw out a trap that begins to arm itself. Once armed, the trap will trigger when an enemy enters its radius, applying Curse and Movement Slow that interrupts, Silences, Disarms, and prevents item usage. Hit the trap with a Charged Shot to detonate early with increased radius.",
+          "descriptionRu": "Серый Коготь бросает ловушку, которая начинает заряжаться. Когда в область действия заряженной ловушки попадает враг, она срабатывает, снижая скорость передвижения жертв и накладывая проклятие, которое прерывает их действия, накладывает безмолвие и обезоруживание, а также предотвращает использование предметов. Попадите по ловушке «Заряженным выстрелом», чтобы она сработала раньше и с увеличенным радиусом.",
+          "ultimate": false
+        },
+        {
+          "id": "3242902780",
+          "slot": 4,
+          "name": "Guided Owl",
+          "nameRu": "Управляемая сова",
+          "className": "ability_guided_arrow",
+          "icon": "assets/heroes/abilities/3242902780.png",
+          "description": "After 1.5s cast time, launch a spirit owl that you control and which explodes on impact, damaging and stunning enemies. Hold [W] to accelerate the owl. Press Jump / mantle to release control. Gain permanent Spirit Power for each enemy hero killed with Guided Owl.",
+          "descriptionRu": "После подготовки в 1.5 сек. Серый Коготь выпускает призрачную сову, которая следует его командам и взрывается при столкновении, нанося урон и оглушая врагов. Удерживайте [W] , чтобы ускорить сову. Нажмите Подпрыгнуть/забраться , чтобы взорвать сову. За каждого вражеского героя, убитого совой, навсегда даётся спиритическая мощь.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Haze",
+      "nameRu": "Пелена",
+      "className": "hero_haze",
+      "portrait": "assets/heroes/13.png",
+      "description": "When Haze fixates on a target she can hold her own in a firefight. She prefers to create one sided exchanges, avoiding damage then picking off unsuspecting targets up close.",
+      "descriptionRu": "Пелена может без проблем выстоять в перестрелке, если сосредоточится на цели. Она предпочитает создавать для себя выгодные ситуации, избегая урона, а затем изрешечивая врагов на близкой дистанции.",
+      "abilities": [
+        {
+          "id": "2948410412",
+          "slot": 1,
+          "name": "Sleep Dagger",
+          "nameRu": "Усыпляющий кинжал",
+          "className": "ability_sleep_dagger",
+          "icon": "assets/heroes/abilities/2948410412.png",
+          "description": "Throw a dagger that damages and sleeps the target. Sleeping targets wake up shortly after being damaged. Throwing a Dagger does not break your invisibility. Sleep Dagger does not interrupt enemies' channeling abilities.",
+          "descriptionRu": "Пелена бросает кинжал, который наносит урон и усыпляет цель. Спящие цели просыпаются вскоре после получения урона. Бросок кинжала не лишает вас невидимости и не прерывает активированные умения врагов.",
+          "ultimate": false
+        },
+        {
+          "id": "2414191464",
+          "slot": 2,
+          "name": "Smoke Bomb",
+          "nameRu": "Дымовая шашка",
+          "className": "ability_smoke_bomb",
+          "icon": "assets/heroes/abilities/2414191464.png",
+          "description": "Fade out of sight, becoming invisible and gaining sprint speed. Attacking removes invisibility, but using items does not. Close enemies can see through your invisibility.",
+          "descriptionRu": "Позволяет скрыться благодаря невидимости и повышению скорости бега. Пелена теряет невидимость, если начинает атаковать, и становится видимой для врагов, подошедших слишком близко. Использование предметов не лишает невидимости.",
+          "ultimate": false
+        },
+        {
+          "id": "1080948381",
+          "slot": 3,
+          "name": "Fixation",
+          "nameRu": "Пристальный взгляд",
+          "className": "ability_stacking_damage",
+          "icon": "assets/heroes/abilities/1080948381.png",
+          "description": "Shooting a target increases your bullet damage on that target. Gain one stack per bullet hit, three if the hit is a headshot.",
+          "descriptionRu": "Стрельба по цели увеличивает ваш урон от пуль по этой цели. Эффект суммируется: +3 ед. при попадании в голову, +1 ед. — в другие части тела.",
+          "ultimate": false
+        },
+        {
+          "id": "731943444",
+          "slot": 4,
+          "name": "Bullet Dance",
+          "nameRu": "Танец пуль",
+          "className": "ability_bullet_flurry",
+          "icon": "assets/heroes/abilities/731943444.png",
+          "description": "Enter a flurry, firing your weapon at nearby enemies with perfect accuracy and added Bullet Damage.",
+          "descriptionRu": "Пелена входит в кураж и начинает стрелять по врагам поблизости с идеальной точностью, а также наносит им дополнительный урон от пуль.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Holliday",
+      "nameRu": "Холлидей",
+      "className": "hero_astro",
+      "portrait": "assets/heroes/14.png",
+      "description": "Holliday depends on her skills as a crack shot, shooting things she's bounced into the air. With good aim she can lay out heavy damage. Her movement skills let her isolate her enemies or beat a hasty retreat.",
+      "descriptionRu": "Холлидей полагается на свою исключительную меткость, выстреливая по целям, которые она запускает в воздух. При хорошем прицеливании она может нанести большой урон, а навыки передвижения позволяют ей изолировать врагов и быстро отступать.",
+      "abilities": [
+        {
+          "id": "1235098866",
+          "slot": 1,
+          "name": "Powder Keg",
+          "nameRu": "Пороховая бочка",
+          "className": "ability_explosive_barrel",
+          "icon": "assets/heroes/abilities/1235098866.png",
+          "description": "Throw a barrel that explodes after a delay, dealing spirit damage, setting enemies on fire and applying knockup. The barrel can be detonated early by being shot, melee'd, or detonated by another barrel. The burn stacks, so overlapping barrels burn for their combined damage. Can be Alt-Cast to place the barrel in front of Holliday.",
+          "descriptionRu": "Бросает бочку, которая взрывается после задержки. Взрыв наносит спиритический урон, поджигает врагов и подбрасывает их. Преждевременно взорвать бочку можно выстрелом, атакой ближнего боя или взрывом другой бочки. Эффекты горения суммируются, т. е. несколько бочек нанесут больше урона. При альтернативном применении Холлидей размещает бочку перед собой.",
+          "ultimate": false
+        },
+        {
+          "id": "2240607294",
+          "slot": 2,
+          "name": "Bounce Pad",
+          "nameRu": "Трамплин",
+          "className": "ability_bounce_pad",
+          "icon": "assets/heroes/abilities/2240607294.png",
+          "description": "Drop a bounce pad in the world that launches any hero. You explode on landing, dealing Damage to any nearby enemies. The explosion can only occur once per person per Bounce Pad.",
+          "descriptionRu": "Холлидей устанавливает трамплин, который отправляет героев в полёт. Когда герой приземляется, происходит взрыв, наносящий урон всем врагам поблизости. Каждый трамплин позволяет прыгающему произвести взрыв при приземлении только раз.",
+          "ultimate": false
+        },
+        {
+          "id": "4179229681",
+          "slot": 3,
+          "name": "Crackshot",
+          "nameRu": "Меткий глаз",
+          "className": "ability_crackshot",
+          "icon": "assets/heroes/abilities/4179229681.png",
+          "description": "Headshots deal bonus Damage and applies a Fading Move Speed penalty. This effect can only occur when off cooldown. Cooldown is reduced by 50% on NPC hits. Crackshot ignores range damage fall-off and does not apply to objectives.",
+          "descriptionRu": "Попадания в голову наносят дополнительный урон и накладывают затухающее замедление. Этот эффект срабатывает, только когда не перезаряжается. Время перезарядки уменьшается на 50% при попадании по всем, кроме героев. Урон этого умения не зависит от расстояния до жертвы и не применяется к ключевым целям.",
+          "ultimate": false
+        },
+        {
+          "id": "3190606822",
+          "slot": 4,
+          "name": "Spirit Lasso",
+          "nameRu": "Спиритическое лассо",
+          "className": "ability_gravity_lasso",
+          "icon": "assets/heroes/abilities/3190606822.png",
+          "description": "Throw out your lasso, dealing spirit damage, pulling, and applying stun. Using a Bounce Pad extends the duration of Spirit Lasso.",
+          "descriptionRu": "Холлидей бросает лассо, которое наносит целям спиритический урон, а также притягивает и оглушает их. Использование трамплина продлевает действие лассо.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Infernus",
+      "nameRu": "Инфернус",
+      "className": "hero_inferno",
+      "portrait": "assets/heroes/1.png",
+      "description": "Infernus has many ways to deal damage over time, burning foes before swooping in for the kill. Due to Infernus' blazing speed, his enemies won't be able to escape the flames.",
+      "descriptionRu": "Инфернус знает много способов нанесения длительного урона: он обжигает противников, прежде чем нанести смертельный удар. Скорость Инфернуса под стать его температуре, поэтому врагам не спастись от пламени.",
+      "abilities": [
+        {
+          "id": "491391007",
+          "slot": 1,
+          "name": "Napalm",
+          "nameRu": "Напалм",
+          "className": "ability_incendiary_projectile",
+          "icon": "assets/heroes/abilities/491391007.png",
+          "description": "Spew an incendiary mixture, dealing spirit damage, applying slow, and coating targets in napalm.",
+          "descriptionRu": "Инфернус изрыгает зажигательную смесь, которая наносит спиритический урон, накладывает замедление и покрывает цели напалмом.",
+          "ultimate": false
+        },
+        {
+          "id": "3516947824",
+          "slot": 2,
+          "name": "Flame Dash",
+          "nameRu": "Пламенный рывок",
+          "className": "ability_flame_dash",
+          "icon": "assets/heroes/abilities/3516947824.png",
+          "description": "Dash forward, gaining slow resistance while leaving a flaming trail that deals spirit damage over time. Hold [W] while active to dash farther.",
+          "descriptionRu": "Инфернус мчится вперёд, получая slow resistance и оставляя за собой пламенный след, который наносит постепенный спиритический урон. Удерживайте [W] , когда умение активно, чтобы ускориться.",
+          "ultimate": false
+        },
+        {
+          "id": "1593133799",
+          "slot": 3,
+          "name": "Afterburn",
+          "nameRu": "Тление",
+          "className": "ability_afterburn",
+          "icon": "assets/heroes/abilities/1593133799.png",
+          "description": "Weapon hits build up a burning effect, dealing spirit damage over time. Abilities refresh to the base burn duration and weapon hits extend it.",
+          "descriptionRu": "Попадания из оружия накладывают накапливаемый эффект тления, наносящий постепенный спиритический урон. Применение умений восстанавливает базовую длительность тления, а попадания из оружия её увеличивают.",
+          "ultimate": false
+        },
+        {
+          "id": "1142270357",
+          "slot": 4,
+          "name": "Concussive Combustion",
+          "nameRu": "Сотрясающий взрыв",
+          "className": "ability_fire_bomb",
+          "icon": "assets/heroes/abilities/1142270357.png",
+          "description": "Become a living bomb, dealing spirit damage and applying stun to all nearby enemies after a delay. Once cast, Concussive Combustion cannot be interrupted.",
+          "descriptionRu": "Инфернус становится живой бомбой, которая взрывается после задержки, нанося всем врагам поблизости спиритический урон и накладывая на них оглушение Данное умение нельзя прервать.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Ivy",
+      "nameRu": "Плющик",
+      "className": "hero_tengu",
+      "portrait": "assets/heroes/20.png",
+      "description": "Ivy has disruptive combat tricks that slow and stun enemies. She's most effective when linking up with an ally, empowering her and her ally's guns as well as sharing heals.",
+      "descriptionRu": "Плющик замедляет и оглушает врагов, применяя в бою хитрость. Она наиболее эффективна в паре с союзником, поскольку может повышать мощность оружия и ускорять регенерацию для обоих.",
+      "abilities": [
+        {
+          "id": "4111222521",
+          "slot": 1,
+          "name": "Entangling Thorns",
+          "nameRu": "Опутывающие терния",
+          "className": "citadel_ability_tengu_urn",
+          "icon": "assets/heroes/abilities/4111222521.png",
+          "description": "Summon a patch of choking thorns that damages and slows enemies in its radius.",
+          "descriptionRu": "Плющик создаёт участок с терниями, которые наносят урон попавшимся врагам и замедляют их.",
+          "ultimate": false
+        },
+        {
+          "id": "1531378655",
+          "slot": 2,
+          "name": "Kudzu Connection",
+          "nameRu": "Кудзу-связь",
+          "className": "citadel_ability_tangotether",
+          "icon": "assets/heroes/abilities/1531378655.png",
+          "description": "Connect with a nearby ally to gain bonuses, replicated healing, and ignore the move speed penalty while shooting. Receive 50% of Bonuses with no connection Connection requires line of sight.",
+          "descriptionRu": "Плющик соединяется лозой с союзником поблизости, что даёт бонусы, дублируемое лечение и избавляет от замедления при стрельбе. При отсутствии соединения Плющик получает вдвое меньшие бонусы. Для соединения цель должна находиться в вашем поле зрения.",
+          "ultimate": false
+        },
+        {
+          "id": "3642273386",
+          "slot": 3,
+          "name": "Stone Form",
+          "nameRu": "Каменный облик",
+          "className": "citadel_ability_tengu_stone_form",
+          "icon": "assets/heroes/abilities/3642273386.png",
+          "description": "Turn yourself into impervious stone and smash into the ground, stunning and damaging enemies nearby. Heals you for a percentage of your max health.",
+          "descriptionRu": "Плющик превращается в непробиваемый камень и врезается в землю, нанося урон и оглушая врагов поблизости. Умение лечит на процент от макс. здоровья.",
+          "ultimate": false
+        },
+        {
+          "id": "1247583368",
+          "slot": 4,
+          "name": "Air Drop",
+          "nameRu": "Поддержка с воздуха",
+          "className": "citadel_ability_tengu_airlift",
+          "icon": "assets/heroes/abilities/1247583368.png",
+          "description": "Grab an ally and take flight with them. Drop your ally to cause an explosion, dealing spirit damage. You and your ally gain increased Outgoing Damage when flying ends. Cooldown reduced by 30% when used on allies. Taking damage briefly disables using the ability. While lifted, your ally cannot attack and deals -20% damage.",
+          "descriptionRu": "Плющик хватает союзника и взмывает с ним в воздух. При сбросе союзника происходит взрыв, который наносит спиритический урон. Вы и союзник наносите увеличенный урон по окончании полёта. Перезарядка сокращается на 30% при применении на союзников. Получение урона ненадолго лишает возможности использовать умение. Поднятый союзник не может атаковать и наносит лишь -20% урона.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Kelvin",
+      "nameRu": "Кельвин",
+      "className": "hero_kelvin",
+      "portrait": "assets/heroes/12.png",
+      "description": "Timely heals and splitting a teamfight properly is the difference between an easy victory or a ruinous defeat. Gliding around slowing enemies gives Kelvin's team the maneuvering advantage to make this happen.",
+      "descriptionRu": "Своевременное лечение и правильное разделение командного боя — вот разница между лёгкой победой и сокрушительным поражением. Кельвин быстро скользит по полю боя и замедляет врагов, чем обеспечивает своей команде преимущество в манёвренности.",
+      "abilities": [
+        {
+          "id": "18921423",
+          "slot": 1,
+          "name": "Frost Grenade",
+          "nameRu": "Леденящая граната",
+          "className": "ability_ice_grenade",
+          "icon": "assets/heroes/abilities/18921423.png",
+          "description": "Throw a grenade that explodes in a cloud of freezing ice that heals allies and applies spirit damage and move speed reduction to enemies.",
+          "descriptionRu": "Кельвин бросает гранату, при взрыве которой образуется леденящее облако. Оно лечит союзников, а врагам наносит спиритический урон и замедляет их передвижение.",
+          "ultimate": false
+        },
+        {
+          "id": "1963397252",
+          "slot": 2,
+          "name": "Ice Path",
+          "nameRu": "Ледяная дорожка",
+          "className": "ability_icepath",
+          "icon": "assets/heroes/abilities/1963397252.png",
+          "description": "Kelvin creates a floating trail of ice and snow that gives movement bonuses to him and his allies. Kelvin gains 60% slow resistance for the duration. Enemies can also walk on the floating trail. Press Dash / Crouch / slide to travel up or down while in Ice Path.",
+          "descriptionRu": "Кельвин создаёт парящую дорожку изо льда и снега, которая ускоряет передвижение — его и союзников. При создании дорожки cопротивляемость замедлениям у героя повышается на 60%. Враги тоже могут ходить по дорожке. Нажмите Рывок или Приседание/скольжение , чтобы направить дорожку вверх или вниз.",
+          "ultimate": false
+        },
+        {
+          "id": "2351041382",
+          "slot": 3,
+          "name": "Arctic Beam",
+          "nameRu": "Арктический луч",
+          "className": "ability_icebeam",
+          "icon": "assets/heroes/abilities/2351041382.png",
+          "description": "Shoot freezing cold energy out in front of you, damaging targets and progressively reducing their movement and fire rate the longer you sustain the beam on them. You have reduced move speed while using Arctic Beam. The beam may also claim Souls.",
+          "descriptionRu": "Кельвин стреляет перед собой лучом леденящей энергии, которая наносит урон, а также замедляет и снижает скорострельность целей пропорционально длительности их нахождения под лучом. Во время использования умения у героя снижается скорость передвижения. С помощью луча можно собирать шары с душами.",
+          "ultimate": false
+        },
+        {
+          "id": "3826390464",
+          "slot": 4,
+          "name": "Frozen Shelter",
+          "nameRu": "Ледяное укрытие",
+          "className": "ability_ice_dome",
+          "icon": "assets/heroes/abilities/3826390464.png",
+          "description": "Target yourself or a Hero to freeze the air and create an impenetrable dome around them. While in the dome, allies gain rapid regeneration and enemies are slowed. Objectives become Invulnerable and Frozen under Frozen Shelter",
+          "descriptionRu": "Кельвин замораживает воздух вокруг себя или другого героя и создаёт непробиваемый купол. Союзники в куполе получают ускоренное восстановление, а враги замедляются. Ключевые цели в куполе становятся неуязвимыми и замораживаются.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Lady Geist",
+      "nameRu": "Леди Гайст",
+      "className": "hero_ghost",
+      "portrait": "assets/heroes/4.png",
+      "description": "Expending health to achieve devastating effects is the source of Lady Geist's power. When running low, she can drain the life out of her rivals.",
+      "descriptionRu": "Суть силы Леди Гайст — жертвование здоровьем для получения разрушительной мощи. В критической ситуации она может отобрать здоровье у врагов.",
+      "abilities": [
+        {
+          "id": "715325746",
+          "slot": 1,
+          "name": "Essence Bomb",
+          "nameRu": "Бомба квинтэссенции",
+          "className": "ability_blood_bomb",
+          "icon": "assets/heroes/abilities/715325746.png",
+          "description": "Sacrifice some of your health to launch a bomb that deals damage after a brief arm time. Self damage type is Spirit and can be mitigated.",
+          "descriptionRu": "Леди Гайст жертвует частью здоровья, чтобы бросить бомбу, которая наносит урон после короткого времени зарядки. Урон, наносимый себе, — спиритический, и его можно уменьшить.",
+          "ultimate": false
+        },
+        {
+          "id": "218284420",
+          "slot": 2,
+          "name": "Life Drain",
+          "nameRu": "Высасывание жизни",
+          "className": "ability_life_drain",
+          "icon": "assets/heroes/abilities/218284420.png",
+          "description": "Create a tether that drains enemy health over time and heals you. Target must be in line of sight and within max range to drain. You can shoot and use other abilities during the drain, but your move speed is reduced. to give health to friendly Heroes.",
+          "descriptionRu": "Леди Гайст создаёт путы, которыми постепенно высасывает здоровье у врагов и лечит себя. Цель должна находиться в пределах видимости и радиуса действия. Во время действия можно стрелять и применять другие умения, но скорость передвижения снижается. Нажмите , чтобы излечивать союзных героев.",
+          "ultimate": false
+        },
+        {
+          "id": "3230530872",
+          "slot": 3,
+          "name": "Malice",
+          "nameRu": "Порча",
+          "className": "ability_blood_shards",
+          "icon": "assets/heroes/abilities/3230530872.png",
+          "description": "Sacrifice some of your health to launch blood shards that apply a stack of Malice. Each stack slows the victim and increases the damage they take from you. The slow effect decreases over time.",
+          "descriptionRu": "Леди Гайст жертвует частью здоровья, чтобы бросить кровавые осколки, которые накладывают суммирующийся эффект порчи. Каждая ед. эффекта замедляет жертву и увеличивает урон, получаемый от Леди Гайст. Замедление со временем ослабевает.",
+          "ultimate": false
+        },
+        {
+          "id": "1307289689",
+          "slot": 4,
+          "name": "Soul Exchange",
+          "nameRu": "Обмен душами",
+          "className": "ability_health_swap",
+          "icon": "assets/heroes/abilities/1307289689.png",
+          "description": "Swaps health levels with an enemy target. There is a minimum health percentage that enemies can be brought down to and a minimum amount of health received based on victims current health.",
+          "descriptionRu": "Леди Гайст обменивается уровнем здоровья с вражеским героем. Для умения определены нижние пределы уменьшения здоровья врага и увеличения своего.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Lash",
+      "nameRu": "Хлыст",
+      "className": "hero_lash",
+      "portrait": "assets/heroes/31.png",
+      "description": "Lash gives his enemies little room to breathe, either by flying in from long distances to initiate combat with unsuspecting enemies, or pursuing said enemies when they try to run.",
+      "descriptionRu": "Хлыст не даёт врагам передышки: то налетит издалека и навяжет бой ничего не подозревающим неприятелям, то преследует тех, кто пытается убежать.",
+      "abilities": [
+        {
+          "id": "3561817145",
+          "slot": 1,
+          "name": "Ground Strike",
+          "nameRu": "Удар по земле",
+          "className": "citadel_ability_lash_down_strike",
+          "icon": "assets/heroes/abilities/3561817145.png",
+          "description": "Stomp the ground beneath you, damaging enemies in front of you. If you perform Ground Strike while airborne, you quickly dive towards the ground. Damage grows slower after 25m.",
+          "descriptionRu": "Хлыст бьёт ногой по земле, нанося урон врагам перед собой. Если умение применяется в воздухе, Хлыст делает рывок вниз. После 25 м урон нарастает медленнее.",
+          "ultimate": false
+        },
+        {
+          "id": "2670099061",
+          "slot": 2,
+          "name": "Grapple",
+          "nameRu": "Сцепка",
+          "className": "citadel_ability_lash",
+          "icon": "assets/heroes/abilities/2670099061.png",
+          "description": "Pull yourself through the air toward a target. Using Grapple also resets your limit of air jumps and dashes.",
+          "descriptionRu": "Хлыст подтягивает себя по воздуху к цели. Использование этого умения также сбрасывает ограничение на прыжки в воздухе и рывки.",
+          "ultimate": false
+        },
+        {
+          "id": "519124136",
+          "slot": 3,
+          "name": "Flog",
+          "nameRu": "Порка",
+          "className": "ability_lash_flog",
+          "icon": "assets/heroes/abilities/519124136.png",
+          "description": "Strike enemies in front of you with your whip, healing for a portion of the damage dealt.",
+          "descriptionRu": "Удар врагов впереди кнутом, дающий лечение в размере части нанесённого урона.",
+          "ultimate": false
+        },
+        {
+          "id": "397010810",
+          "slot": 4,
+          "name": "Death Slam",
+          "nameRu": "Смертельный бросок",
+          "className": "citadel_ability_lash_ultimate",
+          "icon": "assets/heroes/abilities/397010810.png",
+          "description": "Focus on enemies to connect whips to them. After channeling, connected enemies are lifted and stunned then slammed into the ground. Your victims and any enemies in the landing zone will be damaged and slowed. Press to throw connected enemies early. Enemies that are not in line of sight or go out of range during the latch time will not be grabbed.",
+          "descriptionRu": "Хлыст фиксируется на врагах и зацепляет их кнутами. После подготовки он подбрасывает и оглушает врагов, а затем бьёт их об землю. Упавшие жертвы и враги, находящиеся в зоне их падения, получают урон и замедляются. Нажмите , чтобы сбросить зацепленных врагов раньше. Враги, находящиеся вне поля зрения или вышедшие из него во время подготовки, не будут схвачены.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "McGinnis",
+      "nameRu": "Макгиннис",
+      "className": "hero_forge",
+      "portrait": "assets/heroes/8.png",
+      "description": "Precise placement is everything for McGinnis, whether she's creating a killzone or splitting the enemy team. She can help keep her team running making them hard to dislodge when entrenched.",
+      "descriptionRu": "Для Макгиннис главное — точное размещение, как при устройстве западни, так и для разделения вражеской команды. Она помогает своим стойко удерживать позиции.",
+      "abilities": [
+        {
+          "id": "3133377790",
+          "slot": 1,
+          "name": "Mini Turret",
+          "nameRu": "Мини-турель",
+          "className": "citadel_ability_shieldedsentry",
+          "icon": "assets/heroes/abilities/3133377790.png",
+          "description": "Deploy a turret that shoots enemies, dealing spirit damage over time. The turret expires after a limited lifetime. Turrets deal reduced damage to troopers and objectives.",
+          "descriptionRu": "Макгиннис развёртывает турель, которая стреляет по врагам, нанося постепенный спиритический урон. Через некоторое время турель исчезает. Турели наносят меньше урона солдатам и ключевым целям.",
+          "ultimate": false
+        },
+        {
+          "id": "2142734020",
+          "slot": 2,
+          "name": "Medicinal Specter",
+          "nameRu": "Лечебный призрак",
+          "className": "citadel_ability_mobile_resupply",
+          "icon": "assets/heroes/abilities/2142734020.png",
+          "description": "Deploy a spirit that provides healing to nearby allies.",
+          "descriptionRu": "Макгиннис выпускает призрака, который лечит союзников поблизости.",
+          "ultimate": false
+        },
+        {
+          "id": "1725685134",
+          "slot": 3,
+          "name": "Spectral Wall",
+          "nameRu": "Призрачная стена",
+          "className": "citadel_ability_fissure_wall",
+          "icon": "assets/heroes/abilities/1725685134.png",
+          "description": "Cast a wall that applies slow on enemies it passes through. Erupt the wall to divide the terrain in half and damage nearby enemies. After casting, press or Ability 3 to erupt the wall early. Can be Destroyed with Melee Attacks",
+          "descriptionRu": "Макгиннис создаёт стену, которая при появлении накладывает замедление на задетых врагов. При возведении стена разделяет местность пополам и наносит урон врагам поблизости. После применения нажмите или 3-е умение , чтобы возвести стену раньше. Стену можно разрушить ударами ближнего боя.",
+          "ultimate": false
+        },
+        {
+          "id": "3503044146",
+          "slot": 4,
+          "name": "Heavy Barrage",
+          "nameRu": "Тяжёлый обстрел",
+          "className": "citadel_ability_rocket_barrage",
+          "icon": "assets/heroes/abilities/3503044146.png",
+          "description": "Unleashes a volley of rockets that home in on a targeted location. McGinnis is slowed and is still able to use stamina.",
+          "descriptionRu": "Макгиннис выпускает залп ракет, которые бьют по заданному месту. Макгиннис замедляется, но может расходовать выносливость.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "63",
+      "name": "Mina",
+      "nameRu": "Мина",
+      "className": "hero_vampirebat",
+      "portrait": "assets/heroes/63.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "193508101",
+          "slot": 1,
+          "name": "Rake",
+          "nameRu": "Загребание",
+          "className": "ability_vampirebat_steallife",
+          "icon": "assets/heroes/abilities/193508101.png",
+          "description": "",
+          "descriptionRu": "",
+          "ultimate": false
+        },
+        {
+          "id": "2398133749",
+          "slot": 2,
+          "name": "Sanguine Retreat",
+          "nameRu": "Багровое отступление",
+          "className": "ability_vampirebat_batblink",
+          "icon": "assets/heroes/abilities/2398133749.png",
+          "description": "Briefly disperse, becoming untargetable and flying to a target location. Can be recast within a brief window.",
+          "descriptionRu": "Мина ненадолго разлетается и следует в выбранное место. Когда она в этом облике, её нельзя выбрать целью. Умение можно применить повторно через короткий промежуток времени.",
+          "ultimate": false
+        },
+        {
+          "id": "1233782561",
+          "slot": 3,
+          "name": "Love Bites",
+          "nameRu": "Любовные укусы",
+          "className": "ability_vampirebat_lovebites",
+          "icon": "assets/heroes/abilities/1233782561.png",
+          "description": "Your bullets apply additional spirit damage. Dealing damage with your abilities builds up to a vicious bite, dealing a burst of bonus spirit damage. Love Bites has a unique cooldown per target.",
+          "descriptionRu": "Ваши пули наносят дополнительный спиритический урон. Урон от умений накапливается и выливается в жестокий укус, который наносит большой доп. спиритический урон. «Любовные укусы» перезаряжаются отдельно для каждой цели.",
+          "ultimate": false
+        },
+        {
+          "id": "3379486147",
+          "slot": 4,
+          "name": "Nox Nostra",
+          "nameRu": "Владыка ночи",
+          "className": "ability_vampirebat_batswarm",
+          "icon": "assets/heroes/abilities/3379486147.png",
+          "description": "Active: Unleash a cloud of bats that seek out targets, each dealing spirit damage and applying Silence. Passive: Triggering Love Bites against heroes permanently increases the number of bats released.",
+          "descriptionRu": "Активное: Мина выпускает облако летучих мышей, каждая из которых ищет цель, наносит ей спиритический урон и накладывает безмолвие. Пассивное: применение «Любовных укусов» на героев навсегда увеличивает число выпускаемых летучих мышей.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "name": "Mirage",
+      "nameRu": "Мираж",
+      "className": "hero_mirage",
+      "portrait": "assets/heroes/52.png",
+      "description": "Mirage can envelop himself in a violent tornado to catch up to enemies and lift them up. His scarabs help him sustain against multiple enemies, and he's always ready to help an ally or punish an enemy anywhere.",
+      "descriptionRu": "Мираж может окутать себя яростным торнадо, чтобы догнать врагов и подбросить их в воздух, а скарабеи помогают ему выжить в неравном бою. Он всегда готов помочь союзнику или наказать противника, где бы тот ни был.",
+      "abilities": [
+        {
+          "id": "3733594387",
+          "slot": 1,
+          "name": "Fire Scarabs",
+          "nameRu": "Огненные скарабеи",
+          "className": "mirage_fire_beetles",
+          "icon": "assets/heroes/abilities/3733594387.png",
+          "description": "Infest an enemy with fire scarabs, stealing life from them and causing them to deal reduced damage.",
+          "descriptionRu": "Мираж насылает на врага огненных скарабеев, которые крадут у него здоровье и снижают наносимый им урон.",
+          "ultimate": false
+        },
+        {
+          "id": "1336069669",
+          "slot": 2,
+          "name": "Dust Devil",
+          "nameRu": "Пылевой дьявол",
+          "className": "mirage_tornado",
+          "icon": "assets/heroes/abilities/1336069669.png",
+          "description": "Transform yourself into a whirlwind that travels forward, damaging enemies, slowing their move speed and lifting them up in the air. After emerging from the tornado you gain bullet evasion.",
+          "descriptionRu": "Мираж превращается в вихрь, который движется вперёд, наносит врагам урон, замедляет их передвижение и поднимает их в воздух. Появившись из торнадо, Мираж получает уклонение от пуль.",
+          "ultimate": false
+        },
+        {
+          "id": "2221949202",
+          "slot": 3,
+          "name": "Djinn's Mark",
+          "nameRu": "Метка джинна",
+          "className": "mirage_sand_phantom",
+          "icon": "assets/heroes/abilities/2221949202.png",
+          "description": "Active: Consume all Djinn Marks to deal their damage now.",
+          "descriptionRu": "Активное: поглощает все метки, чтобы нанести мгновенный урон.",
+          "ultimate": false
+        },
+        {
+          "id": "2604653402",
+          "slot": 4,
+          "name": "Traveler",
+          "nameRu": "Путник",
+          "className": "mirage_teleport",
+          "icon": "assets/heroes/abilities/2604653402.png",
+          "description": "Target a location on the minimap. After a brief wait, teleport to that location. Taking damage during the wait period causes the teleport to be interrupted.",
+          "descriptionRu": "Выберите точку на мини-карте. После короткой задержки Мираж телепортируется в указанное место. Получение урона в период ожидания прерывает телепортацию.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Mo & Krill",
+      "nameRu": "Мо и Мелкий",
+      "className": "hero_krill",
+      "portrait": "assets/heroes/18.png",
+      "description": "By burrowing through the ground, Mo and Krill can get the drop on almost anyone; and once they get in close the results can be devastating.",
+      "descriptionRu": "Зарывшись в землю, Мо и Мелкий могут настигнуть практически любого — оказавшимся вблизи недругам несдобровать.",
+      "abilities": [
+        {
+          "id": "1454278799",
+          "slot": 1,
+          "name": "Scorn",
+          "nameRu": "Презрение",
+          "className": "ability_intimidate",
+          "icon": "assets/heroes/abilities/1454278799.png",
+          "description": "Deal damage to nearby enemies and heal yourself based on the damage done. Heal is stronger against enemy heroes.",
+          "descriptionRu": "Мо и Мелкий наносят урон врагам поблизости и восстанавливают своё здоровье пропорционально ему. Если урон наносится вражескому герою, здоровья восстанавливается больше.",
+          "ultimate": false
+        },
+        {
+          "id": "2406758797",
+          "slot": 2,
+          "name": "Burrow",
+          "nameRu": "Зарывание",
+          "className": "ability_burrow",
+          "icon": "assets/heroes/abilities/2406758797.png",
+          "description": "Burrow underground, moving faster, and gaining spirit and bullet armor. Damage from enemy heroes will reduce the speed bonus. When you jump out, deal spirit damage, slow, and knockup.",
+          "descriptionRu": "Мо и Мелкий зарываются в землю, благодаря чему передвигаются быстрее и получают защиту от спиритического и пулевого урона. Урон от вражеских героев уменьшает бонус к скорости. При выпрыгивании Мо и Мелкий наносят целям спиритический урон, а также замедляют и подбрасывают их.",
+          "ultimate": false
+        },
+        {
+          "id": "1914797280",
+          "slot": 3,
+          "name": "Sand Blast",
+          "nameRu": "Песочная волна",
+          "className": "ability_throw_sand",
+          "icon": "assets/heroes/abilities/1914797280.png",
+          "description": "Spray sand that disarms enemies in front of you and deals damage.",
+          "descriptionRu": "Мо и Мелкий разбрасывают песок, который обезоруживает врагов перед ними и наносит урон.",
+          "ultimate": false
+        },
+        {
+          "id": "1917840730",
+          "slot": 4,
+          "name": "Combo",
+          "nameRu": "Комбо",
+          "className": "ability_ult_combo",
+          "icon": "assets/heroes/abilities/1917840730.png",
+          "description": "Hold the target in place, stunning them and dealing damage during the channel. If they die during, or within 3 seconds of Combo ending, you permanently gain max health.",
+          "descriptionRu": "Цель удерживается на месте, оглушается и получает урон. Если она погибает во время применения умения или в течение 3 сек. после его окончания, Мо и Мелкий получают постоянный бонус к макс. объёму здоровья.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "name": "Paige",
+      "nameRu": "Пейдж",
+      "className": "hero_bookworm",
+      "portrait": "assets/heroes/67.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "604448162",
+          "slot": 1,
+          "name": "Bookwyrm",
+          "nameRu": "Книжный змей",
+          "className": "ability_bookworm_dragonfire",
+          "icon": "assets/heroes/abilities/604448162.png",
+          "description": "Conjure a dragon that appears at the target location before flying forward, dealing spirit damage and leaving a burning path in its trail.",
+          "descriptionRu": "Пейдж призывает дракона, который появляется в выбранном месте, после чего летит вперёд, нанося спиритический урон и оставляя за собой огненный след.",
+          "ultimate": false
+        },
+        {
+          "id": "3553292912",
+          "slot": 2,
+          "name": "Plot Armor",
+          "nameRu": "Сюжетная броня",
+          "className": "ability_bookworm_knightbarrier",
+          "icon": "assets/heroes/abilities/3553292912.png",
+          "description": "Grant an ally a barrier. While the barrier holds, they gain bonus weapon damage.",
+          "descriptionRu": "Пейдж даёт союзнику барьер. Во время его действия союзник наносит доп. урон от оружия.",
+          "ultimate": false
+        },
+        {
+          "id": "3054993162",
+          "slot": 3,
+          "name": "Captivating Read",
+          "nameRu": "Пленяющее чтиво",
+          "className": "ability_bookworm_aoemagic",
+          "icon": "assets/heroes/abilities/3054993162.png",
+          "description": "Target an area with latent magic, applying slow. The magic detonates after a delay, dealing spirit damage and applying immobilize.",
+          "descriptionRu": "Пейдж заколдовывает выбранную область латентной магией, которая накладывает замедление. После задержки происходит взрыв, наносящий спиритический урон и накладывающий обездвиживание.",
+          "ultimate": false
+        },
+        {
+          "id": "1841901343",
+          "slot": 4,
+          "name": "Rallying Charge",
+          "nameRu": "Единящее наступление",
+          "className": "ability_bookworm_knightcharge",
+          "icon": "assets/heroes/abilities/1841901343.png",
+          "description": "Release a wave of spectral knights and steeds that charge across the entire city, healing allies and dealing spirit damage to enemies. The strength of the heal and spirit damage is amplified as the knights travel further.",
+          "descriptionRu": "Пейдж выпускает волну призрачных рыцарей и лошадей, которые мчатся через весь город, леча союзников и нанося спиритический урон врагам. Сила лечения и спиритического урона увеличивается с расстоянием, на которое удаляются рыцари.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Paradox",
+      "nameRu": "Парадокс",
+      "className": "hero_chrono",
+      "portrait": "assets/heroes/10.png",
+      "description": "Manipulating time lets Paradox outpace an enemy in one on one combat. She thrives by subjecting her enemies to timely swaps into a waiting pulse grenade, her wall, or into the middle of her teammates.",
+      "descriptionRu": "Благодаря манипулированию временем Парадокс может опередить врага в бою один на один. Она в нужный момент перемещает противников к пульсирующей гранате, к своей стене или в засаду к своим союзникам.",
+      "abilities": [
+        {
+          "id": "58655583",
+          "slot": 1,
+          "name": "Pulse Grenade",
+          "nameRu": "Пульсирующая граната",
+          "className": "citadel_ability_chrono_pulse_grenade",
+          "icon": "assets/heroes/abilities/58655583.png",
+          "description": "Throw a grenade that begins pulsing when it lands. Each pulse expands the radius and applies spirit damage, time slow, and stacking increased damage for Paradox against the victim.",
+          "descriptionRu": "Парадокс бросает гранату, которая начинает пульсировать при приземлении. Каждый импульс увеличивает радиус действия, наносит жертве спиритический урон, замедляет для неё время и накладывает на неё накапливаемый эффект повышения урона, получаемого от Парадокс.",
+          "ultimate": false
+        },
+        {
+          "id": "1366719170",
+          "slot": 2,
+          "name": "Time Wall",
+          "nameRu": "Стена времени",
+          "className": "citadel_ability_chrono_time_wall",
+          "icon": "assets/heroes/abilities/1366719170.png",
+          "description": "Create a time warping wall that stops time for all enemy projectiles and bullets that touch it and increases the speed and damage of friendly bullets. Enemies that touch the wall will be briefly slowed.",
+          "descriptionRu": "Создаёт стену, которая останавливает время для всех попадающих в неё вражеских снарядов и пуль, а также увеличивает скорость и урон пуль, выпущенных союзниками. Коснувшиеся стены враги ненадолго замедляются.",
+          "ultimate": false
+        },
+        {
+          "id": "1128670012",
+          "slot": 3,
+          "name": "Kinetic Carbine",
+          "nameRu": "Кинетический карабин",
+          "className": "citadel_ability_chrono_kinetic_carbine",
+          "icon": "assets/heroes/abilities/1128670012.png",
+          "description": "Charge up a powerful shot of time energy, dealing spirit damage and applying a Time-Stop to enemies hit. The damage dealt increases with weapon damage. Move speed is increased while charging. While in the air and charging, to timeslow your movement.",
+          "descriptionRu": "Парадокс заряжает выстрел мощной энергией времени, которая наносит спиритический урон и останавливает время для поражённых врагов. Наносимый урон увеличивается с ростом урона от оружия. Во время зарядки скорость передвижения повышается. Находясь в воздухе во время зарядки, нажмите , чтобы замедлить время для себя.",
+          "ultimate": false
+        },
+        {
+          "id": "2917891787",
+          "slot": 4,
+          "name": "Paradoxical Swap",
+          "nameRu": "Парадоксальная перестановка",
+          "className": "citadel_ability_chrono_swap",
+          "icon": "assets/heroes/abilities/2917891787.png",
+          "description": "Fire a projectile that swaps your position with the target enemy hero.",
+          "descriptionRu": "Парадокс бросает снаряд, который меняет её и вражеского героя местами.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "name": "Pocket",
+      "nameRu": "Карман",
+      "className": "hero_synth",
+      "portrait": "assets/heroes/50.png",
+      "description": "With a powerful shotgun and a thin frame, Pocket relies on their ability to briefly escape into a mystic suitcase and teleport via a flying cloak in order to survive close encounters.",
+      "descriptionRu": "Несмотря на своё хрупкое телосложение, Карман ведёт бой на ближней дистанции, расстреливая врагов из мощного дробовика, укрываясь в мистическом чемоданчике и телепортируясь с помощью летающего плаща.",
+      "abilities": [
+        {
+          "id": "938149308",
+          "slot": 1,
+          "name": "Barrage",
+          "nameRu": "Шквал",
+          "className": "synth_barrage",
+          "icon": "assets/heroes/abilities/938149308.png",
+          "description": "Channel to start launching projectiles that deal spirit damage and apply slow around their impact point. Projectiles that hit a hero grant Pocket increased damage that stacks. Casting while airborne will cause Pocket to float. Casting AirDash or Flying Cloak will not cancel Barrage.",
+          "descriptionRu": "Карман начинает стрелять снарядами, которые наносят спиритический урон и накладывают замедление на цели в радиусе попадания. За каждый снаряд, попавший во вражеского героя, Карман получает накапливаемое повышение урона. Применение в воздухе заставляет героя парить. Использование рывка в воздухе и «Летающего плаща» не прерывает умение.",
+          "ultimate": false
+        },
+        {
+          "id": "1976701714",
+          "slot": 2,
+          "name": "Flying Cloak",
+          "nameRu": "Летающий плащ",
+          "className": "synth_plasma_flux",
+          "icon": "assets/heroes/abilities/1976701714.png",
+          "description": "Launch a sentient cloak that travels forward and damages enemies. You can press Ability 2 to teleport to its location.",
+          "descriptionRu": "Карман выпускает оживший плащ, который движется вперёд и наносит урон врагам. Нажмите 2-е умение , чтобы телепортироваться к плащу.",
+          "ultimate": false
+        },
+        {
+          "id": "3747867012",
+          "slot": 3,
+          "name": "Enchanter's Satchel",
+          "nameRu": "Чемодан заклинателя",
+          "className": "synth_pulse",
+          "icon": "assets/heroes/abilities/3747867012.png",
+          "description": "Escape into your suitcase. When the duration ends, deal spirit damage to nearby enemies. Duration can be ended early by performing any action.",
+          "descriptionRu": "Карман прячется в своём чемодане. По окончании действия противникам поблизости наносится спиритический урон. Из чемодана можно вернуться раньше, совершив любое действие.",
+          "ultimate": false
+        },
+        {
+          "id": "2954330093",
+          "slot": 4,
+          "name": "Affliction",
+          "nameRu": "Недуг",
+          "className": "synth_affliction",
+          "icon": "assets/heroes/abilities/2954330093.png",
+          "description": "Applies damage over time to enemies nearby. Affliction's damage is non-lethal and does not apply item procs.",
+          "descriptionRu": "Карман наносит постепенный урон врагам поблизости. Урон от умения не может убить и не влияет на срабатывание предметов.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "84",
+      "name": "Rat King",
+      "nameRu": "Крысиный король",
+      "className": "hero_ratking",
+      "portrait": "assets/heroes/84.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "3002308408",
+          "slot": 1,
+          "name": "Scrap Grenade",
+          "nameRu": "Хлам-граната",
+          "className": "ability_ratking_scrap_grenade",
+          "icon": "assets/heroes/abilities/3002308408.png",
+          "description": "Throw a grenade of scrap that detonates multiple times, dealing bullet damage and applying slow. The grenade can be meleed to knock it away.",
+          "descriptionRu": "Крысиный король кидает гранату из хлама, которая взрывается несколько раз, нанося урон от пуль и накладывая замедление. Гранату можно отбить атакой ближнего боя.",
+          "ultimate": false
+        },
+        {
+          "id": "3681399397",
+          "slot": 2,
+          "name": "Rat Swarm",
+          "nameRu": "Крысиная стая",
+          "className": "ability_ratking_ratnibble",
+          "icon": "assets/heroes/abilities/3681399397.png",
+          "description": "Call forth a swarm of rats that leap onto enemies, dealing spirit damage over time and reducing their bullet resist with every bite. The more rats are attached, the faster they will bite the target. Enemies can have multiple rats attached, but can shake off a rat early by performing a ground or air dash.",
+          "descriptionRu": "Крысиный король призывает стаю крыс, которые бросаются на врагов, нанося постепенный спиритический урон и снижая сопротивляемость пулям с каждым укусом. Чем больше крыс вцепилось в цель, тем быстрее они наносят укусы. Во врага может вцепиться несколько крыс одновременно, но он может стряхнуть крысу, выполнив рывок на земле или в воздухе.",
+          "ultimate": false
+        },
+        {
+          "id": "690412829",
+          "slot": 3,
+          "name": "Royal Pestments",
+          "nameRu": "Крысолевская мантия",
+          "className": "ability_ratking_ratarmor",
+          "icon": "assets/heroes/abilities/690412829.png",
+          "description": "Adorn scrappy armor, gaining barrier based on your max health. As long as the armor holds, bullets have a chance to be deflected back towards the attacker. The barrier does not benefit from resists.",
+          "descriptionRu": "Крысиный король облачается в кустарную броню и получает барьер, на прочность которого влияет макс. здоровье. Пока броня держится, Крысиный король с некоторой вероятностью отражает пули в атакующего. Барьер не получает бонусов от сопротивлений.",
+          "ultimate": false
+        },
+        {
+          "id": "1627989937",
+          "slot": 4,
+          "name": "Rule, Ratannia!",
+          "nameRu": "Правь, Крысания!",
+          "className": "ability_ratking_standard_bearer",
+          "icon": "assets/heroes/abilities/1627989937.png",
+          "description": "Charge up and summon the banner of Ratannia, granting all nearby allies increased move speed, immunity from slows, and reduced incoming damage while near the banner.",
+          "descriptionRu": "Зарядите и призовите знамя Крысании. Все союзники поблизости получают увеличенную скорость передвижения, становятся неуязвимы к замедлению, а получаемый ими урон снижается в радиусе знамени.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "79",
+      "name": "Rem",
+      "nameRu": "Дрём",
+      "className": "hero_familiar",
+      "portrait": "assets/heroes/79.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "3692321247",
+          "slot": 1,
+          "name": "Pillow Toss",
+          "nameRu": "Бой подушками",
+          "className": "ability_familiar_ability02",
+          "icon": "assets/heroes/abilities/3692321247.png",
+          "description": "Throw your trusty pillow inflicting spirit damage and heavy knockback. Landing hits reduces the cooldown of your other abilities.",
+          "descriptionRu": "Дрём бросает свою верную подушку, которая наносит спиритический урон и сильно отбрасывает цель. При попадании сокращается перезарядка других умений героя.",
+          "ultimate": false
+        },
+        {
+          "id": "1568845221",
+          "slot": 2,
+          "name": "Tag Along",
+          "nameRu": "Приятная компания",
+          "className": "ability_familiar_attach",
+          "icon": "assets/heroes/abilities/1568845221.png",
+          "description": "Jump to an ally and nap alongside them. Both you and the ally receive a burst heal based on missing health followed by lingering regeneration. Hop between allies with Ability 2 to apply the heal, once per ally. You are knocked off if stunned by an ultimate ability. You can use items and all self-casts target your ally instead.",
+          "descriptionRu": "Дрём прыгает к союзнику и дремлет возле него. Дрём и союзник получают мгновенное лечение, пропорциональное их недостающему здоровью, а также постепенное восстановление. Прыгайте между целями нажатием 2-е умение , чтобы лечить их — по разу на каждого союзника. Дрём падает, если его оглушает ульт. Дрём может использовать предметы, но при применении на себя эффекты будут наложены на союзника.",
+          "ultimate": false
+        },
+        {
+          "id": "536278136",
+          "slot": 3,
+          "name": "Lil Helpers",
+          "nameRu": "Маленькие помощники",
+          "className": "ability_familiar_helpinghands",
+          "icon": "assets/heroes/abilities/536278136.png",
+          "description": "Signal a Helper to lend a hand. They can collect boxes, do Sinner's Sacrifices, or be sent to support allies and troopers. Follow a hero: Provides a short burst of spirit resist and fading move speed. Follow a trooper: Provides healing, damage, resists, and allows tagging along. When no hero is around, souls from trooper kills are split amongst the team. Can be cast during Tag Along. Helpers will take a nap for 15.1s after following someone.",
+          "descriptionRu": "Дрём даёт помощнику задание. Помощник может собирать награды из ящиков и автоматов Sinner's Sacrifice, а также следовать за союзниками или солдатами. При следовании за героем: помощник ненадолго даёт сопротивляемость спиритизму и затухающий бонус к скорости передвижения. При следовании за солдатом: помощник даёт лечение, бонус к урону и сопротивляемостям, а также позволяет применить на солдата «Приятную компанию». Если поблизости нет героя, души с убитых солдат распределяются между членами команды. Можно применить во время действия «Приятной компании». После следования помощники отходят поспать на 15.1 с.",
+          "ultimate": false
+        },
+        {
+          "id": "2396527575",
+          "slot": 4,
+          "name": "Naptime",
+          "nameRu": "Тихий час",
+          "className": "ability_familiar_ability01",
+          "icon": "assets/heroes/abilities/2396527575.png",
+          "description": "Cast your gaze forward, piercing walls and floors. Enemies in the gaze are slowed, have reduced dash distance, and cannot use movement abilities. When the channel ends they fall asleep before waking up to a splitting headache that deals heavy spirit damage.",
+          "descriptionRu": "Дрём бросает взгляд вперёд, пронизывая стены и полы. Попавшие под его взор враги замедляются, получают уменьшенную дальность рывка и не могут использовать связанные с передвижением умения. По окончании подготовки они засыпают, а просыпаются с жуткой головной болью, наносящей большой спиритический урон.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Seven",
+      "nameRu": "Семь",
+      "className": "hero_gigawatt",
+      "portrait": "assets/heroes/2.png",
+      "description": "Seven thrives in a skirmish waiting for the time to strike. Then he rolls into the fight like a storm and batters his enemies with a cascade of lightning.",
+      "descriptionRu": "Семь преуспевает в схватках, выжидая время для атаки. Он врывается в бой словно гроза, обрушивая на врагов каскад молний.",
+      "abilities": [
+        {
+          "id": "1065103387",
+          "slot": 1,
+          "name": "Lightning Ball",
+          "nameRu": "Шаровая молния",
+          "className": "citadel_ability_lightning_ball",
+          "icon": "assets/heroes/abilities/1065103387.png",
+          "description": "Shoot a ball of lightning that travels in a straight line. Does damage to all targets in its radius. Slows down when damaging enemies and stops if it hits the world.",
+          "descriptionRu": "Семь запускает шаровую молнию, которая движется по прямой и наносит урон всем целям в радиусе своего действия. Молния замедляется, если попадает во врагов, и останавливается, если на пути оказываются элементы игрового мира.",
+          "ultimate": false
+        },
+        {
+          "id": "1074714947",
+          "slot": 2,
+          "name": "Static Charge",
+          "nameRu": "Статический заряд",
+          "className": "citadel_ability_static_charge",
+          "icon": "assets/heroes/abilities/1074714947.png",
+          "description": "Apply a charge to a target enemy hero. After a short duration, the static charge stuns and damages enemies within the radius.",
+          "descriptionRu": "Семь накладывает заряд на вражеского героя. После короткой задержки заряд наносит урон и оглушает врагов в радиусе действия.",
+          "ultimate": false
+        },
+        {
+          "id": "539192269",
+          "slot": 3,
+          "name": "Power Surge",
+          "nameRu": "Скачок напряжения",
+          "className": "ability_power_surge",
+          "icon": "assets/heroes/abilities/539192269.png",
+          "description": "Power up your weapon with a shock effect, making your bullets proc shock damage on your target. This shock damage bounces to enemies near your target. Occurs once per burst shot.",
+          "descriptionRu": "Пули героя наносят электрический урон цели. Электрический заряд также отскакивает во врагов, которые находятся рядом с целью. Заряд выпускается раз за очередь.",
+          "ultimate": false
+        },
+        {
+          "id": "2061574352",
+          "slot": 4,
+          "name": "Storm Cloud",
+          "nameRu": "Грозовое облако",
+          "className": "citadel_ability_storm_cloud",
+          "icon": "assets/heroes/abilities/2061574352.png",
+          "description": "Channel an expanding storm cloud around you that damages all enemies within its radius. Enemies do not take damage when they are out of line-of-sight.",
+          "descriptionRu": "Семь образует вокруг себя грозовое облако, которое наносит урон всем врагам в радиусе действия. Враги не получают урона, если находятся вне вашей видимости.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Shiv",
+      "nameRu": "Заточка",
+      "className": "hero_shiv",
+      "portrait": "assets/heroes/19.png",
+      "description": "Shiv has zero interest in playing fair, which is why he relies on hit and run tactics to weaken enemies before he dives in for the kill.",
+      "descriptionRu": "Играть по-честному — не про Заточку. Он изматывает врагов, сматываясь до того, как те успеют спохватиться, а затем наносит смертельный удар.",
+      "abilities": [
+        {
+          "id": "2460791803",
+          "slot": 1,
+          "name": "Serrated Knives",
+          "nameRu": "Зазубренные ножи",
+          "className": "citadel_ability_shiv_dagger",
+          "icon": "assets/heroes/abilities/2460791803.png",
+          "description": "Throw a knife that bleeds an enemy. Each additional hit adds a stack and refreshes the bleed duration, causing the bleed to increase per stack.",
+          "descriptionRu": "Заточка бросает кинжал, который вызывает у врага кровотечение. Каждое последующее попадание кинжалом добавляет единицу этого эффекта, а отсчёт времени его действия начинается заново. Урон от кровотечения увеличивается с каждой добавленной единицей эффекта.",
+          "ultimate": false
+        },
+        {
+          "id": "1458044103",
+          "slot": 2,
+          "name": "Slice and Dice",
+          "nameRu": "Режущий рывок",
+          "className": "citadel_ability_shiv_dash",
+          "icon": "assets/heroes/abilities/1458044103.png",
+          "description": "Perform a dash forward, damaging enemies along the path. Hit Enemies have their spirit resist reduced. This debuff can stack.",
+          "descriptionRu": "Заточка совершает рывок вперёд, нанося урон врагам на пути. У поражённых врагов снижается сопротивляемость спиритизму. Данный эффект накапливается.",
+          "ultimate": false
+        },
+        {
+          "id": "1537272748",
+          "slot": 3,
+          "name": "Bloodletting",
+          "nameRu": "Кровопускание",
+          "className": "citadel_ability_shiv_defer_damage",
+          "icon": "assets/heroes/abilities/1537272748.png",
+          "description": "Take only a portion of incoming damage immediately and defer the rest to be taken over time. Activate to clear a portion of the deferred damage.",
+          "descriptionRu": "Доля урона, получаемого героем, наносится не сразу, а постепенно. Умение можно активировать, чтобы отменить получение части отложенного урона.",
+          "ultimate": false
+        },
+        {
+          "id": "1835738020",
+          "slot": 4,
+          "name": "Killing Blow",
+          "nameRu": "Добивающий удар",
+          "className": "citadel_ability_shiv_killing_blow",
+          "icon": "assets/heroes/abilities/1835738020.png",
+          "description": "",
+          "descriptionRu": "",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "name": "Silver",
+      "nameRu": "Сильвер",
+      "className": "hero_werewolf",
+      "portrait": "assets/heroes/80.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "1385849824",
+          "slot": 1,
+          "name": "Slam Fire",
+          "nameRu": "Скоростной огонь",
+          "className": "ability_werewolf_unloadgun",
+          "icon": "assets/heroes/abilities/1385849824.png",
+          "description": "Instantly reload your gun. You gain bonus fire rate and deal bonus weapon damage based on the target's health for a limited number of shots, but suffer from reduced accuracy. Deals bonus Weapon Damage against troopers and neutrals.",
+          "descriptionRu": "Мгновенно перезаряжает оружие. На ограниченное число выстрелов вы получаете повышенную скорострельность и наносите увеличенный урон от оружия, пропорциональный здоровью цели, но точность стрельбы снижается. Наносит дополнительный урон от оружия солдатам и нейтралам.",
+          "ultimate": false
+        },
+        {
+          "id": "2717130900",
+          "slot": 2,
+          "name": "Boot Kick",
+          "nameRu": "Пинок",
+          "className": "ability_werewolf_kickflip",
+          "icon": "assets/heroes/abilities/2717130900.png",
+          "description": "",
+          "descriptionRu": "",
+          "ultimate": false
+        },
+        {
+          "id": "3983754897",
+          "slot": 3,
+          "name": "Entangling Bola",
+          "nameRu": "Опутывающая бола",
+          "className": "ability_werewolf_netshot",
+          "icon": "assets/heroes/abilities/3983754897.png",
+          "description": "Throw a bola, dealing spirit damage, applying slow and preventing movement abilities or stamina.",
+          "descriptionRu": "Сильвер бросает болу, которая наносит спиритический урон, накладывает замедление и не даёт использовать связанные с передвижением умения и выносливость.",
+          "ultimate": false
+        },
+        {
+          "id": "515791019",
+          "slot": 4,
+          "name": "Lycan Curse",
+          "nameRu": "Ликантропия",
+          "className": "ability_werewolf_transformation",
+          "icon": "assets/heroes/abilities/515791019.png",
+          "description": "Passive: Dealing damage generates bloodlust, increased at low health. At max bloodlust, you automatically cast Lycan Curse. Active: Instantly transform, gaining increased max health, and stacking fire rate on enemy heroes, and replacing your abilities and weapon with their ferocious versions.",
+          "descriptionRu": "Пассивное: нанесение урона вызывает жажду крови (быстрее при низком уровне здоровья). При максимальной жажде Сильвер автоматически применяет «Ликантропию». Активное: Сильвер мгновенно трансформируется, что даёт ей бонусы к макс. здоровью, а также накапливаемое повышение скорострельности против вражеских героев. Умения и оружие героини заменяются свирепыми версиями.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "name": "Sinclair",
+      "nameRu": "Синклер",
+      "className": "hero_magician",
+      "portrait": "assets/heroes/60.png",
+      "description": "With the help of their unwilling assistant, The Magnificent Sinclair can confuse enemies with curving hexes and rapid bolts.",
+      "descriptionRu": "Великолепный Синклер сбивает врагов с толку, используя своего неохотного помощника, превращающие заклинания и быстрые заряды.",
+      "abilities": [
+        {
+          "id": "3156905386",
+          "slot": 1,
+          "name": "Vexing Bolt",
+          "nameRu": "Досаждающий заряд",
+          "className": "ability_magician_magicbolt",
+          "icon": "assets/heroes/abilities/3156905386.png",
+          "description": "Fire a bolt of magic that deals Damage, increasing as it travels. If you have an Assistant, they also cast Vexing Bolt at reduced damage. Press Ability 1 to redirect the bolt towards your crosshairs.",
+          "descriptionRu": "Синклер выпускает магический заряд, урон которого увеличивается со временем полёта до цели. Если призван помощник, он тоже применяет ‭«Досаждающий заряд», но наносит меньше урона. Нажмите 1-е умение , чтобы перенаправить заряд в сторону вашего прицела.",
+          "ultimate": false
+        },
+        {
+          "id": "12456023",
+          "slot": 2,
+          "name": "Spectral Assistant",
+          "nameRu": "Призрачный помощник",
+          "className": "ability_magician_cloneturret",
+          "icon": "assets/heroes/abilities/12456023.png",
+          "description": "Summon an Assistant at the targeted location. The Assistant attacks whenever you fire your weapon, dealing Damage. While the Assistant is out, you can press Ability 2 to swap positions with your Assistant. Casting Spectral Assistant also reloads your weapon.",
+          "descriptionRu": "Синклер призывает помощника в выбранном месте. Помощник атакует врагов, нанося им урон, когда вы стреляете из оружия. Вы можете нажать 2-е умение , чтобы поменяться с помощником местами. Призыв помощника также перезаряжает ваше оружие.",
+          "ultimate": false
+        },
+        {
+          "id": "2142213586",
+          "slot": 3,
+          "name": "Rabbit Hex",
+          "nameRu": "Кроличий сглаз",
+          "className": "ability_magician_animalhexarea",
+          "icon": "assets/heroes/abilities/2142213586.png",
+          "description": "Hex a target area and transform all enemies into a Rabbit for a limited duration. Rabbits are small and move faster, but take increased Damage and are unable to perform most actions. Hex does not interrupt abilities.",
+          "descriptionRu": "Временно превращает всех врагов в выбранной области в кроликов. Кролики маленькие и двигаются быстрее, но получают больше урона и не могут выполнять большинство действий. Превращение не прерывает умения.",
+          "ultimate": false
+        },
+        {
+          "id": "191022746",
+          "slot": 4,
+          "name": "Audience Participation",
+          "nameRu": "Участие аудитории",
+          "className": "ability_magician_copyult",
+          "icon": "assets/heroes/abilities/191022746.png",
+          "description": "Copy the Ultimate of an enemy hero for a limited time. Reactivating the ability will use the Copied Ultimate instead. Copies will inherit this ability's upgrade points. Audience Participation will also copy the cooldown.",
+          "descriptionRu": "Синклер временно копирует ульт вражеского героя. Повторное использование этого умения активирует скопированный ульт. У скопированных ультов будут улучшения от этого умения. ‭«Участие аудитории» также копирует время перезарядки умения.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "85",
+      "name": "Solomon",
+      "nameRu": "Соломон",
+      "className": "hero_chessmaster",
+      "portrait": "assets/heroes/85.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "4011110259",
+          "slot": 1,
+          "name": "Setup Bishop",
+          "nameRu": "Поставить слона",
+          "className": "ability_chessmaster_throwbishop",
+          "icon": "assets/heroes/abilities/4011110259.png",
+          "description": "Create a bishop that remains in place indefinitely. Move ( ): Moves the bishop, applying a fading slow and dealing spirit damage to enemies it passes through. After a delay, activates diagonal squares that deal additional spirit damage when stepped on. Re-activate to recall all bishops, ending the ability.",
+          "descriptionRu": "Соломон создает слона, который остаётся на месте неограниченное время. Ход ( ): Соломон делает ход слоном, накладывая затухающее замедление и нанося спиритический урон врагам на пути. После задержки появляются диагональные клетки, которые наносят дополнительный спиритический урон тем, кто на них наступает. Повторная активация отзывает всех слонов, завершая действие умения.",
+          "ultimate": false
+        },
+        {
+          "id": "4180486641",
+          "slot": 2,
+          "name": "Kingside Knight",
+          "nameRu": "Королевский конь",
+          "className": "ability_chessmaster_knightbuff",
+          "icon": "assets/heroes/abilities/4180486641.png",
+          "description": "Promote an ally to be a knight, granting bonus stamina and barrier for a duration. If self-cast you develop yourself as king instead, granting double the barrier but no stamina. Move ( ): Moves the piece, making it invulnerable during the duration before landing.",
+          "descriptionRu": "Соломон назначает союзника конём, на время даруя ему дополнительную выносливость и барьер. Если Соломон применяет умение на себя, он становится королём, получая вдвое более прочный барьер, но без выносливости. Ход ( ): Соломон перемещает фигуру, делая её неуязвимой до приземления.",
+          "ultimate": false
+        },
+        {
+          "id": "2424652896",
+          "slot": 3,
+          "name": "Rook Battery",
+          "nameRu": "Ладейная батарея",
+          "className": "ability_chessmaster_forkpiece",
+          "icon": "assets/heroes/abilities/2424652896.png",
+          "description": "Release a pair of rooks that travel forward, dealing spirit damage and applying immobilize. If the rooks hit a wall, they reflect back in the opposite direction. Re-Activate: Split the rooks perpendicularly.",
+          "descriptionRu": "Соломон запускает пару ладей, которые двигаются вперёд, нанося спиритический урон и накладывая обездвиживание. Столкнувшись со стеной, ладьи движутся в обратном направлении. Повторная активация: ладьи расходятся в стороны перпендикулярно первоначальной траектории.",
+          "ultimate": false
+        },
+        {
+          "id": "1389230689",
+          "slot": 4,
+          "name": "Develop Queen",
+          "nameRu": "Развить ферзя",
+          "className": "ability_chessmaster_queen",
+          "icon": "assets/heroes/abilities/1389230689.png",
+          "description": "",
+          "descriptionRu": "",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "name": "The Doorman",
+      "nameRu": "Швейцар",
+      "className": "hero_doorman",
+      "portrait": "assets/heroes/69.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "103496908",
+          "slot": 1,
+          "name": "Call Bell",
+          "nameRu": "Звонок для вызова",
+          "className": "ability_doorman_bomb",
+          "icon": "assets/heroes/abilities/103496908.png",
+          "description": "Throw out a call bell that deals spirit damage on impact. After a short delay it explodes, dealing additional spirit damage and causing affected enemies to suffer reduced weapon accuracy and movement slow. Can be shot to detonate early.",
+          "descriptionRu": "Швейцар бросает звонок для вызова, который наносит спиритический урон при попадании. После небольшой задержки звонок взрывается, нанося дополнительный спиритический урон, а также временно снижая точность стрельбы и скорость передвижения задетых врагов. С помощью выстрела можно вызвать преждевременную детонацию.",
+          "ultimate": false
+        },
+        {
+          "id": "109766091",
+          "slot": 2,
+          "name": "Doorway",
+          "nameRu": "Дверной портал",
+          "className": "ability_doorman_doorway",
+          "icon": "assets/heroes/abilities/109766091.png",
+          "description": "Place two connected doors in the world. Players and most projectiles entering one door will exit out through the other. The doors will close at the end of the duration. The two doors must be placed within the doorway distance of each other.",
+          "descriptionRu": "Швейцар создаёт в игровом мире две связанные двери. Игроки и большинство снарядов, входящих в одну дверь, будут выходить через другую. Двери закроются после окончания действия умения. Дистанция между дверями ограничена.",
+          "ultimate": false
+        },
+        {
+          "id": "1719512318",
+          "slot": 3,
+          "name": "Luggage Cart",
+          "nameRu": "Багажная тележка",
+          "className": "ability_doorman_luggage_cart",
+          "icon": "assets/heroes/abilities/1719512318.png",
+          "description": "Send out a Luggage Cart that deals spirit damage and pulls enemy heroes along its path. Can be alt cast with to target friendly heroes instead.",
+          "descriptionRu": "Швейцар запускает багажную тележку, которая наносит спиритический урон и тянет за собой вражеских героев. Активируйте с помощью , чтобы применить на союзных героев.",
+          "ultimate": false
+        },
+        {
+          "id": "1703045691",
+          "slot": 4,
+          "name": "Hotel Guest",
+          "nameRu": "Постоялец отеля",
+          "className": "ability_doorman_hotel",
+          "icon": "assets/heroes/abilities/1703045691.png",
+          "description": "Send the target's physical body to be a guest at the Baroness Hotel. The guest is to promptly make their way to the exit elevator, where they'll be sent back to their original position. A stay at the Baroness Hotel is paid for in spirit damage. Failure to check-out on time costs additional spirit damage.",
+          "descriptionRu": "Швейцар отправляет физическое тело цели погостить в отеле «Баронесса». Постояльцу нужно добраться до лифта, который вернёт его в начальную точку. Плата за проживание в отеле взимается в спиритическом уроне. За несвоевременный выезд выписывается дополнительный спиритический урон.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "name": "Venator",
+      "nameRu": "Венатор",
+      "className": "hero_priest",
+      "portrait": "assets/heroes/65.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "911307831",
+          "slot": 1,
+          "name": "Consecrating Grenade",
+          "nameRu": "Освящающая граната",
+          "className": "ability_priest_flashbang",
+          "icon": "assets/heroes/abilities/911307831.png",
+          "description": "Fire a grenade that bounces before exploding, dealing weapon damage and setting enemies on fire. Burning targets deal pure damage to enemies in the area and suffer from reduced healing.",
+          "descriptionRu": "Венатор стреляет гранатой, которая отскакивает перед взрывом, нанося урон от оружия и поджигая врагов. Горящие цели наносят чистый урон врагам в области и имеют сниженное лечение.",
+          "ultimate": false
+        },
+        {
+          "id": "1764146857",
+          "slot": 2,
+          "name": "Gutshot",
+          "nameRu": "Разрывной выстрел",
+          "className": "ability_priest_knockback",
+          "icon": "assets/heroes/abilities/1764146857.png",
+          "description": "Fire a blast with your shotgun, dealing weapon damage and pushing enemies back. Enemies near a wall receive stun and take bonus weapon damage.",
+          "descriptionRu": "Венатор совершает мощный выстрел из дробовика, который наносит урон от оружия и отбрасывает врагов назад. Враги возле стены оглушаются и получают доп. урон от оружия.",
+          "ultimate": false
+        },
+        {
+          "id": "11154161",
+          "slot": 3,
+          "name": "Hex-Lined Snap Trap",
+          "nameRu": "Заколдованный капкан",
+          "className": "ability_priest_beartrap",
+          "icon": "assets/heroes/abilities/11154161.png",
+          "description": "Kick a trap that arms after a brief delay. The trap springs on the first enemy it touches, dealing spirit damage, applying immobilize, and revealing enemies for a duration afterwards.",
+          "descriptionRu": "Венатор пинает капкан, который заряжается после короткой задержки. Капкан срабатывает на первом коснувшемся его враге, нанося спиритический урон, накладывая обездвиживание и раскрывая местоположение целей до конца действия.",
+          "ultimate": false
+        },
+        {
+          "id": "2918874166",
+          "slot": 4,
+          "name": "Ira Domini",
+          "nameRu": "Гнев Божий",
+          "className": "ability_priest_weaponswap",
+          "icon": "assets/heroes/abilities/2918874166.png",
+          "description": "Load your crossbow with 3 stakes, dealing massively increased weapon damage. The final stake is blessed, dealing bonus pure damage and executing low-health enemies.",
+          "descriptionRu": "Венатор заряжает свой арбалет 3 кольями, которые наносят существенно увеличенный урон от оружия. Последний кол освящён, поэтому наносит дополнительный чистый урон и мгновенно убивает врагов с низким уровнем здоровья.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "name": "Victor",
+      "nameRu": "Виктор",
+      "className": "hero_frank",
+      "portrait": "assets/heroes/66.png",
+      "description": "",
+      "descriptionRu": "",
+      "abilities": [
+        {
+          "id": "2043074967",
+          "slot": 1,
+          "name": "Pain Battery",
+          "nameRu": "Батарея боли",
+          "className": "ability_frank_shocktarget2",
+          "icon": "assets/heroes/abilities/2043074967.png",
+          "description": "Taking any damage passively charges up your Pain Battery. Once full, activating the ability fires multiple shocking bolts, dealing spirit damage once per target.",
+          "descriptionRu": "При получении любого урона Виктор заряжает свою батарею боли. Когда она полностью заряжена, при активации умения герой выпускает электрические заряды, которые наносят спиритический урон каждой цели.",
+          "ultimate": false
+        },
+        {
+          "id": "3727084744",
+          "slot": 2,
+          "name": "Jumpstart",
+          "nameRu": "Прикуривание",
+          "className": "ability_frank_selfzap",
+          "icon": "assets/heroes/abilities/3727084744.png",
+          "description": "Deal spirit damage to yourself. Then, gain bonus regeneration and bonus move speed, decaying over time.",
+          "descriptionRu": "Виктор наносит себе спиритический урон, после чего у него повышаются восстановление и скорость передвижения. Сила эффекта постепенно снижается.",
+          "ultimate": false
+        },
+        {
+          "id": "1472593493",
+          "slot": 3,
+          "name": "Aura of Suffering",
+          "nameRu": "Аура страдания",
+          "className": "ability_frank_painaura",
+          "icon": "assets/heroes/abilities/1472593493.png",
+          "description": "Unleash pain, dealing spirit damage over time to both enemies and yourself. The damage continues to increase the longer the ability is channeled, up to a maximum amount.",
+          "descriptionRu": "Виктор выпускает боль, нанося постепенный спиритический урон и врагам, и себе. Урон продолжает расти по мере действия умения, пока не достигнет максимального значения.",
+          "ultimate": false
+        },
+        {
+          "id": "3493884851",
+          "slot": 4,
+          "name": "Shocking Reanimation",
+          "nameRu": "Шоковая реанимация",
+          "className": "ability_frank_revive",
+          "icon": "assets/heroes/abilities/3493884851.png",
+          "description": "Release a wave after taking lethal damage, applying a diminishing slow. After a brief channel you reanimate, dealing spirit damage and applying stun to nearby enemies.",
+          "descriptionRu": "Получив летальный урон, Виктор выпускает волну, которая накладывает затухающее замедление. После короткой подготовки Виктор реанимируется, нанося врагам поблизости спиритический урон и оглушая их.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Vindicta",
+      "nameRu": "Виндикта",
+      "className": "hero_hornet",
+      "portrait": "assets/heroes/3.png",
+      "description": "Vindicta has the mobility to engage at her leisure, picking at her prey and bleeding them out slowly. Injured enemies at any distance should fear being picked off when she is on the map.",
+      "descriptionRu": "Ловкость Виндикты позволяет ей изматывать жертв, заставляя их истекать кровью. Раненным врагам всегда стоит остерегаться её смертоносного выстрела.",
+      "abilities": [
+        {
+          "id": "537527508",
+          "slot": 1,
+          "name": "Stake",
+          "nameRu": "Кол",
+          "className": "citadel_ability_hornet_chain",
+          "icon": "assets/heroes/abilities/537527508.png",
+          "description": "Throw a stake that tethers enemies to the location where the stake lands. Enemy movement is restricted to the length of the tether.",
+          "descriptionRu": "Виндикта бросает кол, который приковывает врагов к месту приземления. Враги могут перемещаться только на длину привязи.",
+          "ultimate": false
+        },
+        {
+          "id": "1796564033",
+          "slot": 2,
+          "name": "Flight",
+          "nameRu": "Полёт",
+          "className": "citadel_ability_hornet_leap",
+          "icon": "assets/heroes/abilities/1796564033.png",
+          "description": "Leap into the air and fly. While in flight your weapon deals bonus spirit damage and your items have increased range.",
+          "descriptionRu": "Виндикта взмывает в воздух и летит. Во время полёта её оружие наносит дополнительный спиритический урон, а предметы имеют повышенную дальность действия.",
+          "ultimate": false
+        },
+        {
+          "id": "2048438176",
+          "slot": 3,
+          "name": "Crow Familiar",
+          "nameRu": "Ворон-фамильяр",
+          "className": "citadel_ability_hornet_sting",
+          "icon": "assets/heroes/abilities/2048438176.png",
+          "description": "Your crow familiar deals impact damage, reduces their bullet resist and applies a bleed that deals damage based on the target's current health.",
+          "descriptionRu": "Ворон-фамильяр наносит урон при попадании, уменьшает сопротивляемость цели пулям и вызывает кровотечение, урон которого пропорционален текущему здоровью цели.",
+          "ultimate": false
+        },
+        {
+          "id": "775377419",
+          "slot": 4,
+          "name": "Assassinate",
+          "nameRu": "Контрольный выстрел",
+          "className": "citadel_ability_hornet_snipe",
+          "icon": "assets/heroes/abilities/775377419.png",
+          "description": "Use your scoped rifle to fire a powerful shot over long distances. Deal only partial damage until fully charged after 1.0s of being scoped. Does bonus damage to enemies with less than 50% health remaining. Landing a killing blow on a player with Assassinate grants you bonus weapon damage.",
+          "descriptionRu": "Виндикта совершает из своей винтовки мощный дальний выстрел. Если он производится до накопления полного заряда (раньше чем через 1.0 сек. после взгляда в прицел), урона наносится меньше. Врагам, у которых меньше 50% здоровья, наносится дополнительный урон. Если выстрел оказывается смертельным, Виндикта получает бонус к урону от оружия.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "name": "Viscous",
+      "nameRu": "Вязкус",
+      "className": "hero_viscous",
+      "portrait": "assets/heroes/35.png",
+      "description": "Viscous vexes his opponents through clever evasion and strategic uses of healing, enabling him to withstand the most brutal of enemy attacks.",
+      "descriptionRu": "Вязкус досаждает врагам умелым уклонением и стратегическим использованием лечения. Это позволяет ему выдерживать самые яростные атаки.",
+      "abilities": [
+        {
+          "id": "3247040238",
+          "slot": 1,
+          "name": "Splatter",
+          "nameRu": "Брызги",
+          "className": "viscous_goo_grenade",
+          "icon": "assets/heroes/abilities/3247040238.png",
+          "description": "Throw a ball of goo that deals damage and leaves puddles of goo behind that apply movement slow to enemies in the radius.",
+          "descriptionRu": "Вязкус бросает шар, который наносит урон и оставляет лужи слизи, замедляющие наступивших в них врагов.",
+          "ultimate": false
+        },
+        {
+          "id": "3788152387",
+          "slot": 2,
+          "name": "The Cube",
+          "nameRu": "Куб",
+          "className": "viscous_restorative_goo",
+          "icon": "assets/heroes/abilities/3788152387.png",
+          "description": "Encase the target in a cube of restorative goo that protects from damage, and increases health regen. Target is unable to take any new actions while cubed. Can be used on self. Press Jump / mantle to escape early.",
+          "descriptionRu": "Вязкус помещает цель в куб из целебной слизи, которая защищает от урона и повышает восстановление здоровья. Во время нахождения в кубе нельзя ничего делать. В куб можно поместить себя. Нажмите Подпрыгнуть/забраться , чтобы выйти из куба раньше.",
+          "ultimate": false
+        },
+        {
+          "id": "1020817390",
+          "slot": 3,
+          "name": "Puddle Punch",
+          "nameRu": "Удар из лужи",
+          "className": "viscous_telepunch",
+          "icon": "assets/heroes/abilities/1020817390.png",
+          "description": "Materialize a fist in the world that punches everyone in the area, applying knockup. Punching an enemy deals melee damage and applies slow. Enemies can Parry this attack. You and your allies have increased Air Control.",
+          "descriptionRu": "Создаёт кулак, который бьёт и подбрасывает всех в области действия. Враги получают урон ближнего боя и замедляются. Эту атаку можно парировать. У вас и союзников улучшается управление в воздухе.",
+          "ultimate": false
+        },
+        {
+          "id": "4206531918",
+          "slot": 4,
+          "name": "Goo Ball",
+          "nameRu": "Шар из слизи",
+          "className": "viscous_goo_bowling_ball",
+          "icon": "assets/heroes/abilities/4206531918.png",
+          "description": "Morph into a large goo ball that deals damage and stuns enemies on impact. The ball grants large amounts of Bullet and Spirit resist, bounces off walls and can double jump.",
+          "descriptionRu": "Вязкус превращается в большой шар из слизи, который наносит урон задетым врагам и оглушает их. Шар сильно повышает сопротивляемость пулям и спиритизму, отскакивает от стен и может делать двойной прыжок.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "name": "Vyper",
+      "nameRu": "Гадюка",
+      "className": "hero_viper",
+      "portrait": "assets/heroes/58.png",
+      "description": "With a powerful weapon (and deadly venom to match), Vyper can slither into the back of teams and assassinate high-priority targets in a storm of bullets.",
+      "descriptionRu": "Проскальзывая за спины противников, Гадюка устраняет первостепенные цели шквалом выстрелов из своего мощного оружия и не уступающим ему в смертоносности ядом.",
+      "abilities": [
+        {
+          "id": "645773760",
+          "slot": 1,
+          "name": "Screwjab Dagger",
+          "nameRu": "Вертящийся кинжал",
+          "className": "ability_viper_debuffdagger",
+          "icon": "assets/heroes/abilities/645773760.png",
+          "description": "Throw a dagger, dealing spirit damage and applying slow. Every subsequent dagger against the same target stacks in spirit damage and slow.",
+          "descriptionRu": "Гадюка бросает кинжал, наносящий спиритический урон и накладывающий замедление. При повторных бросках кинжала по той же цели спиритический урон и замедление накапливаются.",
+          "ultimate": false
+        },
+        {
+          "id": "3428732129",
+          "slot": 2,
+          "name": "Lethal Venom",
+          "nameRu": "Смертельный яд",
+          "className": "ability_viper_venom",
+          "icon": "assets/heroes/abilities/3428732129.png",
+          "description": "Inject a target with lethal venom. After a delay the venom triggers, dealing Spirit Damage. The damage is increased by the target's missing health. Lethal Venom will ignore Petrify's damage block.",
+          "descriptionRu": "Гадюка вводит в цель смертельный яд. Через определённое время яд срабатывает и наносит спиритический урон. Урон увеличивается в зависимости от того, сколько здоровья недостаёт цели. Смертельный яд игнорирует блокировку урона окаменением.",
+          "ultimate": false
+        },
+        {
+          "id": "1469918191",
+          "slot": 3,
+          "name": "Slither",
+          "nameRu": "Ползание",
+          "className": "ability_viper_snakedash",
+          "icon": "assets/heroes/abilities/1469918191.png",
+          "description": "You have increased Slide Distance, can Slide up hills, and can turn faster while Sliding.",
+          "descriptionRu": "Гадюка имеет повышенную дальность скольжения и скорость поворота в нём, а также может скользить вверх по склону.",
+          "ultimate": false
+        },
+        {
+          "id": "1594727071",
+          "slot": 4,
+          "name": "Petrifying Bola",
+          "nameRu": "Бола окаменения",
+          "className": "ability_viper_petrifybola",
+          "icon": "assets/heroes/abilities/1594727071.png",
+          "description": "Throw an explosive bola. On exploding, the bola Slows and Damages all enemies in the area. Direct hits deal Additional Damage and Petrify instead. Petrified units block all damage, but cannot take actions.",
+          "descriptionRu": "Гадюка бросает взрывающуюся болу. При взрыве она замедляет всех врагов в области воздействия и наносит им урон. Существа, напрямую задетые болой, получают дополнительный урон и окаменевают. Окаменевшие существа не получают урона, но не могут выполнять действия.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Warden",
+      "nameRu": "Дозорный",
+      "className": "hero_warden",
+      "portrait": "assets/heroes/25.png",
+      "description": "Warden leads from the front, jumping into the fray and hindering his opponents' ability to fight effectively. But what Warden considers brave, others consider reckless, and if he's not careful he can easily find himself in over his head.",
+      "descriptionRu": "Дозорный первым врывается в бой и мешает соперникам эффективно сражаться. Но то, что он называет храбростью, другие считают безрассудством, и если он не будет осторожен, то легко может нарваться на неприятности.",
+      "abilities": [
+        {
+          "id": "2656490109",
+          "slot": 1,
+          "name": "Alchemical Flask",
+          "nameRu": "Алхимическая колба",
+          "className": "ability_warden_crowd_control",
+          "icon": "assets/heroes/abilities/2656490109.png",
+          "description": "Throw a flask that damages and reduces the weapon damage and move speed of enemies it hits.",
+          "descriptionRu": "Дозорный бросает колбу, которая наносит врагам урон, замедляет их передвижение и уменьшает урон от их оружия.",
+          "ultimate": false
+        },
+        {
+          "id": "2751689917",
+          "slot": 2,
+          "name": "Willpower",
+          "nameRu": "Сила воли",
+          "className": "ability_warden_high_alert",
+          "icon": "assets/heroes/abilities/2751689917.png",
+          "description": "Gain a Barrier and bonus move speed.",
+          "descriptionRu": "Дозорный получает барьер и повышенную скорость передвижения.",
+          "ultimate": false
+        },
+        {
+          "id": "1656913918",
+          "slot": 3,
+          "name": "Binding Word",
+          "nameRu": "Сковывающее слово",
+          "className": "ability_warden_lock_down",
+          "icon": "assets/heroes/abilities/1656913918.png",
+          "description": "Curse an enemy hero. If they don't move away from their initial position within the escape time, they will be damaged and immobilized.",
+          "descriptionRu": "Дозорный проклинает вражеского героя. Если тот остаётся на месте, не воспользовавшись временем для побега, он получает урон и обездвиживается.",
+          "ultimate": false
+        },
+        {
+          "id": "2702908623",
+          "slot": 4,
+          "name": "Last Stand",
+          "nameRu": "Последний бой",
+          "className": "ability_warden_riot_protocol",
+          "icon": "assets/heroes/abilities/2702908623.png",
+          "description": "After charging for 2s, release pulses that damage enemies and heal you based on the damage done. While channeling Last Stand you have greatly increased bullet and spirit resist.",
+          "descriptionRu": "После подготовки в 2 сек. Дозорный выпускает импульсы, которые наносят урон врагам и лечат его пропорционально нанесённому урону. Во время применения этого умения ваша сопротивляемость пулям и спиритизму значительно выше.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Wraith",
+      "nameRu": "Тень",
+      "className": "hero_wraith",
+      "portrait": "assets/heroes/7.png",
+      "description": "Excelling at one-on-one combat, Wraith isolates targets, eliminating them with ruthless efficiency. Then teleporting away before anyone can retaliate.",
+      "descriptionRu": "Превосходно сражаясь в боях один на один, Тень изолирует цели, безжалостно уничтожает их, а затем телепортируется, прежде чем кто-либо сможет нанести ответный удар.",
+      "abilities": [
+        {
+          "id": "1999680326",
+          "slot": 1,
+          "name": "Card Trick",
+          "nameRu": "Карточный трюк",
+          "className": "citadel_ability_card_toss",
+          "icon": "assets/heroes/abilities/1999680326.png",
+          "description": "Deal weapon damage to summon cards of a random suit. Each card can be thrown, dealing damage and applying a different effect depending on its suit. Cards thrown fly towards the enemy or point under your crosshair. Alt-cast to throw first card",
+          "descriptionRu": "Наносите урон от оружия, чтобы призвать карты случайной масти. При броске каждая карта наносит урон и накладывает эффект в зависимости от масти. Брошенные карты летят во врага или куда направлен ваш прицел. Альт. применение: бросить первую карту.",
+          "ultimate": false
+        },
+        {
+          "id": "4147641675",
+          "slot": 2,
+          "name": "Project Mind",
+          "nameRu": "Проекция разума",
+          "className": "citadel_ability_projectmind",
+          "icon": "assets/heroes/abilities/4147641675.png",
+          "description": "Teleport to the targeted location.",
+          "descriptionRu": "Телепортация в указанное место.",
+          "ultimate": false
+        },
+        {
+          "id": "1842576017",
+          "slot": 3,
+          "name": "Full Auto",
+          "nameRu": "Сверхбыстрая стрельба",
+          "className": "citadel_ability_wraith_rapidfire",
+          "icon": "assets/heroes/abilities/1842576017.png",
+          "description": "Temporarily boost your fire rate and deal bonus spirit damage",
+          "descriptionRu": "Тень получает временный бонус к скорострельности и наносит дополнительный спиритический урон.",
+          "ultimate": false
+        },
+        {
+          "id": "2981692841",
+          "slot": 4,
+          "name": "Telekinesis",
+          "nameRu": "Телекинез",
+          "className": "citadel_ability_psychic_lift",
+          "icon": "assets/heroes/abilities/2981692841.png",
+          "description": "Lift an enemy hero into the air and then slam them towards the target location.",
+          "descriptionRu": "Тень поднимает вражеского героя в воздух, а затем швыряет его в выбранное место.",
+          "ultimate": true
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Yamato",
+      "nameRu": "Ямато",
+      "className": "hero_yamato",
+      "portrait": "assets/heroes/27.png",
+      "description": "Yamato uses precise strikes to decimate her rivals. However, such damaging attacks often will leave her exposed, so she needs to make every shot count.",
+      "descriptionRu": "Ямато уничтожает соперников точными ударами, однако ей нужно тщательно выверять свои разрушительные атаки, так как они делают её уязвимой.",
+      "abilities": [
+        {
+          "id": "3255651252",
+          "slot": 1,
+          "name": "Power Slash",
+          "nameRu": "Мощное рассечение",
+          "className": "citadel_ability_power_slash",
+          "icon": "assets/heroes/abilities/3255651252.png",
+          "description": "Channel to increase damage over 1.4 seconds, then release a fully-charged sword strike. Press Ability 1 or to trigger the strike early, dealing partial damage.",
+          "descriptionRu": "Ямато накапливает заряд в течение 1.4 секунд, чтобы увеличить урон, затем наносит мощный удар мечом. Нажмите на 1-е умение или , чтобы нанести удар раньше, причинив частичный урон.",
+          "ultimate": false
+        },
+        {
+          "id": "2566573207",
+          "slot": 2,
+          "name": "Flying Slash",
+          "nameRu": "Рассечение в полёте",
+          "className": "citadel_ability_flying_strike",
+          "icon": "assets/heroes/abilities/2566573207.png",
+          "description": "Throw a grappling hook to reel yourself towards an enemy, dealingmelee damage and slowing the target when you arrive.",
+          "descriptionRu": "Герой выпускает крюк и подтягивается к врагу, нанося урон ближнего боя и замедляя его, когда окажется рядом.",
+          "ultimate": false
+        },
+        {
+          "id": "2366960452",
+          "slot": 3,
+          "name": "Crimson Slash",
+          "nameRu": "Багровое рассечение",
+          "className": "citadel_ability_healing_slash",
+          "icon": "assets/heroes/abilities/2366960452.png",
+          "description": "Slash enemies in front of you, damaging them and slowing their fire rate. If any enemy heroes are hit, you heal.",
+          "descriptionRu": "Ямато рассекает врагов перед собой, нанося им урон и снижая их скорострельность. При попадании по вражеским героям Ямато получает лечение.",
+          "ultimate": false
+        },
+        {
+          "id": "3319782965",
+          "slot": 4,
+          "name": "Shadow Transformation",
+          "nameRu": "Превращение в тень",
+          "className": "citadel_ability_infinity_slash",
+          "icon": "assets/heroes/abilities/3319782965.png",
+          "description": "Become infused with Yamato's shadow soul. After an initial invincible transformation your abilities are refreshed and are 60% faster. You gain immunity to negative status effects and have greatly increased bullet and spirit resist. When you get a hero kill, you heal and the duration is extended.",
+          "descriptionRu": "Ямато сливается со своей теневой душой. После трансформации, во время которой Ямато неуязвима, её умения полностью перезаряжаются и ускоряются на 60%. Ямато также получает иммунитет к отрицательным эффектам, а ещё у неё значительно увеличивается сопротивляемость пулям и спиритизму. Если Ямато убивает героя, она получает лечение, а действие умения продлевается.",
+          "ultimate": true
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "inventorySlots": 12,
+    "baseInventorySlots": 9,
+    "flexInventorySlots": 3,
+    "upgradeCosts": [
+      1,
+      2,
+      5
+    ],
+    "abilityPoints": 32,
+    "unlockSoulThresholds": [
+      0,
+      500,
+      1400,
+      3200
+    ],
+    "unlockLevels": [
+      1,
+      3,
+      5,
+      8
+    ],
+    "ultimateUnlock": {
+      "slot": 4,
+      "level": 8,
+      "souls": 3200
+    },
+    "maxHeroLevel": 36,
+    "maxHeroSouls": 48600,
+    "source": "https://forums.playdeadlock.com/threads/11-21-2025-update.90383/"
+  },
+  "excludedHeroes": [
+    {
+      "id": "21",
+      "name": "Kali",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": false,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "38",
+      "name": "Gunslinger",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": true,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "39",
+      "name": "The Boss",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "48",
+      "name": "Wrecker",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "49",
+      "name": "Rutger",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": true,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "51",
+      "name": "Thumper",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": true,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "53",
+      "name": "Fathom",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "54",
+      "name": "Cadence",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": true,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "56",
+      "name": "Bomber",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "57",
+      "name": "Shield Guy",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "59",
+      "name": "Vandal",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "61",
+      "name": "Trapper",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "62",
+      "name": "Raven",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "68",
+      "name": "Boho",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "70",
+      "name": "Skyrunner",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "71",
+      "name": "Swan",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "73",
+      "name": "Druid",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "74",
+      "name": "Graf",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "75",
+      "name": "Fortuna",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "82",
+      "name": "Opera",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "83",
+      "name": "hero_testhero",
+      "playerSelectable": false,
+      "disabled": true,
+      "prereleaseOnly": false,
+      "developmentState": null,
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "86",
+      "name": "Violet",
+      "playerSelectable": false,
+      "disabled": false,
+      "prereleaseOnly": true,
+      "developmentState": "pre_release",
+      "inDevelopment": false,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "87",
+      "name": "Nurse Harrow",
+      "playerSelectable": false,
+      "disabled": false,
+      "prereleaseOnly": true,
+      "developmentState": "pre_release",
+      "inDevelopment": false,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    },
+    {
+      "id": "88",
+      "name": "Baba",
+      "playerSelectable": true,
+      "disabled": false,
+      "prereleaseOnly": false,
+      "developmentState": "release",
+      "inDevelopment": true,
+      "needsTesting": false,
+      "assignedPlayersOnly": false,
+      "limitedTesting": false
+    }
+  ]
+}

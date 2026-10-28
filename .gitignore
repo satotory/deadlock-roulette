@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.npm-cache/
+.build-cache/
+.smoke-data/
+.smoke-profile/
+artifacts/*-report.json
+artifacts/ui-smoke-failure.png
+*.log
+artifacts/
+.publish/
+.tools/
+.env
+.env.*

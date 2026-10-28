@@ -1,0 +1,12 @@
+{
+  "id": "80",
+  "hero": "Silver",
+  "page": "https://deadlocklabs.gg/heroes/silver/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Silver.webp",
+  "file": "assets/hero-art/extra/80.webp",
+  "width": 1512,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 194820,
+  "sha256": "56f2bcfd72cc58818445f0dc6be00716a296daf1981933c53af779a9d931e84a"
+}

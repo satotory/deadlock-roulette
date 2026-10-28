@@ -1,0 +1,12 @@
+{
+  "id": "6",
+  "hero": "Abrams",
+  "page": "https://deadlocklabs.gg/heroes/abrams/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Abrams.webp",
+  "file": "assets/hero-art/extra/6.webp",
+  "width": 1639,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 219036,
+  "sha256": "f34b221388266d37c661f8633d0249cdc9fbc18bd25b2f9cb331d4fe3c644824"
+}

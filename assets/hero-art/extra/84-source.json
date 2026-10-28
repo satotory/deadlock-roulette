@@ -1,0 +1,12 @@
+{
+  "id": "84",
+  "hero": "Rat King",
+  "page": "https://deadlocklabs.gg/heroes/rat-king/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Rat_King.webp",
+  "file": "assets/hero-art/extra/84.webp",
+  "width": 1779,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 164746,
+  "sha256": "572d2d72c58692c8e090cc54a458e5e34852acc24001acc4742c9836929dd081"
+}

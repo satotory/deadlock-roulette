@@ -1,0 +1,12 @@
+{
+  "id": "81",
+  "hero": "Celeste",
+  "page": "https://deadlocklabs.gg/heroes/celeste/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Celeste.webp",
+  "file": "assets/hero-art/extra/81.webp",
+  "width": 1681,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 251162,
+  "sha256": "24ee3f9c48a80050e53f3b11f80517fc689990c6de9fb2d58ad45bab0260454e"
+}

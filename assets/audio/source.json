@@ -1,0 +1,9 @@
+{
+  "description": "Original Deadlock standard main-menu loop, extracted from the local Steam installation for this personal application.",
+  "copyright": "Valve Corporation",
+  "resource": "sounds/music/music_menu_lp.vsnd_c",
+  "archive": "pak01_280.vpk",
+  "extraction": "Unmodified MPEG audio stream following the Source 2 compiled resource data; archive CRC32 verified.",
+  "bytes": 5765383,
+  "sha256": "d8b0a429809556fc4811db8c58a116e1bae6deae6d563fd9bbaa638d6dcb8da7"
+}

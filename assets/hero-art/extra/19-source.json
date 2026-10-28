@@ -1,0 +1,12 @@
+{
+  "id": "19",
+  "hero": "Shiv",
+  "page": "https://deadlocklabs.gg/heroes/shiv/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Shiv.webp",
+  "file": "assets/hero-art/extra/19.webp",
+  "width": 1808,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 157696,
+  "sha256": "a05465e32154005ea41bdc25394b19c60e65a703fcdc1d9fe39c8fce7102ae47"
+}

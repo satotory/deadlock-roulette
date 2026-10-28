@@ -1,0 +1,826 @@
+{
+  "copyright": "Valve Corporation",
+  "description": "Original complete hero selection artwork for all 41 heroes: original loading-screen background layers from the game assets API, and authentic complete in-game hero selection poses from the public Deadlock Graphical Library or the Deadlock Labs gallery. Cached locally without cropping; no invented or generated character artwork.",
+  "renderLibrary": "https://forums.playdeadlock.com/resources/deadlock-graphical-library.30/",
+  "sources": [
+    {
+      "id": "16",
+      "hero": "Calico",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/calico_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 48136,
+      "sha256": "e30a9de5d4fc6aab31e640bc15418eb6f53a9d8f33fbeafc13b78944833dd94a"
+    },
+    {
+      "id": "81",
+      "hero": "Celeste",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/unicorn_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 67236,
+      "sha256": "85623cdf518911fac2ed1f3abbe70fbd5cb819c338ec39095d4d48ed14758745"
+    },
+    {
+      "id": "72",
+      "hero": "Billy",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/billy_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 82672,
+      "sha256": "9c71df6fc192731329a2ceaf1c755945625ab2220b5e3642c6851724ae9ec5f3"
+    },
+    {
+      "id": "15",
+      "hero": "Bebop",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/bebop_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 57440,
+      "sha256": "ca68de609fa2b157d5a69f5f946a668af79ab957c5c3a9d5fd1b44bb6bfc1693"
+    },
+    {
+      "id": "77",
+      "hero": "Apollo",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/fencer_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 87554,
+      "sha256": "90b5b0a049ae470b16fd609c933d3dd07d29e9aae48b7e01862d355228a0c875"
+    },
+    {
+      "id": "6",
+      "hero": "Abrams",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/abrams_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 91882,
+      "sha256": "c614be19c702c5a0da22efca37325ad50624d299664cf577f408b7c44310e5ea"
+    },
+    {
+      "id": "76",
+      "hero": "Graves",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/necro_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 74198,
+      "sha256": "45994f1984c9658eb53c1c7f838b990708fc15b95facd820ac6c221c60232d8c"
+    },
+    {
+      "id": "78",
+      "hero": "Deadman Danny",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/deadpack_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 42490,
+      "sha256": "0a5d80f735b7a0bfbaa20343ae3d901950deaf9977cda8f8b309dc79ca71e017"
+    },
+    {
+      "id": "64",
+      "hero": "Drifter",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/drifter_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 73020,
+      "sha256": "84dacd08f82b62c3ca00441230365b56348d498d4d148bc12dada1f4b6b18c97"
+    },
+    {
+      "id": "13",
+      "hero": "Haze",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/haze_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 57290,
+      "sha256": "a35eddd35a99a65c4d5dd70c1732e7d881c6785fcc85ab1def973a42d30fa18b"
+    },
+    {
+      "id": "11",
+      "hero": "Dynamo",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/dynamo_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 94194,
+      "sha256": "6ce377adc0e9d4b83b94caf08c68a94de8ca794aa7845e4df1904b204efb718b"
+    },
+    {
+      "id": "17",
+      "hero": "Grey Talon",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/grey_talon_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 54908,
+      "sha256": "4a23591b7f3bbe7738021d0b0c38b1f578fbc04bbc35c72c558a49f28f66df14"
+    },
+    {
+      "id": "1",
+      "hero": "Infernus",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/infernus_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 74612,
+      "sha256": "00297c11e71a90e0a753a6734fad34d5f72281ebb4763102e8c617c8029761f9"
+    },
+    {
+      "id": "31",
+      "hero": "Lash",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/lash_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 39088,
+      "sha256": "aca7d3303c8e7876dc7bb19ca113cead8fe277c13fd53ad0be9612eb92e37f85"
+    },
+    {
+      "id": "4",
+      "hero": "Lady Geist",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/geist_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 59382,
+      "sha256": "1b1f194d4de26936afaff48476d19623db519d856c6f6c123df92c46fc839061"
+    },
+    {
+      "id": "20",
+      "hero": "Ivy",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/ivy_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 38910,
+      "sha256": "4af224610b5e7ba4adf3000d8f36e25c019dbf8c0f155cac4825079dd0adb321"
+    },
+    {
+      "id": "14",
+      "hero": "Holliday",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/astro_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 78912,
+      "sha256": "8cb28fd522833f4b5236aa960686bf4fe450242747538d4889187c805fad8f90"
+    },
+    {
+      "id": "12",
+      "hero": "Kelvin",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/kelvin_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 72754,
+      "sha256": "a07272ed60d59e827524e3dedb8eaca85adbd01d9cb61d6ddc03c7f62c6429c7"
+    },
+    {
+      "id": "63",
+      "hero": "Mina",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/mina_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 65988,
+      "sha256": "854079cdb2ef12f9b023c3353c2a2518c32c95dd6930174dffd20ae1f82380f0"
+    },
+    {
+      "id": "67",
+      "hero": "Paige",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/patience_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 71104,
+      "sha256": "ca41957b9f2b89099f6cfcb0612f44dfe107a6f0175b9aaea7111170e119cd65"
+    },
+    {
+      "id": "52",
+      "hero": "Mirage",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/mirage_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 62022,
+      "sha256": "4b685c99cf27b6d4d159c0880496e23eefa0ec75abbbdc653f4e937dc63d3734"
+    },
+    {
+      "id": "10",
+      "hero": "Paradox",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/paradox_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 69526,
+      "sha256": "5c5abb5d353811d4d1747219341fe1cc2e162598bf999a49e091f48e09a5068d"
+    },
+    {
+      "id": "8",
+      "hero": "McGinnis",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/mcginnis_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 59522,
+      "sha256": "a0b5c6ca5ae73b88c52391c7a39e8ff936c0f747a043b929755799c1828e3a11"
+    },
+    {
+      "id": "18",
+      "hero": "Mo & Krill",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/krill_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 61016,
+      "sha256": "777bcef5480f44396abcadaf5dd22c0bd3815ce472d0729fa473c20ab322b4b2"
+    },
+    {
+      "id": "84",
+      "hero": "Rat King",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/ratking_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 27654,
+      "sha256": "2e11ff9799a85c7b1aec5e7104724d5902e611f4151dcbbc68572a2f812d1af8"
+    },
+    {
+      "id": "19",
+      "hero": "Shiv",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/shiv_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 38950,
+      "sha256": "1c887bbeb41832f03d8b39e80ba3c93bd6b498bd40fd73e887e9b4fdf9223073"
+    },
+    {
+      "id": "80",
+      "hero": "Silver",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/werewolf_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 35378,
+      "sha256": "742ad08282774b5aaf53664e67cb2503997cebeee4d29f40dbf483b59fff9042"
+    },
+    {
+      "id": "50",
+      "hero": "Pocket",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/pocket_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 112804,
+      "sha256": "e79fc4489cac34eedd68e1d6364bcc2ac4c5ade5a52ac1768a2b5aa1e539d62f"
+    },
+    {
+      "id": "2",
+      "hero": "Seven",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/seven_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 72634,
+      "sha256": "b1deda054cb1e60d22496974b8f3adc27fe2d54e7f75c9d8b76df1b4c32bb505"
+    },
+    {
+      "id": "79",
+      "hero": "Rem",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/familiar_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 74446,
+      "sha256": "340adbb8377d55c1191eb63d3e54ce81a756006f60d8f7e4c3673ef90e5925f8"
+    },
+    {
+      "id": "3",
+      "hero": "Vindicta",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/vindicta_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 62668,
+      "sha256": "4171a7c8d93246791a614bc348244ac4cd100deb0be8ff34d74789b7d01dd8ef"
+    },
+    {
+      "id": "66",
+      "hero": "Victor",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/victor_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 43124,
+      "sha256": "96fa1ae96f626b798a0a86f8f8fff2ce641712d6be794c96391c136a4f5a1245"
+    },
+    {
+      "id": "85",
+      "hero": "Solomon",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/chessmaster_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 27114,
+      "sha256": "34bfe7641b3459ab7fa4c1c951c0444fea394ad363154729cdc4d1f002da34e9"
+    },
+    {
+      "id": "60",
+      "hero": "Sinclair",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/magician_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 36484,
+      "sha256": "297e051f8af0651105c707074786964b369f655da2137f8f02412afceb9cdf59"
+    },
+    {
+      "id": "69",
+      "hero": "The Doorman",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/doorman_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 83836,
+      "sha256": "048984fadf644d9697ae5c7f3504f0e43477974f6bf0a431cb7044fb0934cd44"
+    },
+    {
+      "id": "65",
+      "hero": "Venator",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/priest_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 62370,
+      "sha256": "84bffb589963a1abd5df27de234e8c8bd1810fd36a3b0eb02805678c91ff2a97"
+    },
+    {
+      "id": "25",
+      "hero": "Warden",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/warden_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 84716,
+      "sha256": "3ea5e34d3ec92b16ce0bf7a5d1f1e7717d53460f323871b3caac4e2fcee00c0d"
+    },
+    {
+      "id": "35",
+      "hero": "Viscous",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/viscous_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 51658,
+      "sha256": "d888fc666b29f73af45b5c4782b134e71d231542cff9f5a6ed64c91226815c8f"
+    },
+    {
+      "id": "7",
+      "hero": "Wraith",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/wraith_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 42060,
+      "sha256": "fe9b0ca0a8478082d5869af5037ee0ca5b279824cd2e23b6b925f9d1f1aba430"
+    },
+    {
+      "id": "58",
+      "hero": "Vyper",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/vyper_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 79208,
+      "sha256": "56d08b722387cb7b67b76e4bdce4190faa320045456e7d51e5900bd3c8d68651"
+    },
+    {
+      "id": "27",
+      "hero": "Yamato",
+      "source": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/yamato_bg.webp",
+      "originalWidth": 4096,
+      "originalHeight": 2312,
+      "bytes": 45202,
+      "sha256": "ae9c20f82d98e6a437f2bf37585065aef107d2aec250e24e69b7075100d1c311"
+    }
+  ],
+  "renders": [
+    {
+      "id": "72",
+      "hero": "Billy",
+      "url": "https://drive.google.com/file/d/14nN6P4Wnx47ysLNJ4dyynYs4xrR-zjl9/view",
+      "originalName": "Billy.png",
+      "originalWidth": 2614,
+      "originalHeight": 2153,
+      "bytes": 143746,
+      "sha256": "e04517065ddb9e35b0835c72ed5f906da69967aca4ee73d5e16e4d9d517f56e3"
+    },
+    {
+      "id": "77",
+      "hero": "Apollo",
+      "url": "https://drive.google.com/file/d/13SU3RgIG9Pfx7YDXSN4CfFCpFfcewmbA/view",
+      "originalName": "Apollo.png",
+      "originalWidth": 2305,
+      "originalHeight": 2105,
+      "bytes": 129996,
+      "sha256": "8a589dd277281805286cbd91c16c168af211b09402f7de408b7a0a8037aa1c1e"
+    },
+    {
+      "id": "16",
+      "hero": "Calico",
+      "url": "https://drive.google.com/file/d/1Fe6Pum2RvVRJX_cdPaiMOwuLMA1PHDfA/view",
+      "originalName": "Calico.png",
+      "originalWidth": 1932,
+      "originalHeight": 2160,
+      "bytes": 133442,
+      "sha256": "02c68639950f93ce2a1d479f680576e6b84bcf831a7b0c76ef07d2902e42fedc"
+    },
+    {
+      "id": "64",
+      "hero": "Drifter",
+      "url": "https://drive.google.com/file/d/1V8CxJ516j5aayQ_yyWgkfNoJlAAPwHJt/view",
+      "originalName": "Drifter.png",
+      "originalWidth": 2702,
+      "originalHeight": 2160,
+      "bytes": 93356,
+      "sha256": "557b9ad68f8605c9e5909af35c7fdbadb10c52a05a7d18192a581e0e0b3fa8d2"
+    },
+    {
+      "id": "69",
+      "hero": "The Doorman",
+      "url": "https://drive.google.com/file/d/1qhBnJzItglWjp7oSO-MCmfYFqEU-ci7F/view",
+      "originalName": "Doorman.png",
+      "originalWidth": 2216,
+      "originalHeight": 2030,
+      "bytes": 148860,
+      "sha256": "09abdbcaffb7a7fa838178c454cfb7ff490fd6642d7fa0fac093e41b60bc5fbd"
+    },
+    {
+      "id": "11",
+      "hero": "Dynamo",
+      "url": "https://drive.google.com/file/d/1Sb-shWUjiUFo8FOKKeVUo4_DdhnEdZOD/view",
+      "originalName": "Dynamo.png",
+      "originalWidth": 2053,
+      "originalHeight": 2154,
+      "bytes": 221032,
+      "sha256": "ad510b3b09f4b94957134b1404c263119cc7ea52a9d8ee11d7a6eb01ba014887"
+    },
+    {
+      "id": "13",
+      "hero": "Haze",
+      "url": "https://drive.google.com/file/d/1DdLSrgA7iJlmtKRGtCDFWd3HzRPKpthp/view",
+      "originalName": "Haze.png",
+      "originalWidth": 1446,
+      "originalHeight": 2143,
+      "bytes": 117428,
+      "sha256": "bb7db97176412ba1bc160e56b2dfcb4942d8538e5863d01579a9b3d30bd50927"
+    },
+    {
+      "id": "20",
+      "hero": "Ivy",
+      "url": "https://drive.google.com/file/d/1RERknQa-9sA7pGY3webtuVkSGIuFRw5g/view",
+      "originalName": "Ivy.png",
+      "originalWidth": 1998,
+      "originalHeight": 1959,
+      "bytes": 173592,
+      "sha256": "4cca4539679dbf58822656eddc81e79923880dad6396e1046aa055ccd649b025"
+    },
+    {
+      "id": "17",
+      "hero": "Grey Talon",
+      "url": "https://drive.google.com/file/d/1W6yobDjhfAFTIr1oUj4ecQCT5ieJhE3V/view",
+      "originalName": "GreyTalon.png",
+      "originalWidth": 1791,
+      "originalHeight": 2118,
+      "bytes": 132914,
+      "sha256": "97b80c95d10104b3af9fb77ef48b7708cfad6232992772f9705d379d362daece"
+    },
+    {
+      "id": "31",
+      "hero": "Lash",
+      "url": "https://drive.google.com/file/d/1-4TX7q3QyJyKfBflBno6g741aM77XygP/view",
+      "originalName": "Lash.png",
+      "originalWidth": 2210,
+      "originalHeight": 2091,
+      "bytes": 128462,
+      "sha256": "ea951f688ad9dec7d35e34e20670bb491ec26d6b6d87b5b8dcd69e76c3099da6"
+    },
+    {
+      "id": "63",
+      "hero": "Mina",
+      "url": "https://drive.google.com/file/d/1r94IYEhPNXpiWqmSUIRmYFpPbUpjqFuV/view",
+      "originalName": "Mina.png",
+      "originalWidth": 1713,
+      "originalHeight": 2143,
+      "bytes": 142716,
+      "sha256": "47b7b76f24ef7e03453af53d6c3d47224da331b33b36806c0c1f9f52708b7e27"
+    },
+    {
+      "id": "12",
+      "hero": "Kelvin",
+      "url": "https://drive.google.com/file/d/1FNA8WWPb7V7QIhTeEPuKFBqyrL8BQPR6/view",
+      "originalName": "Kelvin.png",
+      "originalWidth": 2249,
+      "originalHeight": 2153,
+      "bytes": 196996,
+      "sha256": "4e10331aa6f85ec729a0ca38c018ecad5a5fb6bfdeb9108e507bd87608b448f3"
+    },
+    {
+      "id": "10",
+      "hero": "Paradox",
+      "url": "https://drive.google.com/file/d/1HgE5SBS1dU8oJNxq-xTGHw36zQr-XM_g/view",
+      "originalName": "Paradox.png",
+      "originalWidth": 2376,
+      "originalHeight": 2047,
+      "bytes": 112810,
+      "sha256": "3f55ef5a1faf4256e56a8a841af954082fd5d8f9e2b258e2b79029c8d8918997"
+    },
+    {
+      "id": "52",
+      "hero": "Mirage",
+      "url": "https://drive.google.com/file/d/1HdZHo9KT8X_GX-cN67q9A1NJ2hJlKyf3/view",
+      "originalName": "Mirage.png",
+      "originalWidth": 1966,
+      "originalHeight": 2156,
+      "bytes": 174316,
+      "sha256": "4e0e38eecb1358106a61a8f080826d438d16032c1b1b49f55bca9210d6afe939"
+    },
+    {
+      "id": "18",
+      "hero": "Mo & Krill",
+      "url": "https://drive.google.com/file/d/1HtQA7ZaaNuV0WYfTnwRqn0QMgQfhvnRN/view",
+      "originalName": "Mo & Krill.png",
+      "originalWidth": 2673,
+      "originalHeight": 2158,
+      "bytes": 144366,
+      "sha256": "3e5d2c81dd1377c79670b0aa476f72303b9634538b9b6087e4243e7c58ce311b"
+    },
+    {
+      "id": "60",
+      "hero": "Sinclair",
+      "url": "https://drive.google.com/file/d/15sz8siGhrltst4P6FE4Ejc7pDHBsIQmT/view",
+      "originalName": "Sinclair.png",
+      "originalWidth": 1437,
+      "originalHeight": 2061,
+      "bytes": 81866,
+      "sha256": "9ab3fae0a21f4039bd805bb60fec30f4ead9e5dbd5d07767b3c02ca75665636a"
+    },
+    {
+      "id": "79",
+      "hero": "Rem",
+      "url": "https://drive.google.com/file/d/1q0GukhNps4t9fyTSbnCfbL01USjN0-ph/view",
+      "originalName": "Rem.png",
+      "originalWidth": 1414,
+      "originalHeight": 1908,
+      "bytes": 162042,
+      "sha256": "23a73ab3ed2311212626ce15d0107ba50f3d05181df78acb2bdbf5f9a2ab4025"
+    },
+    {
+      "id": "2",
+      "hero": "Seven",
+      "url": "https://drive.google.com/file/d/1ZljYW6_13UtLlLFk9AlS4pXHymNBQsDe/view",
+      "originalName": "Seven.png",
+      "originalWidth": 2112,
+      "originalHeight": 2081,
+      "bytes": 180038,
+      "sha256": "508d6aea37f2d79e08bf03619172fc2916e18acd3507463c2c6678ee3602ca0a"
+    },
+    {
+      "id": "58",
+      "hero": "Vyper",
+      "url": "https://drive.google.com/file/d/12AxlrnZo0kfySeB8uYrDa00nX8EdIUyX/view",
+      "originalName": "Vyper.png",
+      "originalWidth": 2708,
+      "originalHeight": 1749,
+      "bytes": 78500,
+      "sha256": "5640b88a117275b2d47771ca2060fd7d586fd2e9e295c3bf858a5180815b5352"
+    },
+    {
+      "id": "3",
+      "hero": "Vindicta",
+      "url": "https://drive.google.com/file/d/19qLni6YXVte2ucr_3SvP0wQeglmIlqiB/view",
+      "originalName": "Vindicta.png",
+      "originalWidth": 2286,
+      "originalHeight": 2103,
+      "bytes": 113024,
+      "sha256": "709ba2e79fbbe49f270e5e71565459133207ea7fc426b45569ad7bfc65da7b48"
+    },
+    {
+      "id": "35",
+      "hero": "Viscous",
+      "url": "https://drive.google.com/file/d/15G4KoD0odS4LdBRDq8UHEBx1zNeHoJC7/view",
+      "originalName": "Viscous.png",
+      "originalWidth": 1320,
+      "originalHeight": 2034,
+      "bytes": 144214,
+      "sha256": "277384f0c65c3d061a5af375ac809f19066ad73ac68cafcc32e3a61d395a5465"
+    },
+    {
+      "id": "25",
+      "hero": "Warden",
+      "url": "https://drive.google.com/file/d/1NljchhSgn3-BHiW9iOWiYhHSis6fsQTQ/view",
+      "originalName": "Warden.png",
+      "originalWidth": 2306,
+      "originalHeight": 2107,
+      "bytes": 126918,
+      "sha256": "7dea9d13c5eff65f179bd4b7be029f67d405ea39a4cfbc59c823d80eed87003e"
+    },
+    {
+      "id": "15",
+      "hero": "Bebop",
+      "page": "https://deadlocklabs.gg/heroes/bebop/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Bebop.webp",
+      "file": "assets/hero-art/extra/15.webp",
+      "width": 1632,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 182306,
+      "sha256": "eb34633d997b93c81444d76bfa1b525f1af0607581852407a7abe30e39a1ca58"
+    },
+    {
+      "id": "78",
+      "hero": "Deadman Danny",
+      "page": "https://deadlocklabs.gg/heroes/deadman-danny/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Deadman_Danny.webp",
+      "file": "assets/hero-art/extra/78.webp",
+      "width": 1464,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 213868,
+      "sha256": "81d6caba4fe324e42b8d0fb4039d163d3b04c3d550da30fd5814e5aedd708d46"
+    },
+    {
+      "id": "81",
+      "hero": "Celeste",
+      "page": "https://deadlocklabs.gg/heroes/celeste/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Celeste.webp",
+      "file": "assets/hero-art/extra/81.webp",
+      "width": 1681,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 251162,
+      "sha256": "24ee3f9c48a80050e53f3b11f80517fc689990c6de9fb2d58ad45bab0260454e"
+    },
+    {
+      "id": "6",
+      "hero": "Abrams",
+      "page": "https://deadlocklabs.gg/heroes/abrams/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Abrams.webp",
+      "file": "assets/hero-art/extra/6.webp",
+      "width": 1639,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 219036,
+      "sha256": "f34b221388266d37c661f8633d0249cdc9fbc18bd25b2f9cb331d4fe3c644824"
+    },
+    {
+      "id": "76",
+      "hero": "Graves",
+      "page": "https://deadlocklabs.gg/heroes/graves/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Graves.webp",
+      "file": "assets/hero-art/extra/76.webp",
+      "width": 1558,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 228228,
+      "sha256": "4395a326218506c04bfc09e7fddc3a5d97ba6dad4d27451eb35679c752ff2d67"
+    },
+    {
+      "id": "4",
+      "hero": "Lady Geist",
+      "page": "https://deadlocklabs.gg/heroes/lady-geist/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Lady_Geist.webp",
+      "file": "assets/hero-art/extra/4.webp",
+      "width": 1834,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 182190,
+      "sha256": "626809dd42caad55887dbc388002bc02d00167f82fad06a9eef75cab5dbf6c9d"
+    },
+    {
+      "id": "14",
+      "hero": "Holliday",
+      "page": "https://deadlocklabs.gg/heroes/holliday/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Holliday.webp",
+      "file": "assets/hero-art/extra/14.webp",
+      "width": 1112,
+      "height": 1024,
+      "alpha": true,
+      "bytes": 112300,
+      "sha256": "fec78625f1cd2af141b6968f579493ef4c136d5ad81dbcf40c3b3a32066999c6"
+    },
+    {
+      "id": "1",
+      "hero": "Infernus",
+      "page": "https://deadlocklabs.gg/heroes/infernus/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Infernus.webp",
+      "file": "assets/hero-art/extra/1.webp",
+      "width": 1754,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 182542,
+      "sha256": "fc7988dd430d015b7c5cadccf76d7e01e3251f23fd34113b20f86ac796b23ed7"
+    },
+    {
+      "id": "84",
+      "hero": "Rat King",
+      "page": "https://deadlocklabs.gg/heroes/rat-king/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Rat_King.webp",
+      "file": "assets/hero-art/extra/84.webp",
+      "width": 1779,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 164746,
+      "sha256": "572d2d72c58692c8e090cc54a458e5e34852acc24001acc4742c9836929dd081"
+    },
+    {
+      "id": "50",
+      "hero": "Pocket",
+      "page": "https://deadlocklabs.gg/heroes/pocket/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Pocket.webp",
+      "file": "assets/hero-art/extra/50.webp",
+      "width": 1827,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 181854,
+      "sha256": "9e7ff0e37845542ae9ccd2343ed6cfc52d3008120fcfbb934b3653c7962e57bf"
+    },
+    {
+      "id": "67",
+      "hero": "Paige",
+      "page": "https://deadlocklabs.gg/heroes/paige/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Paige.webp",
+      "file": "assets/hero-art/extra/67.webp",
+      "width": 1608,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 216948,
+      "sha256": "064ddfb4890269aaad29bcca0d59520de642990a3cea826a172513d5b5b14606"
+    },
+    {
+      "id": "8",
+      "hero": "McGinnis",
+      "page": "https://deadlocklabs.gg/heroes/mcginnis/",
+      "source": "https://deadlocklabs.gg/heroes/renders/McGinnis.webp",
+      "file": "assets/hero-art/extra/8.webp",
+      "width": 1642,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 231402,
+      "sha256": "c7b62d050a5531fb1f7888fe5415c6bca51f77af6f5243561a3fe7eeb6a7d167"
+    },
+    {
+      "id": "65",
+      "hero": "Venator",
+      "page": "https://deadlocklabs.gg/heroes/venator/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Venator.webp",
+      "file": "assets/hero-art/extra/65.webp",
+      "width": 1639,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 196216,
+      "sha256": "844a6b1cbd4a6165c049d9671b88d6581d260560ea718931bdfcbe2ac983d5d6"
+    },
+    {
+      "id": "19",
+      "hero": "Shiv",
+      "page": "https://deadlocklabs.gg/heroes/shiv/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Shiv.webp",
+      "file": "assets/hero-art/extra/19.webp",
+      "width": 1808,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 157696,
+      "sha256": "a05465e32154005ea41bdc25394b19c60e65a703fcdc1d9fe39c8fce7102ae47"
+    },
+    {
+      "id": "85",
+      "hero": "Solomon",
+      "page": "https://deadlocklabs.gg/heroes/solomon/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Solomon.webp",
+      "file": "assets/hero-art/extra/85.webp",
+      "width": 1769,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 196736,
+      "sha256": "79601305071962e409d87a50d19abe00b50b48ed3389637aa76d76f8381a5dfc"
+    },
+    {
+      "id": "80",
+      "hero": "Silver",
+      "page": "https://deadlocklabs.gg/heroes/silver/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Silver.webp",
+      "file": "assets/hero-art/extra/80.webp",
+      "width": 1512,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 194820,
+      "sha256": "56f2bcfd72cc58818445f0dc6be00716a296daf1981933c53af779a9d931e84a"
+    },
+    {
+      "id": "7",
+      "hero": "Wraith",
+      "page": "https://deadlocklabs.gg/heroes/wraith/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Wraith.webp",
+      "file": "assets/hero-art/extra/7.webp",
+      "width": 1683,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 146346,
+      "sha256": "4f43c082521191db8340582c73264918627ab1ed7b24552c4eb688951a1ef574"
+    },
+    {
+      "id": "27",
+      "hero": "Yamato",
+      "page": "https://deadlocklabs.gg/heroes/yamato/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Yamato.webp",
+      "file": "assets/hero-art/extra/27.webp",
+      "width": 1555,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 124744,
+      "sha256": "f64fe72ca047f5fcddda1388e8223d35fe9c3817b89197f829091fc1703c3153"
+    },
+    {
+      "id": "66",
+      "hero": "Victor",
+      "page": "https://deadlocklabs.gg/heroes/victor/",
+      "source": "https://deadlocklabs.gg/heroes/renders/Victor.webp",
+      "file": "assets/hero-art/extra/66.webp",
+      "width": 1583,
+      "height": 1440,
+      "alpha": true,
+      "bytes": 141474,
+      "sha256": "f75723086bafea0a35a6a4cf12550588fdc7f89c2af146dbb29c64f25a7830e2"
+    }
+  ]
+}

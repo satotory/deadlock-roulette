@@ -1,0 +1,12 @@
+{
+  "id": "1",
+  "hero": "Infernus",
+  "page": "https://deadlocklabs.gg/heroes/infernus/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Infernus.webp",
+  "file": "assets/hero-art/extra/1.webp",
+  "width": 1754,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 182542,
+  "sha256": "fc7988dd430d015b7c5cadccf76d7e01e3251f23fd34113b20f86ac796b23ed7"
+}

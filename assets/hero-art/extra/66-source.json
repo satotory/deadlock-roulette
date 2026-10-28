@@ -1,0 +1,12 @@
+{
+  "id": "66",
+  "hero": "Victor",
+  "page": "https://deadlocklabs.gg/heroes/victor/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Victor.webp",
+  "file": "assets/hero-art/extra/66.webp",
+  "width": 1583,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 141474,
+  "sha256": "f75723086bafea0a35a6a4cf12550588fdc7f89c2af146dbb29c64f25a7830e2"
+}

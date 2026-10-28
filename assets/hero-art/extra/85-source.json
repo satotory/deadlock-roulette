@@ -1,0 +1,12 @@
+{
+  "id": "85",
+  "hero": "Solomon",
+  "page": "https://deadlocklabs.gg/heroes/solomon/",
+  "source": "https://deadlocklabs.gg/heroes/renders/Solomon.webp",
+  "file": "assets/hero-art/extra/85.webp",
+  "width": 1769,
+  "height": 1440,
+  "alpha": true,
+  "bytes": 196736,
+  "sha256": "79601305071962e409d87a50d19abe00b50b48ed3389637aa76d76f8381a5dfc"
+}
