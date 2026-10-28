@@ -16,6 +16,8 @@ An offline Windows app for playing Deadlock with whatever chance gives you. Spin
 2. Run it. No installation, administrator access, server or account is needed.
 3. Choose **Item roulette** or **Hero build**. Enable the items and heroes you want, then start drawing.
 
+**Windows download notice:** Release 1.9.0 is unsigned, so Windows may show **Unknown publisher** or a SmartScreen warning. See [how to verify the official download](docs/WINDOWS-DOWNLOAD.md#english) before deciding whether to run it; changing your protection settings is unnecessary.
+
 The portable app supports **Windows 10/11 x64**. Icons, hero art, music, sounds and voices are bundled; playing does not require an internet connection.
 
 ### A look inside
@@ -213,6 +215,8 @@ This is an unofficial fan project, unaffiliated with Valve. Deadlock, characters
 1. Открой [последний релиз](https://github.com/satotory/deadlock-roulette/releases/latest) и скачай `.exe` из раздела **Assets**.
 2. Запусти файл. Установка, права администратора, сервер и аккаунт не нужны.
 3. Выбери **«Рулетка предметов»** или **«Билд на персонажа»**, настрой пул и начинай розыгрыш.
+
+**При скачивании на Windows:** Версия 1.9.0 не подписана, поэтому могут появиться **«Неизвестный издатель»** или предупреждение SmartScreen. Перед запуском [проверь официальный файл по инструкции](docs/WINDOWS-DOWNLOAD.md#русский); менять настройки защиты не требуется.
 
 Переносимая версия работает на **Windows 10/11 x64**. Иконки, герои, музыка, звуки и реплики уже внутри файла; интернет во время игры не нужен.
 
