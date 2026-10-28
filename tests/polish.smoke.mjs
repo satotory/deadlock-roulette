@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const source = process.argv.includes('--source');
-const executable = source ? path.join(root, 'node_modules/electron/dist/electron.exe') : path.join(root, 'dist/Deadlock Roulette.exe');
+const executable = source ? path.join(root, 'node_modules/electron/dist/electron.exe') : process.env.DEADLOCK_SMOKE_EXE || path.join(root, 'dist/Deadlock Roulette.exe');
 const { version } = JSON.parse(await fs.readFile(path.join(root, 'package.json'), 'utf8'));
 const profile = path.join(root, '.smoke-data', `polish-${Date.now()}`);
 const port = 15000 + process.pid % 1000;

@@ -43,5 +43,5 @@ for (const relative of required) {
 }
 const { version } = JSON.parse(asar.extractFile(archive, 'package.json').toString('utf8'));
 assert.equal(version, JSON.parse(await fs.readFile(path.join(root, 'package.json'), 'utf8')).version);
-await fs.access(path.join(root, 'dist', 'Deadlock Roulette.exe'));
+await fs.access(process.env.DEADLOCK_SMOKE_EXE || path.join(root, 'dist', 'Deadlock Roulette.exe'));
 console.log(`Verified portable release ${version}: ${required.length} packaged files match current source, including all icons and ${Object.keys(heroVoices).length} original hero voice lines.`);

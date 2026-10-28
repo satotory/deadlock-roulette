@@ -12,7 +12,7 @@ const sourceMode = process.argv.includes('--source');
 const rulesOnly = process.argv.includes('--rules-only');
 const executable = sourceMode
   ? path.join(root, 'node_modules', 'electron', 'dist', 'electron.exe')
-  : path.join(root, 'dist', 'Deadlock Roulette.exe');
+  : process.env.DEADLOCK_SMOKE_EXE || path.join(root, 'dist', 'Deadlock Roulette.exe');
 const profile = path.join(root, '.smoke-data', `profile-${Date.now()}`);
 const screenshot = path.join(root, '.smoke-data', 'desktop-result.png');
 const buildScreenshot = path.join(root, '.smoke-data', 'desktop-build.png');

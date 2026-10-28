@@ -169,7 +169,7 @@ test('project links and sharing use fixed destinations and reject untrusted fram
   const initial = handlers.get('desktop:update-state')(trustedEvent);
   assert.equal(initial.status, 'idle');
   assert.equal(initial.canInstall, false);
-  assert.equal(initial.reason, 'development');
+  assert.equal(initial.reason, process.platform === 'win32' ? 'development' : 'windows-only');
 });
 
 const tinyPNG = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/lLkAAAAASUVORK5CYII=';
