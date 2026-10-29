@@ -6,7 +6,8 @@ const fsSync = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
 const crypto = require('node:crypto');
-const { spawnSync } = require('node:child_process');
+const { spawn, spawnSync } = require('node:child_process');
+const { once } = require('node:events');
 const core = require('../update-core.cjs');
 const updater = require('../desktop-updater.cjs');
 
@@ -175,6 +176,20 @@ test('helper generation rejects paths outside the exact managed folders', async 
   const script = updater.createInstallScript(config);
   assert(!script.includes(f.target), 'Paths are encoded data, never interpolated into shell source.');
   assert(!script.includes('ExecutionPolicy'), 'The updater does not weaken execution policy.');
+});
+
+test('production hidden helper spawn executes after its Node parent has exited', { skip: process.platform !== 'win32' }, async t => {
+  const f = await fixture(t), config = helperConfig(f), marker = path.join(f.directory, 'parent-exited.json'), worker = path.join(f.directory, 'spawn-worker.cjs');
+  const moduleFile = path.resolve(__dirname, '..', 'desktop-updater.cjs');
+  await fs.writeFile(worker, `const fs=require('node:fs'); const {spawnInstallHelper}=require(${JSON.stringify(moduleFile)}); const config=${JSON.stringify(config)}; config.parentPid=process.pid;
+    spawnInstallHelper(config,{createScript(){const file=${JSON.stringify(Buffer.from(marker).toString('base64'))}; return "$file=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('"+file+"'));[IO.File]::WriteAllText($file+'.ready','ready');$p=Get-Process -Id "+process.pid+" -ErrorAction SilentlyContinue;if($p){$null=$p.WaitForExit(10000)};[IO.File]::WriteAllText($file,'parent-exited')";}});
+    const end=Date.now()+8000;setInterval(()=>{if(fs.existsSync(${JSON.stringify(marker + '.ready')}))process.exit(0);if(Date.now()>end)process.exit(2)},50);`);
+  const child = spawn(process.execPath, [worker], { windowsHide: true, stdio: 'ignore' });
+  const [code] = await once(child, 'exit'); assert.equal(code, 0);
+  let written = false;
+  for (let attempt = 0; attempt < 60; attempt++) { try { written = await fs.readFile(marker, 'utf8') === 'parent-exited'; if (written) break; } catch {} await new Promise(resolve => setTimeout(resolve, 100)); }
+  assert.equal(written, true, 'The production spawn options must let PowerShell run after its parent exits.');
+  assert.deepEqual(await fs.readFile(f.target), binary('old'));
 });
 
 for (const mode of ['success', 'launch-failure', 'checksum-failure']) {

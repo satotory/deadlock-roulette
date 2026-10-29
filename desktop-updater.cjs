@@ -189,8 +189,17 @@ try {
 function spawnInstallHelper(config, dependencies = {}) {
   const systemRoot = dependencies.systemRoot || process.env.SystemRoot || 'C:\\Windows';
   const executable = path.join(systemRoot, 'System32', 'WindowsPowerShell', 'v1.0', 'powershell.exe');
-  const encoded = Buffer.from(createInstallScript(config), 'utf16le').toString('base64');
-  const child = (dependencies.spawn || spawn)(executable, ['-NoProfile', '-NonInteractive', '-WindowStyle', 'Hidden', '-EncodedCommand', encoded], { detached: true, windowsHide: true, stdio: 'ignore' });
+  const encoded = Buffer.from((dependencies.createScript || createInstallScript)(config), 'utf16le').toString('base64');
+  // Start-Process gives the hidden helper an independent Windows console. Node's
+  // detached console can exit without evaluating PowerShell, while a directly
+  // attached console can be closed together with a console application's parent.
+  if (encoded.length > 30_000) throw new core.UpdateError('apply-failed', 'The update helper path is too long. Download this release manually.');
+  const executableData = Buffer.from(executable).toString('base64');
+  // Pass the already encoded fixed script in a private child environment variable
+  // so the bootstrap itself stays well below Windows' command-line length limit.
+  const variable = 'DEADLOCK_ROULETTE_UPDATE_SCRIPT';
+  const bootstrap = `$ErrorActionPreference='Stop';$encoded=$env:${variable};Remove-Item -LiteralPath 'Env:\\${variable}';if([string]::IsNullOrEmpty($encoded)){throw 'Missing helper'};$executable=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('${executableData}'));Start-Process -FilePath $executable -ArgumentList ('-NoProfile -NonInteractive -WindowStyle Hidden -EncodedCommand '+$encoded) -WindowStyle Hidden | Out-Null`;
+  const child = (dependencies.spawn || spawn)(executable, ['-NoProfile', '-NonInteractive', '-WindowStyle', 'Hidden', '-EncodedCommand', Buffer.from(bootstrap, 'utf16le').toString('base64')], { windowsHide: true, stdio: 'ignore', env: { ...process.env, [variable]: encoded } });
   child.unref();
   return child;
 }
@@ -271,7 +280,7 @@ function createDesktopUpdater(options) {
         const child = (options.spawnHelper || spawnInstallHelper)(config);
         child?.once?.('error', error => { launchError = error; });
         let ready = false;
-        for (let attempt = 0; attempt < 80; attempt++) {
+        for (let attempt = 0; attempt < 300; attempt++) {
           if (launchError) throw launchError;
           try { const status = JSON.parse(await fs.readFile(config.statusFile, 'utf8')); if (status.nonce === nonce) { if (status.phase === 'ready') { ready = true; break; } if (['failed', 'rolled-back', 'recovery-failed'].includes(status.phase)) throw new core.UpdateError('apply-failed', 'The update helper could not start.'); } } catch (error) { if (error instanceof core.UpdateError) throw error; }
           await delay(100);
