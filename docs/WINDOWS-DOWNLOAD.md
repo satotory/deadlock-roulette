@@ -4,7 +4,7 @@
 
 ## English
 
-Release **1.10.0 is unsigned**. SmartScreen considers both publisher and file reputation; Windows may display **Unknown publisher** or **Windows protected your PC**. [Microsoft explains these reputation checks](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
+Release **1.10.1 is unsigned**. SmartScreen considers both publisher and file reputation; Windows may display **Unknown publisher** or **Windows protected your PC**. [Microsoft explains these reputation checks](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 1. Download `Deadlock.Roulette.exe` and `SHA256SUMS.txt` only from the [official GitHub release](https://github.com/satotory/deadlock-roulette/releases/latest).
 2. In PowerShell, open the download folder and calculate the file’s SHA-256:
@@ -13,10 +13,10 @@ Release **1.10.0 is unsigned**. SmartScreen considers both publisher and file re
 Get-FileHash .\Deadlock.Roulette.exe -Algorithm SHA256
 ```
 
-For **release 1.10.0**, the expected hash is:
+For **release 1.10.1**, the expected hash is:
 
 ```text
-c9e8887c6fa2cee7756e1454655100ce6605fcf7376e28664cc0c1c74aea69f5
+1e76c89228d673325ce27f1aa5fc40b5e259e9d4a94266f0764fccd72476fb19
 ```
 
 Compare the complete hash with `SHA256SUMS.txt`. A match confirms that the bytes match the published file; **it does not prove the absence of malware**. This hash applies only to this exact release file.
@@ -27,7 +27,7 @@ Keep Defender and SmartScreen enabled. Removing the download mark or adding a se
 
 ## Русский
 
-Релиз **1.10.0 не подписан**. SmartScreen учитывает репутацию издателя и самого файла: Windows может показать **«Неизвестный издатель»** или **«Система Windows защитила ваш компьютер»**. [Объяснение этих проверок у Microsoft](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
+Релиз **1.10.1 не подписан**. SmartScreen учитывает репутацию издателя и самого файла: Windows может показать **«Неизвестный издатель»** или **«Система Windows защитила ваш компьютер»**. [Объяснение этих проверок у Microsoft](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 1. Скачай `Deadlock.Roulette.exe` и `SHA256SUMS.txt` только из [официального релиза на GitHub](https://github.com/satotory/deadlock-roulette/releases/latest).
 2. Открой папку загрузки в PowerShell и посчитай SHA-256 файла:
@@ -36,10 +36,10 @@ Keep Defender and SmartScreen enabled. Removing the download mark or adding a se
 Get-FileHash .\Deadlock.Roulette.exe -Algorithm SHA256
 ```
 
-Ожидаемый хеш **для релиза 1.10.0**:
+Ожидаемый хеш **для релиза 1.10.1**:
 
 ```text
-c9e8887c6fa2cee7756e1454655100ce6605fcf7376e28664cc0c1c74aea69f5
+1e76c89228d673325ce27f1aa5fc40b5e259e9d4a94266f0764fccd72476fb19
 ```
 
 Сравни хеш целиком с `SHA256SUMS.txt`. Совпадение подтверждает одинаковые байты с опубликованным файлом, **но не доказывает отсутствие вредоносного кода**. Этот хеш относится только к данному файлу релиза.
