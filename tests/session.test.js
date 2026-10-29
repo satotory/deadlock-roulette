@@ -26,7 +26,7 @@ test('new session returns independent defaults and canonical envelope', () => {
   assert.equal(result.format, 'deadlock-roulette-session');
   assert.equal(result.version, 1);
   assert.deepEqual(result.history, []);
-  assert.deepEqual(result.preferences, { sound: false, quick: false, zoomFactor: 1, music: true, musicTrack: 'title', language: 'ru', musicVolume: .22, soundVolume: 1, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: .5, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
+  assert.deepEqual(result.preferences, { sound: false, quick: false, zoomFactor: 1, music: true, musicTrack: 'title', language: 'en', musicVolume: .01, soundVolume: 1, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: 0, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
   assert.deepEqual(result.settings.enabledTiers, [1, 2, 3, 4]);
   result.settings.tierWeights[1] = 99;
   assert.equal(createSession(undefined, catalog).settings.tierWeights[1], 4);
@@ -106,7 +106,7 @@ test('corrupt local history metadata cannot reintroduce a known drawn item', () 
     entry('a', { time: 0, probability: 0, weight: 0, drawId: 'restored-1' }),
     entry('b', { time: 0, probability: 0, weight: 0, drawId: 'restored-2' }),
   ]);
-  assert.deepEqual(result.preferences, { sound: false, quick: true, zoomFactor: 1, music: true, musicTrack: 'title', language: 'ru', musicVolume: .22, soundVolume: 1, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: .5, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
+  assert.deepEqual(result.preferences, { sound: false, quick: true, zoomFactor: 1, music: true, musicTrack: 'title', language: 'en', musicVolume: .01, soundVolume: 1, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: 0, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
   assert.deepEqual(getEligibleItems(catalog, result.settings, result.history.map(draw => draw.itemId)).map(item => item.id), ['c']);
 });
 
@@ -152,9 +152,14 @@ test('language and independent music/click switches survive import and legacy pr
   assert.equal(imported.preferences.zoomFactor, 1.5);
   assert.deepEqual(imported.history, initial.history);
   const legacy = createSession({ preferences: { sound: false, language: '<script>', music: 'false' } }, catalog);
-  assert.equal(legacy.preferences.language, 'ru');
+  assert.equal(legacy.preferences.language, 'en');
   assert.equal(legacy.preferences.music, true);
   assert.equal(legacy.preferences.sound, false);
+  const existing = createSession({ preferences: { language: 'ru', musicVolume: .22, curseChance: .5 } }, catalog);
+  const restored = parseSessionJSON(serializeSession(existing), catalog).preferences;
+  assert.equal(restored.language, 'ru');
+  assert.equal(restored.musicVolume, .22);
+  assert.equal(restored.curseChance, .5);
 });
 
 test('volumes, visibility and build progress persist independently of the normal roulette', () => {
@@ -181,7 +186,7 @@ test('saved volume limits retain intentional silence and reject nonnumeric value
   assert.equal(prefs.musicVolume, 0);
   assert.equal(prefs.soundVolume, 1);
   const corrupt = createSession({ preferences: { musicVolume: Infinity, soundVolume: '0', mode: 'unknown' } }, catalog).preferences;
-  assert.equal(corrupt.musicVolume, .22);
+  assert.equal(corrupt.musicVolume, .01);
   assert.equal(corrupt.soundVolume, 1);
   assert.equal(corrupt.mode, 'roulette');
 });

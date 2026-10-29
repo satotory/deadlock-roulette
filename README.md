@@ -26,7 +26,7 @@ The portable app supports **Windows 10/11 x64**. Icons, hero art, music, sounds 
 
 ### Guided first run, updates and sharing
 
-The first launch offers a **13-step guided tour**. It highlights the wheel, filters, audio and scale, hero selection, inventory, abilities, events, archive and sharing. Use **Guide** in the header to replay it; Back, Next and Skip let you move at your own pace. The tour keeps your build and does not spend draws or alteration charges.
+New profiles start in **English**, with music at **1%** and curses disabled. The first launch offers a **14-step guided tour**. It highlights the wheel, filters, audio and scale, hero selection, inventory, abilities, events, archive and sharing. Use **Guide** in the header to replay it; Back, Next and Skip let you move at your own pace. The tour keeps your build and does not spend draws or alteration charges.
 
 The version button checks for updates at startup and periodically. In the portable Windows app, **Update and restart** downloads the latest stable release, verifies its SHA-256 and replaces the launcher only after you click. It keeps a backup and can restore the previous executable if the new version fails to start. Your current build, archive, language, scale and volume settings stay in the same profile. Keep the portable EXE in a folder you can write to. Version 1.9 and earlier need a one-time manual download of 1.10; future releases can use the built-in updater.
 
@@ -38,7 +38,7 @@ Browser and desktop saves are separate. Use **JSON export/import** to move a ses
 
 **Item roulette — T4 pool, with a hovered segment.** Every sector displays its item icon; hovering enlarges the selected sector and shows its item card.
 
-![T4 item roulette with visible item icons and an enlarged Boundless Spirit sector under the pointer](docs/screenshots/roulette-hover.jpg)
+![T4 item roulette with visible item icons and an enlarged Silencer sector under the pointer](docs/screenshots/roulette-hover.jpg)
 
 **Haze — a full inventory and a 14-step purchase route.** Components stay in the route after upgrading, so the final inventory never erases how to build it.
 
@@ -107,7 +107,7 @@ A pair’s weight is the average of its components’ weights × **0.35**. It is
 
 ### Curses
 
-The default curse chance is **50%**, adjustable from **0% to 100%**. Each ordinary item gets its own check; both halves of a double drop are checked separately.
+The default curse chance is **0%**, adjustable from **0% to 100%**. Each ordinary item gets its own check; both halves of a double drop are checked separately.
 
 A curse immediately draws an additional single item and marks it with a **lock on its icon**. That bonus item cannot be altered or undone, and it does not trigger another curse. Capacity and pool rules still apply; a curse cannot create an extra item if no valid slot or item remains.
 
@@ -242,7 +242,7 @@ This is an unofficial fan project, unaffiliated with Valve. Deadlock, characters
 
 ### Первое знакомство, обновления и ссылка друзьям
 
-При первом запуске появляется **пошаговый гайд из 13 шагов**: он подсвечивает колесо, фильтры, звук и масштаб, выбор героя, инвентарь, способности, события, архив и кнопку ссылки. Кнопка **«Гайд»** в шапке запускает его повторно. Можно вернуться назад, перейти дальше или пропустить. Гайд сохраняет билд и не тратит розыгрыши или заряды изменений.
+Новый профиль открывается на **английском**, с музыкой **1%** и выключенным проклятием. При первом запуске появляется **пошаговый гайд из 14 шагов**: он подсвечивает колесо, фильтры, звук и масштаб, выбор героя, инвентарь, способности, события, архив и кнопку ссылки. Кнопка **«Гайд»** в шапке запускает его повторно. Можно вернуться назад, перейти дальше или пропустить. Гайд сохраняет билд и не тратит розыгрыши или заряды изменений.
 
 Кнопка с версией проверяет обновления при запуске и затем периодически. В переносимой Windows-версии **«Обновить и перезапустить»** скачивает последний стабильный релиз, проверяет SHA-256 и заменяет EXE после твоего нажатия. Сохраняется резервная копия; если новая версия не запустится, приложение сможет вернуть предыдущую. Текущий билд, архив, язык, масштаб и громкость остаются в прежнем профиле. Файл должен лежать в доступной для записи папке. С версии 1.9 и более ранних нужно один раз вручную скачать 1.10; следующие релизы можно будет ставить из приложения.
 
@@ -323,7 +323,7 @@ This is an unofficial fan project, unaffiliated with Valve. Deadlock, characters
 
 ### Проклятия
 
-Шанс проклятия по умолчанию — **50%**, настройка — от **0% до 100%**. Проверяется каждый обычный предмет; у дабла обе половины проходят отдельную проверку.
+Шанс проклятия по умолчанию — **0%**, настройка — от **0% до 100%**. Проверяется каждый обычный предмет; у дабла обе половины проходят отдельную проверку.
 
 Проклятие сразу разыгрывает ещё один одиночный предмет и вешает **замок на его иконку**. Такой бонус нельзя изменить или отменить, и он не вызывает следующее проклятие. Правила пула и вместимости сохраняются: без подходящего предмета или свободного места дополнительной вещи не будет.
 

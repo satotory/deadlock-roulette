@@ -87,14 +87,18 @@ try {
   const initial = await state();
   assert.equal(await evaluate('window.deadlock.getVersion()'), version);
   assert.equal(initial.preferences.mode, 'roulette');
-  assert.equal(await evaluate("document.querySelector('#guide-welcome-dialog').lang"), 'ru');
+  assert.equal(initial.preferences.language, 'en', 'A fresh profile starts in English');
+  assert.equal(initial.preferences.musicVolume, .01, 'New profiles start with music at one percent');
+  assert.equal(initial.preferences.curseChance, 0, 'New profiles start with curses disabled');
+  assert.equal(await evaluate("import('./audio.js').then(({audio})=>audio.state.musicVolume)"), .01, 'The initial audio channel uses the saved quiet default');
+  assert.equal(await evaluate("document.querySelector('#guide-welcome-dialog').lang"), 'en');
   await evaluate("document.querySelector('#guide-start').click()");
   await until("!document.querySelector('#guide-overlay').hidden && document.querySelector('#guide-overlay').dataset.guideStep==='modes' && !document.querySelector('[data-guide-next]').disabled");
   await assertGeometry();
   await key(' ', 'Space', 32);
   assert.deepEqual(gameplay(await state()), gameplay(initial), 'Space does not spin or spend a charge during a guide');
   const steps = await evaluate("import('./guide.js').then(({GUIDE_STEPS})=>GUIDE_STEPS.map(step=>step.id))");
-  assert.equal(steps.length, 13);
+  assert.deepEqual(steps, ['modes', 'weights', 'tiers', 'wheel', 'draw', 'catalogue', 'comfort', 'hero', 'route', 'skills', 'balance', 'events', 'archive', 'links']);
   await evaluate("document.querySelector('[data-guide-next]').click()");
   await until("document.querySelector('#guide-overlay').dataset.guideStep==='weights' && !document.querySelector('[data-guide-next]').disabled");
   await evaluate("document.querySelector('[data-guide-back]').click()");
@@ -130,14 +134,14 @@ try {
   await evaluate("document.querySelector('#build-reroll-button').click()");
   await until("JSON.parse(localStorage.getItem('deadlock-roulette.session.v1')).build.itemActions.usedActions.includes('reroll') && !document.querySelector('#build-item-random').disabled");
   await evaluate("document.querySelector('button[data-mode=build]').click();document.querySelector('#language-button').click()");
-  assert.equal(await evaluate('document.documentElement.lang'), 'en');
+  assert.equal(await evaluate('document.documentElement.lang'), 'ru');
   const beforeReplay = await state();
   for (const scale of [1.25, 2]) {
     await setScale(scale);
     await evaluate("document.querySelector('#guide-button').click()");
     await until("!document.querySelector('#guide-overlay').hidden && !document.querySelector('[data-guide-next]').disabled");
-    assert.equal(await evaluate("document.querySelector('#guide-overlay').lang"), 'en');
-    assert.equal(await evaluate("document.querySelector('#guide-title').textContent"), 'Two ways to trust fate');
+    assert.equal(await evaluate("document.querySelector('#guide-overlay').lang"), 'ru');
+    assert.equal(await evaluate("document.querySelector('#guide-title').textContent"), 'Два способа довериться случаю');
     await key(' ', 'Space', 32);
     for (let index = 0; index < steps.length; index++) {
       await until(`document.querySelector('#guide-overlay').dataset.guideStep===${JSON.stringify(steps[index])} && !document.querySelector('[data-guide-next]').disabled`);
@@ -149,8 +153,11 @@ try {
     assert.deepEqual(gameplay(await state()), gameplay(beforeReplay), 'Skipping restores the original build mode and all game state');
   }
   await setScale(1);
+  await evaluate("document.querySelector('#language-button').click()");
+  assert.equal(await evaluate('document.documentElement.lang'), 'en');
   await evaluate("document.querySelector('#guide-button').click()");
   await until("!document.querySelector('#guide-overlay').hidden && !document.querySelector('[data-guide-next]').disabled");
+  assert.equal(await evaluate("document.querySelector('#guide-overlay').lang"), 'en');
   await evaluate("document.querySelector('[data-guide-skip]').click()");
   await until("document.querySelector('#guide-overlay').hidden && document.body.dataset.mode==='build'");
   assert.equal(await evaluate("document.querySelector('#github-link').href"), 'https://github.com/satotory/deadlock-roulette');
@@ -169,7 +176,7 @@ try {
   assert.equal(failures.length, 0, failures.join('\n'));
   const shot = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
   await fs.writeFile(path.join(root, '.smoke-data', `polish-${source ? 'source' : 'portable'}.png`), Buffer.from(shot.data, 'base64'));
-  const report = { status: 'pass', runtime: source ? 'source' : 'portable', version, welcome: true, steps: visited, spaceBlocked: true, backAndNext: true, replayAndEscape: true, language: true, scaledGeometry: [125, 200], modeRestored: true, gameplayPreserved: true, publicLinks: true, updateDialog: true, malformedMetadata: true, noOfflineBranding: true, profile };
+  const report = { status: 'pass', runtime: source ? 'source' : 'portable', version, defaults: { language: initial.preferences.language, musicVolume: initial.preferences.musicVolume, curseChance: initial.preferences.curseChance }, welcome: true, steps: visited, spaceBlocked: true, backAndNext: true, replayAndEscape: true, language: true, scaledGeometry: [125, 200], modeRestored: true, gameplayPreserved: true, publicLinks: true, updateDialog: true, malformedMetadata: true, noOfflineBranding: true, profile };
   await fs.writeFile(path.join(root, '.smoke-data', `polish-${source ? 'source' : 'portable'}-report.json`), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));
 } catch (error) { console.error(logs.join('').slice(-2500)); throw error; }

@@ -66,7 +66,7 @@ export function planDrawSequence(source, items, action = 'draw', { random = rand
     return true;
   }
   if (!addStep(action)) return null;
-  const chance = skipCurse || royal ? 0 : Math.min(1, Math.max(0, source.preferences.curseChance ?? .5));
+  const chance = skipCurse || royal ? 0 : Math.min(1, Math.max(0, source.preferences.curseChance ?? 0));
   let curseCount = 0;
   const checks = steps[0].ticket.combo ? steps[0].ticket.itemIds.length : 1;
   if (chance > 0) for (let check = 0; check < checks; check++) {

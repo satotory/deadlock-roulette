@@ -8,6 +8,7 @@ const COPY = {
     step: 'Step', of: 'of', protected: 'Your build stays untouched.', missing: 'This control appears when its mode is available. Your current build is preserved.',
     modes: ['Two ways to trust fate', 'Item roulette is a pool without repeats. Hero build makes a whole match contract: a hero, an inventory and a skill order. We will visit both, then return you here.'],
     weights: ['Choose what can drop', 'Categories and tiers define the pool. A larger weight means a larger chance for each eligible item; zero removes it. Start with a preset, then make the rules your own.'],
+    tiers: ['Switch entire tiers on or off', 'Click a tier label — T1, T2, T3 or T4 — to include or exclude all its items. The −/+ buttons beside it change weight separately. Weight 0 also excludes the tier. LEG is the optional Street Brawl tier.'],
     wheel: ['Read the wheel', 'Sector size follows its chance. Hover over a stopped sector to enlarge it and inspect its item. No need to guess from a tiny icon.'],
     draw: ['Draw, then decide', 'Spin here or press Space. An ordinary result leaves the pool until reset. Reroll, upgrade and downgrade sit just below: one charge each, and only one alteration per result.'],
     catalogue: ['Look inside the pool', 'Show the item catalogue to search, read descriptions, exclude an item or adjust its own weight. Save and Load below the draw history transfer the complete session as JSON.'],
@@ -28,6 +29,7 @@ const COPY = {
     step: 'Шаг', of: 'из', protected: 'Твой билд остаётся нетронутым.', missing: 'Этот элемент появится в доступном режиме. Твой текущий билд сохранён.',
     modes: ['Два способа довериться случаю', 'Рулетка — это пул предметов без повторов. Билд героя — контракт на целый матч: персонаж, инвентарь и прокачка. Посмотрим оба режима, затем вернём тебя сюда.'],
     weights: ['Выбери, что может выпасть', 'Категории и тиры определяют пул. Больший вес повышает шанс каждой подходящей вещи, ноль исключает её. Можно начать с пресета, а потом настроить свои правила.'],
+    tiers: ['Включай и выключай тиры целиком', 'Нажми на название тира — T1, T2, T3 или T4 — чтобы включить или исключить все его предметы. Кнопки −/+ рядом отдельно меняют вес. Вес 0 тоже исключает тир. LEG — дополнительный тир из Street Brawl.'],
     wheel: ['Как читать колесо', 'Размер сектора соответствует шансу. Наведи мышку на остановившееся колесо: сектор увеличится и покажет предмет. Разбирать крошечные иконки не придётся.'],
     draw: ['Разыграй и реши', 'Крути этой кнопкой или пробелом. Обычный результат уходит из пула до сброса. Ниже — реролл, апгрейд и даунгрейд: по одному заряду каждого, и только одна правка на результат.'],
     catalogue: ['Загляни в пул', 'Открой каталог: ищи предметы, читай описания, исключай вещи и меняй их личный вес. «Сохранить» и «Загрузить» под историей переносят полную сессию в JSON.'],
@@ -45,6 +47,7 @@ const COPY = {
 export const GUIDE_STEPS = Object.freeze([
   { id: 'modes', mode: 'roulette', selectors: ['.mode-tabs'] },
   { id: 'weights', mode: 'roulette', selectors: ['.controls'] },
+  { id: 'tiers', mode: 'roulette', selectors: ['#tier-controls'], highlightSelector: '#tier-controls .tier-enable' },
   { id: 'wheel', mode: 'roulette', selectors: ['#wheel-wrap'] },
   { id: 'draw', mode: 'roulette', selectors: ['#spin-button', '.roulette-actions'] },
   { id: 'catalogue', mode: 'roulette', selectors: ['#catalog-toggle-button', '#catalog-title'] },
@@ -128,7 +131,12 @@ export function createGuide({ getLanguage = () => 'en', getMode = () => 'roulett
     const cssZoom = Number.parseFloat(win.getComputedStyle(doc.documentElement).zoom) || 1;
     overlay.style.zoom = String(1 / cssZoom);
     const viewport = { width: win.innerWidth, height: win.innerHeight };
-    const rect = target && visible(target) ? target.getBoundingClientRect() : null;
+    let rect = target && visible(target) ? target.getBoundingClientRect() : null;
+    const highlightSelector = sequence[index]?.highlightSelector;
+    const highlights = highlightSelector ? [...doc.querySelectorAll(highlightSelector)].filter(visible).map(element => element.getBoundingClientRect()) : [];
+    if (highlights.length) {
+      rect = { left: Math.min(...highlights.map(value => value.left)), top: Math.min(...highlights.map(value => value.top)), right: Math.max(...highlights.map(value => value.right)), bottom: Math.max(...highlights.map(value => value.bottom)) };
+    }
     if (rect) {
       const left = Math.max(8, rect.left - 7), top = Math.max(8, rect.top - 7);
       const right = Math.min(viewport.width - 8, rect.right + 7), bottom = Math.min(viewport.height - 8, rect.bottom + 7);
