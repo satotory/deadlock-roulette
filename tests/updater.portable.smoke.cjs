@@ -11,7 +11,7 @@ const crypto = require('node:crypto');
 const { spawn, spawnSync } = require('node:child_process');
 const { Readable } = require('node:stream');
 const { once } = require('node:events');
-const { createDesktopUpdater } = require('../desktop-updater.cjs');
+const { createDesktopUpdater, spawnInstallHelper } = require('../desktop-updater.cjs');
 const core = require('../update-core.cjs');
 const root = path.resolve(__dirname, '..');
 const fixtureRoot = path.join(root, '.smoke-data');
@@ -28,6 +28,18 @@ function fixturePaths(directory) {
 }
 async function json(file) { return JSON.parse(await fs.readFile(file, 'utf8')); }
 async function waitFor(fn, ms = 90_000) { const deadline = Date.now() + ms; while (Date.now() < deadline) { const result = await fn(); if (result) return result; await sleep(250); } throw new Error('Portable update smoke timed out.'); }
+
+async function browserPID(port) {
+  const info = await (await fetch(`http://127.0.0.1:${port}/json/version`)).json();
+  const socket = new WebSocket(info.webSocketDebuggerUrl); await once(socket, 'open');
+  try {
+    return await new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error('Could not inspect the fixture browser PID.')), 5000);
+      socket.addEventListener('message', event => { const message = JSON.parse(event.data); if(message.id !== 1)return; clearTimeout(timer); if(message.error)return reject(new Error(message.error.message)); const pid=message.result.processInfo.find(process=>process.type==='browser')?.id; assert(Number.isSafeInteger(pid)&&pid>0); resolve(pid); });
+      socket.send(JSON.stringify({ id: 1, method: 'SystemInfo.getProcessInfo' }));
+    });
+  } finally { socket.close(); }
+}
 
 async function launchDebug(p, port) {
   const env = { ...process.env }; delete env.ELECTRON_RUN_AS_NODE;
@@ -47,7 +59,7 @@ async function launchDebug(p, port) {
   function call(method, params) { return new Promise((resolve, reject) => { const key = ++id, timer = setTimeout(() => { pending.delete(key); reject(new Error(`Timed out: ${method}`)); }, 15_000); pending.set(key, { resolve, reject, timer }); socket.send(JSON.stringify({ id: key, method, params })); }); }
   async function evaluate(expression) { const result = await call('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true }); assert.equal(result.exceptionDetails, undefined, JSON.stringify(result.exceptionDetails)); return result.result.value; }
   await waitFor(() => evaluate("Boolean(window.deadlock && Number(document.querySelector('#total-count')?.textContent) > 0)"));
-  return { evaluate, call, async close() { await evaluate('window.close()').catch(() => {}); await waitFor(async () => exited, 15_000); socket.close(); } };
+  return { evaluate, call, mainPid: await browserPID(port), async close() { await evaluate('window.close()').catch(() => {}); await waitFor(async () => exited, 15_000); socket.close(); } };
 }
 
 async function worker(p, nextFile) {
@@ -57,6 +69,7 @@ async function worker(p, nextFile) {
   const sumURL = `${core.PROJECT_URL}/releases/download/v${next}/SHA256SUMS.txt`;
   const checksum = `${sha}  Deadlock.Roulette.exe\n`;
   let saved = null;
+  const actualParent = Number(argument('--old-pid')); assert(Number.isSafeInteger(actualParent) && actualParent > 0);
   const instance = createDesktopUpdater({ version: '1.9.0', isPackaged: true, platform: 'win32', env: { PORTABLE_EXECUTABLE_FILE: p.target, PORTABLE_EXECUTABLE_DIR: p.directory }, userData: p.profile,
     fetchImpl: async url => {
       if (url === core.RELEASE_API) return new Response(JSON.stringify({ tag_name: `v${next}`, draft: false, prerelease: false, assets: [
@@ -67,8 +80,9 @@ async function worker(p, nextFile) {
       if (url === exeURL) return new Response(Readable.toWeb(fsSync.createReadStream(nextFile)), { headers: { 'content-length': String(size) } });
       throw new Error('Unexpected update network request.');
     },
+    spawnHelper(config) { return spawnInstallHelper({ ...config, parentPid: actualParent }); },
     onState(state) { saved = state; },
-    quit() { const pending = JSON.parse(fsSync.readFileSync(path.join(p.profile, 'updates/pending.json'), 'utf8')); fsSync.writeFileSync(p.worker, JSON.stringify({ final: saved, next, sha, pending, parentPid: process.pid })); process.exit(0); },
+    quit() { const pending = JSON.parse(fsSync.readFileSync(path.join(p.profile, 'updates/pending.json'), 'utf8')); fsSync.writeFileSync(p.worker, JSON.stringify({ final: saved, next, sha, pending, workerPid: process.pid, parentPid: actualParent })); process.exit(0); },
   });
   assert.equal((await instance.checkForUpdates()).status, 'available');
   const result = await instance.installUpdate();
@@ -103,7 +117,7 @@ async function run(p, nextFile) {
     await fs.writeFile(path.join(p.directory, 'before-session.json'), JSON.stringify(baseline, null, 2));
   } catch(error) { await app.close(); app = null; throw error; }
   console.log('Old portable profile seeded. Starting actual replacement helper while the old app still holds its launcher.');
-  const child = spawn(process.execPath, [__filename, '--worker', '--fixture', p.directory, '--next', nextFile], { cwd: root, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
+  const child = spawn(process.execPath, [__filename, '--worker', '--fixture', p.directory, '--next', nextFile, '--old-pid', String(app.mainPid)], { cwd: root, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
   let workerLog = ''; child.stdout.on('data', data => { workerLog += data; }); child.stderr.on('data', data => { workerLog += data; });
   try {
     const [exitCode] = await once(child, 'exit'); assert.equal(exitCode, 0, workerLog);
@@ -122,7 +136,7 @@ async function run(p, nextFile) {
     assert.equal(await app.evaluate('window.deadlock.getVersion()'), result.next);
     const restored = await app.evaluate(`JSON.parse(localStorage.getItem(${JSON.stringify(storageKey)}))`);
     assert.deepEqual(restored, baseline, 'Canonical build, skill plan, inventory and preferences must survive the update.');
-    const report = { version: result.next, fixture: p.directory, oldDigest, newDigest: result.sha, helperPhase: status.phase, nativeReplacement: true, actualPortableRelaunch: true, backupPreserved: true, canonicalSessionPreserved: true, profileSentinelPreserved: true, normallyClosedPids: closedPids };
+    const report = { version: result.next, fixture: p.directory, oldDigest, newDigest: result.sha, helperPhase: status.phase, oldMainPid: result.parentPid, nativeReplacement: true, actualPortableRelaunch: true, backupPreserved: true, canonicalSessionPreserved: true, profileSentinelPreserved: true, normallyClosedPids: closedPids };
     await fs.writeFile(path.join(p.directory, 'report.json'), JSON.stringify(report, null, 2)); console.log(JSON.stringify(report, null, 2));
   } finally { await app.close(); }
 }
