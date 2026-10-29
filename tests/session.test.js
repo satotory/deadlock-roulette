@@ -26,7 +26,7 @@ test('new session returns independent defaults and canonical envelope', () => {
   assert.equal(result.format, 'deadlock-roulette-session');
   assert.equal(result.version, 1);
   assert.deepEqual(result.history, []);
-  assert.deepEqual(result.preferences, { sound: false, quick: false, zoomFactor: 1, music: true, musicTrack: 'title', language: 'en', musicVolume: .01, soundVolume: 1, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: 0, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
+  assert.deepEqual(result.preferences, { sound: true, quick: false, zoomFactor: 1, music: true, musicTrack: 'title', language: 'en', musicVolume: .01, soundVolume: .15, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: 0, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
   assert.deepEqual(result.settings.enabledTiers, [1, 2, 3, 4]);
   result.settings.tierWeights[1] = 99;
   assert.equal(createSession(undefined, catalog).settings.tierWeights[1], 4);
@@ -61,12 +61,13 @@ test('music choice and special-action budgets survive export and restore indepen
 });
 
 test('roulette sound choices and independent hero voice settings persist and sanitize bad imports', () => {
-  const session = createSession({ preferences: { soundStyle: 'revolver', sound: false, voices: false, voiceVolume: .53 } }, catalog);
+  const session = createSession({ preferences: { soundStyle: 'revolver', sound: false, soundVolume: .27, voices: false, voiceVolume: .53 } }, catalog);
   const restored = parseSessionJSON(serializeSession(session), catalog);
   assert.equal(restored.preferences.soundStyle, 'revolver');
   assert.equal(restored.preferences.voices, false);
   assert.equal(restored.preferences.voiceVolume, .53);
   assert.equal(restored.preferences.sound, false);
+  assert.equal(restored.preferences.soundVolume, .27, 'A saved muted custom volume survives the new enabled default');
   const invalid = createSession({ preferences: { soundStyle: '<script>', voices: 'false', voiceVolume: Infinity } }, catalog);
   assert.equal(invalid.preferences.soundStyle, 'streetbrawl');
   assert.equal(invalid.preferences.voices, true);
@@ -106,7 +107,7 @@ test('corrupt local history metadata cannot reintroduce a known drawn item', () 
     entry('a', { time: 0, probability: 0, weight: 0, drawId: 'restored-1' }),
     entry('b', { time: 0, probability: 0, weight: 0, drawId: 'restored-2' }),
   ]);
-  assert.deepEqual(result.preferences, { sound: false, quick: true, zoomFactor: 1, music: true, musicTrack: 'title', language: 'en', musicVolume: .01, soundVolume: 1, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: 0, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
+  assert.deepEqual(result.preferences, { sound: true, quick: true, zoomFactor: 1, music: true, musicTrack: 'title', language: 'en', musicVolume: .01, soundVolume: .15, soundStyle: 'streetbrawl', voices: true, voiceVolume: .65, uiSound: true, uiVolume: .35, catalogVisible: true, mode: 'roulette', curseChance: 0, pairsEnabled: true, chickenChance: .1, archmotherChance: .1, hiddenKingChance: .1 });
   assert.deepEqual(getEligibleItems(catalog, result.settings, result.history.map(draw => draw.itemId)).map(item => item.id), ['c']);
 });
 
@@ -187,7 +188,7 @@ test('saved volume limits retain intentional silence and reject nonnumeric value
   assert.equal(prefs.soundVolume, 1);
   const corrupt = createSession({ preferences: { musicVolume: Infinity, soundVolume: '0', mode: 'unknown' } }, catalog).preferences;
   assert.equal(corrupt.musicVolume, .01);
-  assert.equal(corrupt.soundVolume, 1);
+  assert.equal(corrupt.soundVolume, .15);
   assert.equal(corrupt.mode, 'roulette');
 });
 
@@ -200,11 +201,15 @@ test('interface audio preferences round trip independently with compatible old-s
   assert.equal(imported.preferences.music, false);
   assert.equal(imported.preferences.sound, true);
   assert.equal(imported.preferences.soundVolume, .63);
-  const old = parseSessionJSON(JSON.stringify(envelope({ preferences: { sound: false } })), catalog);
+  const old = parseSessionJSON(JSON.stringify(envelope({ preferences: { sound: false, soundVolume: 1 } })), catalog);
   assert.equal(old.preferences.uiSound, true);
   assert.equal(old.preferences.uiVolume, .35);
-  const silent = createSession({ preferences: { uiSound: true, uiVolume: 0 } }, catalog);
+  assert.equal(old.preferences.sound, false);
+  assert.equal(old.preferences.soundVolume, 1, 'An explicitly saved old maximum is preserved');
+  const silent = createSession({ preferences: { uiSound: true, uiVolume: 0, sound: false, soundVolume: 0 } }, catalog);
   assert.equal(parseSessionJSON(serializeSession(silent), catalog).preferences.uiVolume, 0);
+  assert.equal(parseSessionJSON(serializeSession(silent), catalog).preferences.sound, false);
+  assert.equal(parseSessionJSON(serializeSession(silent), catalog).preferences.soundVolume, 0, 'An intentional zero stays silent');
   for (const invalid of [undefined, null, NaN, Infinity, '0', {}]) {
     assert.equal(createSession({ preferences: { uiVolume: invalid, uiSound: 'false' } }, catalog).preferences.uiVolume, .35);
     assert.equal(createSession({ preferences: { uiSound: 'false' } }, catalog).preferences.uiSound, true);

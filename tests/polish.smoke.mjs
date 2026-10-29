@@ -89,8 +89,14 @@ try {
   assert.equal(initial.preferences.mode, 'roulette');
   assert.equal(initial.preferences.language, 'en', 'A fresh profile starts in English');
   assert.equal(initial.preferences.musicVolume, .01, 'New profiles start with music at one percent');
+  assert.equal(initial.preferences.sound, true, 'Fresh profiles enable the wheel audio channel');
+  assert.equal(initial.preferences.soundVolume, .15, 'Fresh wheel sounds start at fifteen percent');
   assert.equal(initial.preferences.curseChance, 0, 'New profiles start with curses disabled');
   assert.equal(await evaluate("import('./audio.js').then(({audio})=>audio.state.musicVolume)"), .01, 'The initial audio channel uses the saved quiet default');
+  assert.equal(await evaluate("import('./audio.js').then(({audio})=>audio.state.soundEnabled)"), true, 'Canonical initial preferences enable actual wheel audio');
+  assert.equal(await evaluate("import('./audio.js').then(({audio})=>audio.state.soundVolume)"), .15);
+  assert.equal(await evaluate("document.querySelector('#sound-button').getAttribute('aria-pressed')"), 'true');
+  assert.equal(await evaluate("Number(document.querySelector('#sound-volume').value)"), 15);
   assert.equal(await evaluate("document.querySelector('#guide-welcome-dialog').lang"), 'en');
   await evaluate("document.querySelector('#guide-start').click()");
   await until("!document.querySelector('#guide-overlay').hidden && document.querySelector('#guide-overlay').dataset.guideStep==='modes' && !document.querySelector('[data-guide-next]').disabled");
@@ -125,6 +131,9 @@ try {
     document.querySelector('#spin-button').click();
   }`);
   await until("JSON.parse(localStorage.getItem('deadlock-roulette.session.v1')).history.length===1 && !document.querySelector('#reroll-button').disabled");
+  assert.equal((await state()).preferences.sound, true, 'An actual wheel draw keeps the enabled audio preference');
+  assert.equal((await state()).preferences.soundVolume, .15, 'An actual wheel draw retains the fifteen-percent volume');
+  assert.equal(await evaluate("import('./audio.js').then(({audio})=>audio.state.soundVolume)"), .15);
   await evaluate("document.querySelector('#reroll-button').click()");
   await until("JSON.parse(localStorage.getItem('deadlock-roulette.session.v1')).itemActions.usedActions.includes('reroll') && !document.querySelector('#spin-button').disabled");
   await evaluate("document.querySelector('button[data-mode=build]').click();document.querySelector('#build-hero-random').click()");
@@ -176,7 +185,7 @@ try {
   assert.equal(failures.length, 0, failures.join('\n'));
   const shot = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
   await fs.writeFile(path.join(root, '.smoke-data', `polish-${source ? 'source' : 'portable'}.png`), Buffer.from(shot.data, 'base64'));
-  const report = { status: 'pass', runtime: source ? 'source' : 'portable', version, defaults: { language: initial.preferences.language, musicVolume: initial.preferences.musicVolume, curseChance: initial.preferences.curseChance }, welcome: true, steps: visited, spaceBlocked: true, backAndNext: true, replayAndEscape: true, language: true, scaledGeometry: [125, 200], modeRestored: true, gameplayPreserved: true, publicLinks: true, updateDialog: true, malformedMetadata: true, noOfflineBranding: true, profile };
+  const report = { status: 'pass', runtime: source ? 'source' : 'portable', version, defaults: { language: initial.preferences.language, musicVolume: initial.preferences.musicVolume, sound: initial.preferences.sound, soundVolume: initial.preferences.soundVolume, curseChance: initial.preferences.curseChance }, wheelSoundDefaultUI: true, wheelSoundDrawPersistence: true, welcome: true, steps: visited, spaceBlocked: true, backAndNext: true, replayAndEscape: true, language: true, scaledGeometry: [125, 200], modeRestored: true, gameplayPreserved: true, publicLinks: true, updateDialog: true, malformedMetadata: true, noOfflineBranding: true, profile };
   await fs.writeFile(path.join(root, '.smoke-data', `polish-${source ? 'source' : 'portable'}-report.json`), JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));
 } catch (error) { console.error(logs.join('').slice(-2500)); throw error; }

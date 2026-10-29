@@ -9,7 +9,7 @@ export class AudioManager {
     this.soundEnabled = false;
     this.uiSoundEnabled = true;
     this.musicVolume = .01;
-    this.soundVolume = 1;
+    this.soundVolume = .15;
     this.uiVolume = .35;
     this.soundStyle = DEFAULT_SOUND_STYLE;
     this.musicTrack = DEFAULT_MUSIC_TRACK;
@@ -84,7 +84,7 @@ export class AudioManager {
     this.voicesEnabled = typeof preferences.voices === 'boolean' ? preferences.voices : true;
     const level = (value, fallback) => typeof value === 'number' && Number.isFinite(value) ? Math.min(1, Math.max(0, value)) : fallback;
     this.musicVolume = level(preferences.musicVolume, .01);
-    this.soundVolume = level(preferences.soundVolume, 1);
+    this.soundVolume = level(preferences.soundVolume, .15);
     this.uiVolume = level(preferences.uiVolume, .35);
     this.voiceVolume = level(preferences.voiceVolume, .65);
     if (this._voice) this._voice.volume = this.voiceVolume;

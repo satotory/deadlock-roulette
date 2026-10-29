@@ -1,7 +1,7 @@
 {
   "name": "deadlock-roulette-private",
   "productName": "Deadlock Roulette",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "Deadlock item roulette and hero build randomizer for Windows and the browser",
   "author": "Deadlock Roulette",
   "private": true,

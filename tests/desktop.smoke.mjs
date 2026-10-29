@@ -244,12 +244,17 @@ try {
   let initialRules = await readSession();
   assert.equal(initialRules.preferences.language, 'en', 'A fresh native profile starts in English');
   assert.equal(initialRules.preferences.musicVolume, .01, 'New sessions start with music at one percent');
+  assert.equal(initialRules.preferences.sound, true, 'Wheel sounds are enabled in a fresh profile');
+  assert.equal(initialRules.preferences.soundVolume, .15, 'Fresh wheel sounds start at fifteen percent');
   assert.equal(initialRules.preferences.curseChance, 0, 'New sessions start with curses disabled');
   assert.equal(initialRules.preferences.pairsEnabled, true, 'Curated double tickets are initially enabled');
   for (const key of ['chickenChance', 'archmotherChance', 'hiddenKingChance']) assert.equal(initialRules.preferences[key], .1, `${key} defaults to ten percent`);
   // Keep the established Russian baseline explicit; language toggling is tested below.
   await app.evaluate("document.querySelector('#language-button').click()");
   assert.equal((await readSession()).preferences.language, 'ru');
+  // The older independent-switch sequence starts muted; do not change the product default.
+  await app.evaluate("document.querySelector('#sound-button').click()");
+  assert.equal((await readSession()).preferences.sound, false);
   await app.evaluate(`{
     const chance = document.querySelector('#curse-chance'); chance.value = '0'; chance.dispatchEvent(new Event('input', { bubbles: true }));
     const pairs = document.querySelector('#pairs-enabled'); pairs.checked = false; pairs.dispatchEvent(new Event('change', { bubbles: true }));
